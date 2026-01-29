@@ -1,0 +1,32 @@
+
+Sender: Unischeduler System <25171213997@login02>
+Subject: Job 1138163: </home/25171213997/.jhjobs/1765530136.1138163.1.shell> Exited
+
+Job </home/25171213997/.jhjobs/1765530136.1138163.1.shell> was submitted from host <login02> by user <25171213997>.
+Job was executed on host(s) <10*gpu03>, in queue <gpu>, as user <25171213997>.
+</home/25171213997> was used as the home directory.
+</home/25171213997/ITI/codes> was used as the working directory.
+Started at 2025-12-12 17:02:04
+Results reported at 2025-12-12 17:02:26
+
+Your job looked like:
+
+------------------------------------------------------------
+# User input
+/home/25171213997/.jhjobs/1765530136.1138163.1.shell
+------------------------------------------------------------
+
+Exited with exit code 1.
+
+Resource usage summary:
+
+    CPU time   :           23.04 sec.
+    Max Memory :              1449 MB
+    Max Processes  :               3
+
+
+The output (if any) follows:
+
+1.12.1
+True
+1

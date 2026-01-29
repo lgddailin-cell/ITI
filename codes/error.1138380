@@ -1,0 +1,16 @@
+2025-12-12 23:17:09,498 INFO     Parameters: Namespace(cuda='True', seed=10, do_train='True', do_valid='True', do_test='True', evaluate_train=False, countries=False, regions=None, data_path='/home/25171213997/ITI/data/FB15k/', model='ComplEx', double_entity_embedding=False, double_relation_embedding=False, negative_sample_size=300, hidden_dim=1000, house_dim=2, house_num=2, housd_num=2, types_num=2, thred=0.7, gamma=26.0, negative_adversarial_sampling=True, adversarial_temperature=1.16010547465235, batch_size=200, regularization=0.0881968094660471, ent_reg=0.0, rel_reg=0.0, test_batch_size=2, uni_weight=False, learning_rate=0.00258708538141072, cpu_num=10, init_checkpoint=None, save_path='/home/25171213997/ITI/FB15k/ComplEx-1/', max_steps=250000, warm_up_steps=20000, save_checkpoint_steps=20000, valid_steps=10000, log_steps=100, test_log_steps=500, nentity=14951, nrelation=1345)
+2025-12-12 23:17:09,498 INFO     Model: ComplEx
+2025-12-12 23:17:09,498 INFO     Data Path: /home/25171213997/ITI/data/FB15k/
+2025-12-12 23:17:09,498 INFO     #entity: 14951
+2025-12-12 23:17:09,499 INFO     #relation: 1345
+2025-12-12 23:17:09,864 INFO     #train: 483142
+2025-12-12 23:17:09,902 INFO     #valid: 50000
+2025-12-12 23:17:09,947 INFO     #test: 59071
+Traceback (most recent call last):
+  File "/home/25171213997/ITI/codes/run.py", line 469, in <module>
+    accuracy = objective()
+  File "/home/25171213997/ITI/codes/run.py", line 286, in objective
+    kge_model = KGEModel(
+  File "/home/25171213997/ITI/codes/mult.py", line 85, in __init__
+    self.head_type_vec[int(i)] = int(j)
+IndexError: index 14951 is out of bounds for dimension 0 with size 14951

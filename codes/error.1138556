@@ -1,0 +1,2268 @@
+2025-12-13 16:32:45,588 INFO     Parameters: Namespace(cuda='True', seed=10, do_train='True', do_valid='True', do_test='True', evaluate_train=False, countries=False, regions=None, data_path='/home/25171213997/ITI/data/FB15k/', model='ITI_ComplEx', double_entity_embedding=False, double_relation_embedding=False, negative_sample_size=400, hidden_dim=1000, house_dim=4, house_num=4, housd_num=2, types_num=2, thred=0.7, gamma=20.0, negative_adversarial_sampling=True, adversarial_temperature=1.16010547465235, batch_size=200, regularization=0.0881968094660471, ent_reg=0.0, rel_reg=0.0, test_batch_size=4, uni_weight=False, learning_rate=0.00258708538141072, cpu_num=10, init_checkpoint=None, save_path='/home/25171213997/ITI/FB15k/ITI_ComplEx/', max_steps=250000, warm_up_steps=20000, save_checkpoint_steps=20000, valid_steps=10000, log_steps=200, test_log_steps=500, nentity=14951, nrelation=1345)
+2025-12-13 16:32:45,588 INFO     Model: ITI_ComplEx
+2025-12-13 16:32:45,588 INFO     Data Path: /home/25171213997/ITI/data/FB15k/
+2025-12-13 16:32:45,588 INFO     #entity: 14951
+2025-12-13 16:32:45,588 INFO     #relation: 1345
+2025-12-13 16:32:45,955 INFO     #train: 483142
+2025-12-13 16:32:45,994 INFO     #valid: 50000
+2025-12-13 16:32:46,039 INFO     #test: 59071
+2025-12-13 16:32:46,499 INFO     Model Parameter Configuration:
+2025-12-13 16:32:46,499 INFO     Parameter gamma: torch.Size([1]), require_grad = False
+2025-12-13 16:32:46,499 INFO     Parameter embedding_range: torch.Size([1]), require_grad = False
+2025-12-13 16:32:46,499 INFO     Parameter entity_embedding: torch.Size([14951, 250, 4]), require_grad = True
+2025-12-13 16:32:46,499 INFO     Parameter head_type_vec: torch.Size([14951]), require_grad = False
+2025-12-13 16:32:46,500 INFO     Parameter head_type_mat: torch.Size([571, 250, 4]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter tail_type_mat: torch.Size([571, 250, 4]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter relation_embedding: torch.Size([1345, 250, 16]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter r1_dir_head: torch.Size([571, 1, 1]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter r2_dir_tail: torch.Size([571, 1, 1]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter r1_scale_head: torch.Size([571, 250, 1]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter r2_scale_tail: torch.Size([571, 250, 1]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter k_dir_head: torch.Size([1345, 1, 2]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter k_dir_tail: torch.Size([1345, 1, 2]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter k_scale_head: torch.Size([1345, 250, 2]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter k_scale_tail: torch.Size([1345, 250, 2]), require_grad = True
+2025-12-13 16:32:46,500 INFO     Parameter relation_weight: torch.Size([1345, 250, 4]), require_grad = True
+2025-12-13 16:32:51,490 INFO     Ramdomly Initializing ITI_ComplEx Model...
+2025-12-13 16:32:51,491 INFO     Start Training...
+2025-12-13 16:32:51,491 INFO     init_step = 1
+2025-12-13 16:32:51,491 INFO     batch_size = 200
+2025-12-13 16:32:51,491 INFO     negative_adversarial_sampling = 1
+2025-12-13 16:32:51,491 INFO     hidden_dim = 1000
+2025-12-13 16:32:51,491 INFO     gamma = 20.000000
+2025-12-13 16:32:51,491 INFO     negative_adversarial_sampling = True
+2025-12-13 16:32:51,491 INFO     adversarial_temperature = 1.160105
+2025-12-13 16:32:51,491 INFO     learning_rate = 0
+2025-12-13 16:33:05,323 INFO     Training average regularization at step 200: 0.012056
+2025-12-13 16:33:05,324 INFO     Training average positive_sample_loss at step 200: 0.692125
+2025-12-13 16:33:05,324 INFO     Training average negative_sample_loss at step 200: 0.693153
+2025-12-13 16:33:05,325 INFO     Training average loss at step 200: 0.704695
+2025-12-13 16:33:18,463 INFO     Training average regularization at step 400: 0.036280
+2025-12-13 16:33:18,463 INFO     Training average positive_sample_loss at step 400: 0.619492
+2025-12-13 16:33:18,463 INFO     Training average negative_sample_loss at step 400: 0.712691
+2025-12-13 16:33:18,463 INFO     Training average loss at step 400: 0.702371
+2025-12-13 16:33:31,591 INFO     Training average regularization at step 600: 0.097968
+2025-12-13 16:33:31,591 INFO     Training average positive_sample_loss at step 600: 0.421483
+2025-12-13 16:33:31,591 INFO     Training average negative_sample_loss at step 600: 0.764248
+2025-12-13 16:33:31,591 INFO     Training average loss at step 600: 0.690834
+2025-12-13 16:33:44,725 INFO     Training average regularization at step 800: 0.140146
+2025-12-13 16:33:44,726 INFO     Training average positive_sample_loss at step 800: 0.420581
+2025-12-13 16:33:44,726 INFO     Training average negative_sample_loss at step 800: 0.636716
+2025-12-13 16:33:44,726 INFO     Training average loss at step 800: 0.668794
+2025-12-13 16:33:57,855 INFO     Training average regularization at step 1000: 0.167722
+2025-12-13 16:33:57,855 INFO     Training average positive_sample_loss at step 1000: 0.400383
+2025-12-13 16:33:57,855 INFO     Training average negative_sample_loss at step 1000: 0.561490
+2025-12-13 16:33:57,855 INFO     Training average loss at step 1000: 0.648659
+2025-12-13 16:34:10,977 INFO     Training average regularization at step 1200: 0.185672
+2025-12-13 16:34:10,977 INFO     Training average positive_sample_loss at step 1200: 0.374129
+2025-12-13 16:34:10,977 INFO     Training average negative_sample_loss at step 1200: 0.513751
+2025-12-13 16:34:10,977 INFO     Training average loss at step 1200: 0.629612
+2025-12-13 16:34:24,065 INFO     Training average regularization at step 1400: 0.198987
+2025-12-13 16:34:24,066 INFO     Training average positive_sample_loss at step 1400: 0.348806
+2025-12-13 16:34:24,066 INFO     Training average negative_sample_loss at step 1400: 0.472886
+2025-12-13 16:34:24,066 INFO     Training average loss at step 1400: 0.609834
+2025-12-13 16:34:37,255 INFO     Training average regularization at step 1600: 0.209512
+2025-12-13 16:34:37,255 INFO     Training average positive_sample_loss at step 1600: 0.333166
+2025-12-13 16:34:37,255 INFO     Training average negative_sample_loss at step 1600: 0.447458
+2025-12-13 16:34:37,255 INFO     Training average loss at step 1600: 0.599824
+2025-12-13 16:34:50,625 INFO     Training average regularization at step 1800: 0.217990
+2025-12-13 16:34:50,625 INFO     Training average positive_sample_loss at step 1800: 0.315144
+2025-12-13 16:34:50,625 INFO     Training average negative_sample_loss at step 1800: 0.423182
+2025-12-13 16:34:50,625 INFO     Training average loss at step 1800: 0.587153
+2025-12-13 16:35:03,858 INFO     Training average regularization at step 2000: 0.225285
+2025-12-13 16:35:03,859 INFO     Training average positive_sample_loss at step 2000: 0.303636
+2025-12-13 16:35:03,859 INFO     Training average negative_sample_loss at step 2000: 0.402431
+2025-12-13 16:35:03,859 INFO     Training average loss at step 2000: 0.578319
+2025-12-13 16:35:17,010 INFO     Training average regularization at step 2200: 0.231358
+2025-12-13 16:35:17,011 INFO     Training average positive_sample_loss at step 2200: 0.288851
+2025-12-13 16:35:17,011 INFO     Training average negative_sample_loss at step 2200: 0.381345
+2025-12-13 16:35:17,011 INFO     Training average loss at step 2200: 0.566456
+2025-12-13 16:35:30,233 INFO     Training average regularization at step 2400: 0.236768
+2025-12-13 16:35:30,234 INFO     Training average positive_sample_loss at step 2400: 0.279331
+2025-12-13 16:35:30,234 INFO     Training average negative_sample_loss at step 2400: 0.368601
+2025-12-13 16:35:30,234 INFO     Training average loss at step 2400: 0.560735
+2025-12-13 16:35:43,427 INFO     Training average regularization at step 2600: 0.241688
+2025-12-13 16:35:43,428 INFO     Training average positive_sample_loss at step 2600: 0.272593
+2025-12-13 16:35:43,428 INFO     Training average negative_sample_loss at step 2600: 0.356320
+2025-12-13 16:35:43,428 INFO     Training average loss at step 2600: 0.556144
+2025-12-13 16:35:56,601 INFO     Training average regularization at step 2800: 0.246355
+2025-12-13 16:35:56,602 INFO     Training average positive_sample_loss at step 2800: 0.262773
+2025-12-13 16:35:56,602 INFO     Training average negative_sample_loss at step 2800: 0.337895
+2025-12-13 16:35:56,602 INFO     Training average loss at step 2800: 0.546689
+2025-12-13 16:36:09,738 INFO     Training average regularization at step 3000: 0.250324
+2025-12-13 16:36:09,739 INFO     Training average positive_sample_loss at step 3000: 0.253569
+2025-12-13 16:36:09,739 INFO     Training average negative_sample_loss at step 3000: 0.334380
+2025-12-13 16:36:09,739 INFO     Training average loss at step 3000: 0.544299
+2025-12-13 16:36:22,863 INFO     Training average regularization at step 3200: 0.254218
+2025-12-13 16:36:22,863 INFO     Training average positive_sample_loss at step 3200: 0.243204
+2025-12-13 16:36:22,863 INFO     Training average negative_sample_loss at step 3200: 0.316753
+2025-12-13 16:36:22,863 INFO     Training average loss at step 3200: 0.534196
+2025-12-13 16:36:35,939 INFO     Training average regularization at step 3400: 0.257892
+2025-12-13 16:36:35,940 INFO     Training average positive_sample_loss at step 3400: 0.244279
+2025-12-13 16:36:35,940 INFO     Training average negative_sample_loss at step 3400: 0.313679
+2025-12-13 16:36:35,940 INFO     Training average loss at step 3400: 0.536871
+2025-12-13 16:36:49,230 INFO     Training average regularization at step 3600: 0.261143
+2025-12-13 16:36:49,231 INFO     Training average positive_sample_loss at step 3600: 0.230942
+2025-12-13 16:36:49,231 INFO     Training average negative_sample_loss at step 3600: 0.301159
+2025-12-13 16:36:49,231 INFO     Training average loss at step 3600: 0.527194
+2025-12-13 16:37:02,370 INFO     Training average regularization at step 3800: 0.264082
+2025-12-13 16:37:02,371 INFO     Training average positive_sample_loss at step 3800: 0.225384
+2025-12-13 16:37:02,371 INFO     Training average negative_sample_loss at step 3800: 0.293593
+2025-12-13 16:37:02,371 INFO     Training average loss at step 3800: 0.523570
+2025-12-13 16:37:15,476 INFO     Training average regularization at step 4000: 0.266968
+2025-12-13 16:37:15,477 INFO     Training average positive_sample_loss at step 4000: 0.221504
+2025-12-13 16:37:15,477 INFO     Training average negative_sample_loss at step 4000: 0.285281
+2025-12-13 16:37:15,477 INFO     Training average loss at step 4000: 0.520360
+2025-12-13 16:37:28,613 INFO     Training average regularization at step 4200: 0.269855
+2025-12-13 16:37:28,613 INFO     Training average positive_sample_loss at step 4200: 0.213068
+2025-12-13 16:37:28,613 INFO     Training average negative_sample_loss at step 4200: 0.278693
+2025-12-13 16:37:28,613 INFO     Training average loss at step 4200: 0.515736
+2025-12-13 16:37:41,749 INFO     Training average regularization at step 4400: 0.272664
+2025-12-13 16:37:41,750 INFO     Training average positive_sample_loss at step 4400: 0.209925
+2025-12-13 16:37:41,750 INFO     Training average negative_sample_loss at step 4400: 0.276396
+2025-12-13 16:37:41,750 INFO     Training average loss at step 4400: 0.515824
+2025-12-13 16:37:54,888 INFO     Training average regularization at step 4600: 0.275335
+2025-12-13 16:37:54,889 INFO     Training average positive_sample_loss at step 4600: 0.204001
+2025-12-13 16:37:54,889 INFO     Training average negative_sample_loss at step 4600: 0.268526
+2025-12-13 16:37:54,889 INFO     Training average loss at step 4600: 0.511598
+2025-12-13 16:38:07,992 INFO     Training average regularization at step 4800: 0.277724
+2025-12-13 16:38:07,993 INFO     Training average positive_sample_loss at step 4800: 0.201973
+2025-12-13 16:38:07,993 INFO     Training average negative_sample_loss at step 4800: 0.265600
+2025-12-13 16:38:07,993 INFO     Training average loss at step 4800: 0.511511
+2025-12-13 16:38:22,116 INFO     Training average regularization at step 5000: 0.279596
+2025-12-13 16:38:22,116 INFO     Training average positive_sample_loss at step 5000: 0.172187
+2025-12-13 16:38:22,116 INFO     Training average negative_sample_loss at step 5000: 0.228652
+2025-12-13 16:38:22,116 INFO     Training average loss at step 5000: 0.480015
+2025-12-13 16:38:35,290 INFO     Training average regularization at step 5200: 0.281306
+2025-12-13 16:38:35,290 INFO     Training average positive_sample_loss at step 5200: 0.171358
+2025-12-13 16:38:35,290 INFO     Training average negative_sample_loss at step 5200: 0.229113
+2025-12-13 16:38:35,290 INFO     Training average loss at step 5200: 0.481541
+2025-12-13 16:38:48,639 INFO     Training average regularization at step 5400: 0.283610
+2025-12-13 16:38:48,640 INFO     Training average positive_sample_loss at step 5400: 0.173968
+2025-12-13 16:38:48,640 INFO     Training average negative_sample_loss at step 5400: 0.229761
+2025-12-13 16:38:48,640 INFO     Training average loss at step 5400: 0.485475
+2025-12-13 16:39:01,787 INFO     Training average regularization at step 5600: 0.286115
+2025-12-13 16:39:01,787 INFO     Training average positive_sample_loss at step 5600: 0.178591
+2025-12-13 16:39:01,788 INFO     Training average negative_sample_loss at step 5600: 0.228871
+2025-12-13 16:39:01,788 INFO     Training average loss at step 5600: 0.489846
+2025-12-13 16:39:14,874 INFO     Training average regularization at step 5800: 0.288460
+2025-12-13 16:39:14,875 INFO     Training average positive_sample_loss at step 5800: 0.179910
+2025-12-13 16:39:14,875 INFO     Training average negative_sample_loss at step 5800: 0.227015
+2025-12-13 16:39:14,875 INFO     Training average loss at step 5800: 0.491922
+2025-12-13 16:39:27,973 INFO     Training average regularization at step 6000: 0.290939
+2025-12-13 16:39:27,973 INFO     Training average positive_sample_loss at step 6000: 0.180603
+2025-12-13 16:39:27,973 INFO     Training average negative_sample_loss at step 6000: 0.230928
+2025-12-13 16:39:27,973 INFO     Training average loss at step 6000: 0.496705
+2025-12-13 16:39:41,108 INFO     Training average regularization at step 6200: 0.293323
+2025-12-13 16:39:41,109 INFO     Training average positive_sample_loss at step 6200: 0.179795
+2025-12-13 16:39:41,109 INFO     Training average negative_sample_loss at step 6200: 0.228173
+2025-12-13 16:39:41,109 INFO     Training average loss at step 6200: 0.497307
+2025-12-13 16:39:54,254 INFO     Training average regularization at step 6400: 0.295509
+2025-12-13 16:39:54,254 INFO     Training average positive_sample_loss at step 6400: 0.174459
+2025-12-13 16:39:54,254 INFO     Training average negative_sample_loss at step 6400: 0.224174
+2025-12-13 16:39:54,254 INFO     Training average loss at step 6400: 0.494825
+2025-12-13 16:40:07,322 INFO     Training average regularization at step 6600: 0.297531
+2025-12-13 16:40:07,324 INFO     Training average positive_sample_loss at step 6600: 0.177137
+2025-12-13 16:40:07,324 INFO     Training average negative_sample_loss at step 6600: 0.225510
+2025-12-13 16:40:07,324 INFO     Training average loss at step 6600: 0.498855
+2025-12-13 16:40:20,445 INFO     Training average regularization at step 6800: 0.299294
+2025-12-13 16:40:20,446 INFO     Training average positive_sample_loss at step 6800: 0.179895
+2025-12-13 16:40:20,446 INFO     Training average negative_sample_loss at step 6800: 0.222899
+2025-12-13 16:40:20,446 INFO     Training average loss at step 6800: 0.500691
+2025-12-13 16:40:33,530 INFO     Training average regularization at step 7000: 0.301023
+2025-12-13 16:40:33,530 INFO     Training average positive_sample_loss at step 7000: 0.175515
+2025-12-13 16:40:33,530 INFO     Training average negative_sample_loss at step 7000: 0.220037
+2025-12-13 16:40:33,530 INFO     Training average loss at step 7000: 0.498799
+2025-12-13 16:40:46,710 INFO     Training average regularization at step 7200: 0.302682
+2025-12-13 16:40:46,710 INFO     Training average positive_sample_loss at step 7200: 0.173676
+2025-12-13 16:40:46,711 INFO     Training average negative_sample_loss at step 7200: 0.218313
+2025-12-13 16:40:46,711 INFO     Training average loss at step 7200: 0.498676
+2025-12-13 16:40:59,838 INFO     Training average regularization at step 7400: 0.304323
+2025-12-13 16:40:59,842 INFO     Training average positive_sample_loss at step 7400: 0.173023
+2025-12-13 16:40:59,842 INFO     Training average negative_sample_loss at step 7400: 0.216298
+2025-12-13 16:40:59,842 INFO     Training average loss at step 7400: 0.498984
+2025-12-13 16:41:12,943 INFO     Training average regularization at step 7600: 0.306008
+2025-12-13 16:41:12,944 INFO     Training average positive_sample_loss at step 7600: 0.170648
+2025-12-13 16:41:12,944 INFO     Training average negative_sample_loss at step 7600: 0.215036
+2025-12-13 16:41:12,944 INFO     Training average loss at step 7600: 0.498850
+2025-12-13 16:41:26,091 INFO     Training average regularization at step 7800: 0.307694
+2025-12-13 16:41:26,092 INFO     Training average positive_sample_loss at step 7800: 0.167737
+2025-12-13 16:41:26,092 INFO     Training average negative_sample_loss at step 7800: 0.213762
+2025-12-13 16:41:26,092 INFO     Training average loss at step 7800: 0.498444
+2025-12-13 16:41:39,229 INFO     Training average regularization at step 8000: 0.309103
+2025-12-13 16:41:39,229 INFO     Training average positive_sample_loss at step 8000: 0.171481
+2025-12-13 16:41:39,229 INFO     Training average negative_sample_loss at step 8000: 0.213566
+2025-12-13 16:41:39,229 INFO     Training average loss at step 8000: 0.501626
+2025-12-13 16:41:52,385 INFO     Training average regularization at step 8200: 0.310321
+2025-12-13 16:41:52,386 INFO     Training average positive_sample_loss at step 8200: 0.166029
+2025-12-13 16:41:52,386 INFO     Training average negative_sample_loss at step 8200: 0.209303
+2025-12-13 16:41:52,386 INFO     Training average loss at step 8200: 0.497986
+2025-12-13 16:42:05,473 INFO     Training average regularization at step 8400: 0.311487
+2025-12-13 16:42:05,473 INFO     Training average positive_sample_loss at step 8400: 0.164834
+2025-12-13 16:42:05,473 INFO     Training average negative_sample_loss at step 8400: 0.204659
+2025-12-13 16:42:05,473 INFO     Training average loss at step 8400: 0.496233
+2025-12-13 16:42:18,596 INFO     Training average regularization at step 8600: 0.312464
+2025-12-13 16:42:18,597 INFO     Training average positive_sample_loss at step 8600: 0.164154
+2025-12-13 16:42:18,597 INFO     Training average negative_sample_loss at step 8600: 0.199060
+2025-12-13 16:42:18,597 INFO     Training average loss at step 8600: 0.494071
+2025-12-13 16:42:31,691 INFO     Training average regularization at step 8800: 0.313442
+2025-12-13 16:42:31,691 INFO     Training average positive_sample_loss at step 8800: 0.162135
+2025-12-13 16:42:31,691 INFO     Training average negative_sample_loss at step 8800: 0.200526
+2025-12-13 16:42:31,691 INFO     Training average loss at step 8800: 0.494772
+2025-12-13 16:42:45,082 INFO     Training average regularization at step 9000: 0.314429
+2025-12-13 16:42:45,082 INFO     Training average positive_sample_loss at step 9000: 0.159811
+2025-12-13 16:42:45,082 INFO     Training average negative_sample_loss at step 9000: 0.197975
+2025-12-13 16:42:45,082 INFO     Training average loss at step 9000: 0.493321
+2025-12-13 16:42:58,293 INFO     Training average regularization at step 9200: 0.315391
+2025-12-13 16:42:58,294 INFO     Training average positive_sample_loss at step 9200: 0.156540
+2025-12-13 16:42:58,294 INFO     Training average negative_sample_loss at step 9200: 0.199097
+2025-12-13 16:42:58,295 INFO     Training average loss at step 9200: 0.493209
+2025-12-13 16:43:11,480 INFO     Training average regularization at step 9400: 0.316310
+2025-12-13 16:43:11,481 INFO     Training average positive_sample_loss at step 9400: 0.152896
+2025-12-13 16:43:11,481 INFO     Training average negative_sample_loss at step 9400: 0.194233
+2025-12-13 16:43:11,481 INFO     Training average loss at step 9400: 0.489875
+2025-12-13 16:43:24,657 INFO     Training average regularization at step 9600: 0.317159
+2025-12-13 16:43:24,657 INFO     Training average positive_sample_loss at step 9600: 0.150353
+2025-12-13 16:43:24,657 INFO     Training average negative_sample_loss at step 9600: 0.193290
+2025-12-13 16:43:24,657 INFO     Training average loss at step 9600: 0.488981
+2025-12-13 16:43:38,851 INFO     Training average regularization at step 9800: 0.317876
+2025-12-13 16:43:38,852 INFO     Training average positive_sample_loss at step 9800: 0.134478
+2025-12-13 16:43:38,852 INFO     Training average negative_sample_loss at step 9800: 0.173449
+2025-12-13 16:43:38,852 INFO     Training average loss at step 9800: 0.471839
+2025-12-13 16:43:52,190 INFO     Training average regularization at step 10000: 0.318029
+2025-12-13 16:43:52,191 INFO     Training average positive_sample_loss at step 10000: 0.134696
+2025-12-13 16:43:52,191 INFO     Training average negative_sample_loss at step 10000: 0.167698
+2025-12-13 16:43:52,191 INFO     Training average loss at step 10000: 0.469226
+2025-12-13 16:43:52,191 INFO     Evaluating on Valid Dataset...
+2025-12-13 16:43:52,994 INFO     Evaluating the model... (0/25000)
+2025-12-13 16:44:00,783 INFO     Evaluating the model... (500/25000)
+2025-12-13 16:44:08,627 INFO     Evaluating the model... (1000/25000)
+2025-12-13 16:44:16,564 INFO     Evaluating the model... (1500/25000)
+2025-12-13 16:44:24,398 INFO     Evaluating the model... (2000/25000)
+2025-12-13 16:44:32,877 INFO     Evaluating the model... (2500/25000)
+2025-12-13 16:44:40,836 INFO     Evaluating the model... (3000/25000)
+2025-12-13 16:44:48,752 INFO     Evaluating the model... (3500/25000)
+2025-12-13 16:44:56,548 INFO     Evaluating the model... (4000/25000)
+2025-12-13 16:45:04,876 INFO     Evaluating the model... (4500/25000)
+2025-12-13 16:45:12,752 INFO     Evaluating the model... (5000/25000)
+2025-12-13 16:45:20,555 INFO     Evaluating the model... (5500/25000)
+2025-12-13 16:45:28,704 INFO     Evaluating the model... (6000/25000)
+2025-12-13 16:45:36,560 INFO     Evaluating the model... (6500/25000)
+2025-12-13 16:45:44,523 INFO     Evaluating the model... (7000/25000)
+2025-12-13 16:45:52,393 INFO     Evaluating the model... (7500/25000)
+2025-12-13 16:46:00,780 INFO     Evaluating the model... (8000/25000)
+2025-12-13 16:46:08,628 INFO     Evaluating the model... (8500/25000)
+2025-12-13 16:46:16,441 INFO     Evaluating the model... (9000/25000)
+2025-12-13 16:46:25,101 INFO     Evaluating the model... (9500/25000)
+2025-12-13 16:46:32,964 INFO     Evaluating the model... (10000/25000)
+2025-12-13 16:46:40,908 INFO     Evaluating the model... (10500/25000)
+2025-12-13 16:46:48,851 INFO     Evaluating the model... (11000/25000)
+2025-12-13 16:46:57,518 INFO     Evaluating the model... (11500/25000)
+2025-12-13 16:47:05,341 INFO     Evaluating the model... (12000/25000)
+2025-12-13 16:47:13,440 INFO     Evaluating the model... (12500/25000)
+2025-12-13 16:47:21,518 INFO     Evaluating the model... (13000/25000)
+2025-12-13 16:47:29,465 INFO     Evaluating the model... (13500/25000)
+2025-12-13 16:47:37,487 INFO     Evaluating the model... (14000/25000)
+2025-12-13 16:47:45,632 INFO     Evaluating the model... (14500/25000)
+2025-12-13 16:47:54,337 INFO     Evaluating the model... (15000/25000)
+2025-12-13 16:48:02,257 INFO     Evaluating the model... (15500/25000)
+2025-12-13 16:48:10,207 INFO     Evaluating the model... (16000/25000)
+2025-12-13 16:48:18,836 INFO     Evaluating the model... (16500/25000)
+2025-12-13 16:48:26,768 INFO     Evaluating the model... (17000/25000)
+2025-12-13 16:48:34,674 INFO     Evaluating the model... (17500/25000)
+2025-12-13 16:48:42,773 INFO     Evaluating the model... (18000/25000)
+2025-12-13 16:48:51,656 INFO     Evaluating the model... (18500/25000)
+2025-12-13 16:48:59,606 INFO     Evaluating the model... (19000/25000)
+2025-12-13 16:49:07,572 INFO     Evaluating the model... (19500/25000)
+2025-12-13 16:49:15,960 INFO     Evaluating the model... (20000/25000)
+2025-12-13 16:49:23,917 INFO     Evaluating the model... (20500/25000)
+2025-12-13 16:49:31,842 INFO     Evaluating the model... (21000/25000)
+2025-12-13 16:49:39,797 INFO     Evaluating the model... (21500/25000)
+2025-12-13 16:49:48,807 INFO     Evaluating the model... (22000/25000)
+2025-12-13 16:49:56,721 INFO     Evaluating the model... (22500/25000)
+2025-12-13 16:50:04,628 INFO     Evaluating the model... (23000/25000)
+2025-12-13 16:50:13,108 INFO     Evaluating the model... (23500/25000)
+2025-12-13 16:50:21,029 INFO     Evaluating the model... (24000/25000)
+2025-12-13 16:50:28,948 INFO     Evaluating the model... (24500/25000)
+2025-12-13 16:50:37,066 INFO     Valid MRR at step 10000: 0.651760
+2025-12-13 16:50:37,066 INFO     Valid MR at step 10000: 299.029300
+2025-12-13 16:50:37,066 INFO     Valid HITS@1 at step 10000: 0.573870
+2025-12-13 16:50:37,066 INFO     Valid HITS@3 at step 10000: 0.701960
+2025-12-13 16:50:37,066 INFO     Valid HITS@10 at step 10000: 0.790240
+2025-12-13 16:50:38,412 INFO     Evaluating on Test Dataset...
+2025-12-13 16:50:39,112 INFO     Evaluating the model... (0/29536)
+2025-12-13 16:50:47,089 INFO     Evaluating the model... (500/29536)
+2025-12-13 16:50:54,965 INFO     Evaluating the model... (1000/29536)
+2025-12-13 16:51:02,770 INFO     Evaluating the model... (1500/29536)
+2025-12-13 16:51:11,210 INFO     Evaluating the model... (2000/29536)
+2025-12-13 16:51:19,096 INFO     Evaluating the model... (2500/29536)
+2025-12-13 16:51:27,007 INFO     Evaluating the model... (3000/29536)
+2025-12-13 16:51:34,882 INFO     Evaluating the model... (3500/29536)
+2025-12-13 16:51:43,544 INFO     Evaluating the model... (4000/29536)
+2025-12-13 16:51:51,431 INFO     Evaluating the model... (4500/29536)
+2025-12-13 16:51:59,300 INFO     Evaluating the model... (5000/29536)
+2025-12-13 16:52:07,693 INFO     Evaluating the model... (5500/29536)
+2025-12-13 16:52:15,504 INFO     Evaluating the model... (6000/29536)
+2025-12-13 16:52:23,298 INFO     Evaluating the model... (6500/29536)
+2025-12-13 16:52:31,047 INFO     Evaluating the model... (7000/29536)
+2025-12-13 16:52:39,487 INFO     Evaluating the model... (7500/29536)
+2025-12-13 16:52:47,523 INFO     Evaluating the model... (8000/29536)
+2025-12-13 16:52:55,332 INFO     Evaluating the model... (8500/29536)
+2025-12-13 16:53:03,708 INFO     Evaluating the model... (9000/29536)
+2025-12-13 16:53:11,571 INFO     Evaluating the model... (9500/29536)
+2025-12-13 16:53:19,384 INFO     Evaluating the model... (10000/29536)
+2025-12-13 16:53:27,241 INFO     Evaluating the model... (10500/29536)
+2025-12-13 16:53:35,653 INFO     Evaluating the model... (11000/29536)
+2025-12-13 16:53:43,740 INFO     Evaluating the model... (11500/29536)
+2025-12-13 16:53:51,590 INFO     Evaluating the model... (12000/29536)
+2025-12-13 16:53:59,975 INFO     Evaluating the model... (12500/29536)
+2025-12-13 16:54:07,785 INFO     Evaluating the model... (13000/29536)
+2025-12-13 16:54:15,549 INFO     Evaluating the model... (13500/29536)
+2025-12-13 16:54:23,353 INFO     Evaluating the model... (14000/29536)
+2025-12-13 16:54:32,208 INFO     Evaluating the model... (14500/29536)
+2025-12-13 16:54:40,728 INFO     Evaluating the model... (15000/29536)
+2025-12-13 16:54:48,741 INFO     Evaluating the model... (15500/29536)
+2025-12-13 16:54:56,729 INFO     Evaluating the model... (16000/29536)
+2025-12-13 16:55:05,349 INFO     Evaluating the model... (16500/29536)
+2025-12-13 16:55:13,238 INFO     Evaluating the model... (17000/29536)
+2025-12-13 16:55:21,115 INFO     Evaluating the model... (17500/29536)
+2025-12-13 16:55:29,010 INFO     Evaluating the model... (18000/29536)
+2025-12-13 16:55:37,712 INFO     Evaluating the model... (18500/29536)
+2025-12-13 16:55:45,804 INFO     Evaluating the model... (19000/29536)
+2025-12-13 16:55:53,684 INFO     Evaluating the model... (19500/29536)
+2025-12-13 16:56:02,183 INFO     Evaluating the model... (20000/29536)
+2025-12-13 16:56:10,068 INFO     Evaluating the model... (20500/29536)
+2025-12-13 16:56:17,958 INFO     Evaluating the model... (21000/29536)
+2025-12-13 16:56:25,849 INFO     Evaluating the model... (21500/29536)
+2025-12-13 16:56:34,319 INFO     Evaluating the model... (22000/29536)
+2025-12-13 16:56:42,343 INFO     Evaluating the model... (22500/29536)
+2025-12-13 16:56:50,355 INFO     Evaluating the model... (23000/29536)
+2025-12-13 16:56:58,936 INFO     Evaluating the model... (23500/29536)
+2025-12-13 16:57:06,854 INFO     Evaluating the model... (24000/29536)
+2025-12-13 16:57:14,730 INFO     Evaluating the model... (24500/29536)
+2025-12-13 16:57:22,634 INFO     Evaluating the model... (25000/29536)
+2025-12-13 16:57:31,301 INFO     Evaluating the model... (25500/29536)
+2025-12-13 16:57:39,270 INFO     Evaluating the model... (26000/29536)
+2025-12-13 16:57:47,380 INFO     Evaluating the model... (26500/29536)
+2025-12-13 16:57:55,919 INFO     Evaluating the model... (27000/29536)
+2025-12-13 16:58:03,757 INFO     Evaluating the model... (27500/29536)
+2025-12-13 16:58:11,647 INFO     Evaluating the model... (28000/29536)
+2025-12-13 16:58:19,569 INFO     Evaluating the model... (28500/29536)
+2025-12-13 16:58:28,176 INFO     Evaluating the model... (29000/29536)
+2025-12-13 16:58:36,134 INFO     Evaluating the model... (29500/29536)
+2025-12-13 16:58:36,950 INFO     Test MRR at step 10000: 0.651224
+2025-12-13 16:58:36,950 INFO     Test MR at step 10000: 309.205854
+2025-12-13 16:58:36,950 INFO     Test HITS@1 at step 10000: 0.572988
+2025-12-13 16:58:36,950 INFO     Test HITS@3 at step 10000: 0.701588
+2025-12-13 16:58:36,950 INFO     Test HITS@10 at step 10000: 0.788940
+2025-12-13 16:58:50,319 INFO     Training average regularization at step 10200: 0.318470
+2025-12-13 16:58:50,320 INFO     Training average positive_sample_loss at step 10200: 0.135261
+2025-12-13 16:58:50,320 INFO     Training average negative_sample_loss at step 10200: 0.165121
+2025-12-13 16:58:50,320 INFO     Training average loss at step 10200: 0.468661
+2025-12-13 16:59:03,529 INFO     Training average regularization at step 10400: 0.319123
+2025-12-13 16:59:03,529 INFO     Training average positive_sample_loss at step 10400: 0.139906
+2025-12-13 16:59:03,529 INFO     Training average negative_sample_loss at step 10400: 0.170842
+2025-12-13 16:59:03,529 INFO     Training average loss at step 10400: 0.474497
+2025-12-13 16:59:16,678 INFO     Training average regularization at step 10600: 0.320289
+2025-12-13 16:59:16,678 INFO     Training average positive_sample_loss at step 10600: 0.142339
+2025-12-13 16:59:16,678 INFO     Training average negative_sample_loss at step 10600: 0.172682
+2025-12-13 16:59:16,679 INFO     Training average loss at step 10600: 0.477800
+2025-12-13 16:59:29,806 INFO     Training average regularization at step 10800: 0.321239
+2025-12-13 16:59:29,807 INFO     Training average positive_sample_loss at step 10800: 0.138126
+2025-12-13 16:59:29,807 INFO     Training average negative_sample_loss at step 10800: 0.176809
+2025-12-13 16:59:29,807 INFO     Training average loss at step 10800: 0.478706
+2025-12-13 16:59:43,000 INFO     Training average regularization at step 11000: 0.322325
+2025-12-13 16:59:43,000 INFO     Training average positive_sample_loss at step 11000: 0.142905
+2025-12-13 16:59:43,000 INFO     Training average negative_sample_loss at step 11000: 0.178939
+2025-12-13 16:59:43,000 INFO     Training average loss at step 11000: 0.483247
+2025-12-13 16:59:56,114 INFO     Training average regularization at step 11200: 0.323428
+2025-12-13 16:59:56,114 INFO     Training average positive_sample_loss at step 11200: 0.143789
+2025-12-13 16:59:56,114 INFO     Training average negative_sample_loss at step 11200: 0.173857
+2025-12-13 16:59:56,114 INFO     Training average loss at step 11200: 0.482251
+2025-12-13 17:00:09,234 INFO     Training average regularization at step 11400: 0.324481
+2025-12-13 17:00:09,234 INFO     Training average positive_sample_loss at step 11400: 0.148767
+2025-12-13 17:00:09,234 INFO     Training average negative_sample_loss at step 11400: 0.177416
+2025-12-13 17:00:09,234 INFO     Training average loss at step 11400: 0.487572
+2025-12-13 17:00:22,361 INFO     Training average regularization at step 11600: 0.325622
+2025-12-13 17:00:22,362 INFO     Training average positive_sample_loss at step 11600: 0.143429
+2025-12-13 17:00:22,362 INFO     Training average negative_sample_loss at step 11600: 0.177976
+2025-12-13 17:00:22,362 INFO     Training average loss at step 11600: 0.486324
+2025-12-13 17:00:35,489 INFO     Training average regularization at step 11800: 0.326748
+2025-12-13 17:00:35,489 INFO     Training average positive_sample_loss at step 11800: 0.149047
+2025-12-13 17:00:35,489 INFO     Training average negative_sample_loss at step 11800: 0.177763
+2025-12-13 17:00:35,489 INFO     Training average loss at step 11800: 0.490153
+2025-12-13 17:00:48,691 INFO     Training average regularization at step 12000: 0.327734
+2025-12-13 17:00:48,692 INFO     Training average positive_sample_loss at step 12000: 0.150324
+2025-12-13 17:00:48,692 INFO     Training average negative_sample_loss at step 12000: 0.179458
+2025-12-13 17:00:48,692 INFO     Training average loss at step 12000: 0.492625
+2025-12-13 17:01:01,839 INFO     Training average regularization at step 12200: 0.328713
+2025-12-13 17:01:01,840 INFO     Training average positive_sample_loss at step 12200: 0.147026
+2025-12-13 17:01:01,840 INFO     Training average negative_sample_loss at step 12200: 0.177809
+2025-12-13 17:01:01,840 INFO     Training average loss at step 12200: 0.491131
+2025-12-13 17:01:14,941 INFO     Training average regularization at step 12400: 0.329582
+2025-12-13 17:01:14,941 INFO     Training average positive_sample_loss at step 12400: 0.144630
+2025-12-13 17:01:14,941 INFO     Training average negative_sample_loss at step 12400: 0.175941
+2025-12-13 17:01:14,941 INFO     Training average loss at step 12400: 0.489867
+2025-12-13 17:01:28,057 INFO     Training average regularization at step 12600: 0.330258
+2025-12-13 17:01:28,057 INFO     Training average positive_sample_loss at step 12600: 0.146782
+2025-12-13 17:01:28,058 INFO     Training average negative_sample_loss at step 12600: 0.176689
+2025-12-13 17:01:28,058 INFO     Training average loss at step 12600: 0.491993
+2025-12-13 17:01:41,188 INFO     Training average regularization at step 12800: 0.330873
+2025-12-13 17:01:41,188 INFO     Training average positive_sample_loss at step 12800: 0.143914
+2025-12-13 17:01:41,189 INFO     Training average negative_sample_loss at step 12800: 0.172959
+2025-12-13 17:01:41,189 INFO     Training average loss at step 12800: 0.489309
+2025-12-13 17:01:54,324 INFO     Training average regularization at step 13000: 0.331361
+2025-12-13 17:01:54,324 INFO     Training average positive_sample_loss at step 13000: 0.146776
+2025-12-13 17:01:54,324 INFO     Training average negative_sample_loss at step 13000: 0.173577
+2025-12-13 17:01:54,324 INFO     Training average loss at step 13000: 0.491537
+2025-12-13 17:02:07,431 INFO     Training average regularization at step 13200: 0.331889
+2025-12-13 17:02:07,431 INFO     Training average positive_sample_loss at step 13200: 0.142240
+2025-12-13 17:02:07,431 INFO     Training average negative_sample_loss at step 13200: 0.172325
+2025-12-13 17:02:07,431 INFO     Training average loss at step 13200: 0.489171
+2025-12-13 17:02:20,541 INFO     Training average regularization at step 13400: 0.332460
+2025-12-13 17:02:20,542 INFO     Training average positive_sample_loss at step 13400: 0.144017
+2025-12-13 17:02:20,542 INFO     Training average negative_sample_loss at step 13400: 0.173925
+2025-12-13 17:02:20,542 INFO     Training average loss at step 13400: 0.491431
+2025-12-13 17:02:33,668 INFO     Training average regularization at step 13600: 0.333126
+2025-12-13 17:02:33,670 INFO     Training average positive_sample_loss at step 13600: 0.140035
+2025-12-13 17:02:33,670 INFO     Training average negative_sample_loss at step 13600: 0.170199
+2025-12-13 17:02:33,670 INFO     Training average loss at step 13600: 0.488243
+2025-12-13 17:02:46,851 INFO     Training average regularization at step 13800: 0.333584
+2025-12-13 17:02:46,851 INFO     Training average positive_sample_loss at step 13800: 0.137665
+2025-12-13 17:02:46,852 INFO     Training average negative_sample_loss at step 13800: 0.168521
+2025-12-13 17:02:46,852 INFO     Training average loss at step 13800: 0.486677
+2025-12-13 17:02:59,993 INFO     Training average regularization at step 14000: 0.334144
+2025-12-13 17:02:59,993 INFO     Training average positive_sample_loss at step 14000: 0.136403
+2025-12-13 17:02:59,993 INFO     Training average negative_sample_loss at step 14000: 0.166669
+2025-12-13 17:02:59,993 INFO     Training average loss at step 14000: 0.485679
+2025-12-13 17:03:13,106 INFO     Training average regularization at step 14200: 0.334461
+2025-12-13 17:03:13,106 INFO     Training average positive_sample_loss at step 14200: 0.136882
+2025-12-13 17:03:13,106 INFO     Training average negative_sample_loss at step 14200: 0.170570
+2025-12-13 17:03:13,106 INFO     Training average loss at step 14200: 0.488187
+2025-12-13 17:03:26,199 INFO     Training average regularization at step 14400: 0.334807
+2025-12-13 17:03:26,200 INFO     Training average positive_sample_loss at step 14400: 0.135160
+2025-12-13 17:03:26,200 INFO     Training average negative_sample_loss at step 14400: 0.163499
+2025-12-13 17:03:26,200 INFO     Training average loss at step 14400: 0.484137
+2025-12-13 17:03:40,331 INFO     Training average regularization at step 14600: 0.334993
+2025-12-13 17:03:40,332 INFO     Training average positive_sample_loss at step 14600: 0.118766
+2025-12-13 17:03:40,332 INFO     Training average negative_sample_loss at step 14600: 0.149041
+2025-12-13 17:03:40,332 INFO     Training average loss at step 14600: 0.468896
+2025-12-13 17:03:53,527 INFO     Training average regularization at step 14800: 0.334613
+2025-12-13 17:03:53,528 INFO     Training average positive_sample_loss at step 14800: 0.113606
+2025-12-13 17:03:53,528 INFO     Training average negative_sample_loss at step 14800: 0.135678
+2025-12-13 17:03:53,528 INFO     Training average loss at step 14800: 0.459255
+2025-12-13 17:04:06,610 INFO     Training average regularization at step 15000: 0.334308
+2025-12-13 17:04:06,610 INFO     Training average positive_sample_loss at step 15000: 0.120997
+2025-12-13 17:04:06,610 INFO     Training average negative_sample_loss at step 15000: 0.144345
+2025-12-13 17:04:06,610 INFO     Training average loss at step 15000: 0.466979
+2025-12-13 17:04:19,751 INFO     Training average regularization at step 15200: 0.334424
+2025-12-13 17:04:19,751 INFO     Training average positive_sample_loss at step 15200: 0.123649
+2025-12-13 17:04:19,751 INFO     Training average negative_sample_loss at step 15200: 0.145495
+2025-12-13 17:04:19,751 INFO     Training average loss at step 15200: 0.468996
+2025-12-13 17:04:32,870 INFO     Training average regularization at step 15400: 0.334786
+2025-12-13 17:04:32,870 INFO     Training average positive_sample_loss at step 15400: 0.119724
+2025-12-13 17:04:32,871 INFO     Training average negative_sample_loss at step 15400: 0.145051
+2025-12-13 17:04:32,871 INFO     Training average loss at step 15400: 0.467174
+2025-12-13 17:04:46,019 INFO     Training average regularization at step 15600: 0.335334
+2025-12-13 17:04:46,020 INFO     Training average positive_sample_loss at step 15600: 0.127044
+2025-12-13 17:04:46,020 INFO     Training average negative_sample_loss at step 15600: 0.148333
+2025-12-13 17:04:46,020 INFO     Training average loss at step 15600: 0.473023
+2025-12-13 17:04:59,150 INFO     Training average regularization at step 15800: 0.336002
+2025-12-13 17:04:59,150 INFO     Training average positive_sample_loss at step 15800: 0.126789
+2025-12-13 17:04:59,150 INFO     Training average negative_sample_loss at step 15800: 0.152033
+2025-12-13 17:04:59,150 INFO     Training average loss at step 15800: 0.475413
+2025-12-13 17:05:12,259 INFO     Training average regularization at step 16000: 0.336665
+2025-12-13 17:05:12,260 INFO     Training average positive_sample_loss at step 16000: 0.126203
+2025-12-13 17:05:12,260 INFO     Training average negative_sample_loss at step 16000: 0.147458
+2025-12-13 17:05:12,260 INFO     Training average loss at step 16000: 0.473495
+2025-12-13 17:05:25,381 INFO     Training average regularization at step 16200: 0.337459
+2025-12-13 17:05:25,381 INFO     Training average positive_sample_loss at step 16200: 0.132108
+2025-12-13 17:05:25,381 INFO     Training average negative_sample_loss at step 16200: 0.156212
+2025-12-13 17:05:25,381 INFO     Training average loss at step 16200: 0.481619
+2025-12-13 17:05:38,526 INFO     Training average regularization at step 16400: 0.338309
+2025-12-13 17:05:38,531 INFO     Training average positive_sample_loss at step 16400: 0.128357
+2025-12-13 17:05:38,531 INFO     Training average negative_sample_loss at step 16400: 0.154110
+2025-12-13 17:05:38,531 INFO     Training average loss at step 16400: 0.479542
+2025-12-13 17:05:51,767 INFO     Training average regularization at step 16600: 0.338996
+2025-12-13 17:05:51,767 INFO     Training average positive_sample_loss at step 16600: 0.130953
+2025-12-13 17:05:51,768 INFO     Training average negative_sample_loss at step 16600: 0.158229
+2025-12-13 17:05:51,768 INFO     Training average loss at step 16600: 0.483587
+2025-12-13 17:06:04,858 INFO     Training average regularization at step 16800: 0.339625
+2025-12-13 17:06:04,859 INFO     Training average positive_sample_loss at step 16800: 0.136809
+2025-12-13 17:06:04,859 INFO     Training average negative_sample_loss at step 16800: 0.156218
+2025-12-13 17:06:04,859 INFO     Training average loss at step 16800: 0.486139
+2025-12-13 17:06:17,964 INFO     Training average regularization at step 17000: 0.340391
+2025-12-13 17:06:17,965 INFO     Training average positive_sample_loss at step 17000: 0.135126
+2025-12-13 17:06:17,965 INFO     Training average negative_sample_loss at step 17000: 0.156196
+2025-12-13 17:06:17,965 INFO     Training average loss at step 17000: 0.486052
+2025-12-13 17:06:31,066 INFO     Training average regularization at step 17200: 0.341146
+2025-12-13 17:06:31,067 INFO     Training average positive_sample_loss at step 17200: 0.133965
+2025-12-13 17:06:31,067 INFO     Training average negative_sample_loss at step 17200: 0.157119
+2025-12-13 17:06:31,067 INFO     Training average loss at step 17200: 0.486688
+2025-12-13 17:06:44,215 INFO     Training average regularization at step 17400: 0.341549
+2025-12-13 17:06:44,215 INFO     Training average positive_sample_loss at step 17400: 0.135982
+2025-12-13 17:06:44,215 INFO     Training average negative_sample_loss at step 17400: 0.155835
+2025-12-13 17:06:44,215 INFO     Training average loss at step 17400: 0.487458
+2025-12-13 17:06:57,340 INFO     Training average regularization at step 17600: 0.341956
+2025-12-13 17:06:57,340 INFO     Training average positive_sample_loss at step 17600: 0.132384
+2025-12-13 17:06:57,340 INFO     Training average negative_sample_loss at step 17600: 0.157451
+2025-12-13 17:06:57,340 INFO     Training average loss at step 17600: 0.486873
+2025-12-13 17:07:10,469 INFO     Training average regularization at step 17800: 0.342256
+2025-12-13 17:07:10,470 INFO     Training average positive_sample_loss at step 17800: 0.132476
+2025-12-13 17:07:10,470 INFO     Training average negative_sample_loss at step 17800: 0.155087
+2025-12-13 17:07:10,470 INFO     Training average loss at step 17800: 0.486038
+2025-12-13 17:07:23,617 INFO     Training average regularization at step 18000: 0.342699
+2025-12-13 17:07:23,618 INFO     Training average positive_sample_loss at step 18000: 0.130979
+2025-12-13 17:07:23,618 INFO     Training average negative_sample_loss at step 18000: 0.156357
+2025-12-13 17:07:23,618 INFO     Training average loss at step 18000: 0.486368
+2025-12-13 17:07:36,725 INFO     Training average regularization at step 18200: 0.342974
+2025-12-13 17:07:36,726 INFO     Training average positive_sample_loss at step 18200: 0.128467
+2025-12-13 17:07:36,726 INFO     Training average negative_sample_loss at step 18200: 0.156638
+2025-12-13 17:07:36,726 INFO     Training average loss at step 18200: 0.485527
+2025-12-13 17:07:49,895 INFO     Training average regularization at step 18400: 0.343032
+2025-12-13 17:07:49,895 INFO     Training average positive_sample_loss at step 18400: 0.127968
+2025-12-13 17:07:49,895 INFO     Training average negative_sample_loss at step 18400: 0.150027
+2025-12-13 17:07:49,895 INFO     Training average loss at step 18400: 0.482030
+2025-12-13 17:08:03,012 INFO     Training average regularization at step 18600: 0.343128
+2025-12-13 17:08:03,013 INFO     Training average positive_sample_loss at step 18600: 0.123539
+2025-12-13 17:08:03,013 INFO     Training average negative_sample_loss at step 18600: 0.148961
+2025-12-13 17:08:03,013 INFO     Training average loss at step 18600: 0.479378
+2025-12-13 17:08:16,082 INFO     Training average regularization at step 18800: 0.343415
+2025-12-13 17:08:16,082 INFO     Training average positive_sample_loss at step 18800: 0.128497
+2025-12-13 17:08:16,082 INFO     Training average negative_sample_loss at step 18800: 0.147410
+2025-12-13 17:08:16,082 INFO     Training average loss at step 18800: 0.481368
+2025-12-13 17:08:29,211 INFO     Training average regularization at step 19000: 0.343462
+2025-12-13 17:08:29,211 INFO     Training average positive_sample_loss at step 19000: 0.126051
+2025-12-13 17:08:29,211 INFO     Training average negative_sample_loss at step 19000: 0.149620
+2025-12-13 17:08:29,211 INFO     Training average loss at step 19000: 0.481298
+2025-12-13 17:08:42,382 INFO     Training average regularization at step 19200: 0.343579
+2025-12-13 17:08:42,383 INFO     Training average positive_sample_loss at step 19200: 0.122650
+2025-12-13 17:08:42,383 INFO     Training average negative_sample_loss at step 19200: 0.145279
+2025-12-13 17:08:42,383 INFO     Training average loss at step 19200: 0.477543
+2025-12-13 17:08:56,548 INFO     Training average regularization at step 19400: 0.343569
+2025-12-13 17:08:56,548 INFO     Training average positive_sample_loss at step 19400: 0.118228
+2025-12-13 17:08:56,548 INFO     Training average negative_sample_loss at step 19400: 0.144505
+2025-12-13 17:08:56,548 INFO     Training average loss at step 19400: 0.474936
+2025-12-13 17:09:09,707 INFO     Training average regularization at step 19600: 0.342974
+2025-12-13 17:09:09,708 INFO     Training average positive_sample_loss at step 19600: 0.102146
+2025-12-13 17:09:09,708 INFO     Training average negative_sample_loss at step 19600: 0.125026
+2025-12-13 17:09:09,708 INFO     Training average loss at step 19600: 0.456560
+2025-12-13 17:09:22,873 INFO     Training average regularization at step 19800: 0.342640
+2025-12-13 17:09:22,874 INFO     Training average positive_sample_loss at step 19800: 0.109216
+2025-12-13 17:09:22,874 INFO     Training average negative_sample_loss at step 19800: 0.128715
+2025-12-13 17:09:22,874 INFO     Training average loss at step 19800: 0.461606
+2025-12-13 17:09:35,953 INFO     Change learning_rate to 0.000259 at step 20000
+2025-12-13 17:09:36,716 INFO     Training average regularization at step 20000: 0.342238
+2025-12-13 17:09:36,716 INFO     Training average positive_sample_loss at step 20000: 0.110480
+2025-12-13 17:09:36,716 INFO     Training average negative_sample_loss at step 20000: 0.132009
+2025-12-13 17:09:36,716 INFO     Training average loss at step 20000: 0.463482
+2025-12-13 17:09:36,716 INFO     Evaluating on Valid Dataset...
+2025-12-13 17:09:37,397 INFO     Evaluating the model... (0/25000)
+2025-12-13 17:09:45,497 INFO     Evaluating the model... (500/25000)
+2025-12-13 17:09:53,354 INFO     Evaluating the model... (1000/25000)
+2025-12-13 17:10:01,833 INFO     Evaluating the model... (1500/25000)
+2025-12-13 17:10:09,636 INFO     Evaluating the model... (2000/25000)
+2025-12-13 17:10:17,454 INFO     Evaluating the model... (2500/25000)
+2025-12-13 17:10:25,274 INFO     Evaluating the model... (3000/25000)
+2025-12-13 17:10:33,689 INFO     Evaluating the model... (3500/25000)
+2025-12-13 17:10:41,679 INFO     Evaluating the model... (4000/25000)
+2025-12-13 17:10:49,568 INFO     Evaluating the model... (4500/25000)
+2025-12-13 17:10:57,771 INFO     Evaluating the model... (5000/25000)
+2025-12-13 17:11:05,604 INFO     Evaluating the model... (5500/25000)
+2025-12-13 17:11:13,368 INFO     Evaluating the model... (6000/25000)
+2025-12-13 17:11:21,158 INFO     Evaluating the model... (6500/25000)
+2025-12-13 17:11:29,269 INFO     Evaluating the model... (7000/25000)
+2025-12-13 17:11:37,121 INFO     Evaluating the model... (7500/25000)
+2025-12-13 17:11:45,156 INFO     Evaluating the model... (8000/25000)
+2025-12-13 17:11:53,690 INFO     Evaluating the model... (8500/25000)
+2025-12-13 17:12:01,549 INFO     Evaluating the model... (9000/25000)
+2025-12-13 17:12:09,336 INFO     Evaluating the model... (9500/25000)
+2025-12-13 17:12:17,192 INFO     Evaluating the model... (10000/25000)
+2025-12-13 17:12:25,938 INFO     Evaluating the model... (10500/25000)
+2025-12-13 17:12:33,799 INFO     Evaluating the model... (11000/25000)
+2025-12-13 17:12:41,897 INFO     Evaluating the model... (11500/25000)
+2025-12-13 17:12:50,757 INFO     Evaluating the model... (12000/25000)
+2025-12-13 17:12:58,983 INFO     Evaluating the model... (12500/25000)
+2025-12-13 17:13:06,936 INFO     Evaluating the model... (13000/25000)
+2025-12-13 17:13:14,879 INFO     Evaluating the model... (13500/25000)
+2025-12-13 17:13:23,503 INFO     Evaluating the model... (14000/25000)
+2025-12-13 17:13:31,469 INFO     Evaluating the model... (14500/25000)
+2025-12-13 17:13:39,458 INFO     Evaluating the model... (15000/25000)
+2025-12-13 17:13:48,124 INFO     Evaluating the model... (15500/25000)
+2025-12-13 17:13:56,045 INFO     Evaluating the model... (16000/25000)
+2025-12-13 17:14:03,908 INFO     Evaluating the model... (16500/25000)
+2025-12-13 17:14:11,817 INFO     Evaluating the model... (17000/25000)
+2025-12-13 17:14:20,473 INFO     Evaluating the model... (17500/25000)
+2025-12-13 17:14:28,386 INFO     Evaluating the model... (18000/25000)
+2025-12-13 17:14:36,299 INFO     Evaluating the model... (18500/25000)
+2025-12-13 17:14:45,048 INFO     Evaluating the model... (19000/25000)
+2025-12-13 17:14:53,043 INFO     Evaluating the model... (19500/25000)
+2025-12-13 17:15:01,050 INFO     Evaluating the model... (20000/25000)
+2025-12-13 17:15:09,010 INFO     Evaluating the model... (20500/25000)
+2025-12-13 17:15:17,485 INFO     Evaluating the model... (21000/25000)
+2025-12-13 17:15:25,426 INFO     Evaluating the model... (21500/25000)
+2025-12-13 17:15:33,354 INFO     Evaluating the model... (22000/25000)
+2025-12-13 17:15:41,987 INFO     Evaluating the model... (22500/25000)
+2025-12-13 17:15:50,063 INFO     Evaluating the model... (23000/25000)
+2025-12-13 17:15:57,994 INFO     Evaluating the model... (23500/25000)
+2025-12-13 17:16:05,880 INFO     Evaluating the model... (24000/25000)
+2025-12-13 17:16:14,707 INFO     Evaluating the model... (24500/25000)
+2025-12-13 17:16:22,923 INFO     Valid MRR at step 20000: 0.612500
+2025-12-13 17:16:22,923 INFO     Valid MR at step 20000: 498.418380
+2025-12-13 17:16:22,923 INFO     Valid HITS@1 at step 20000: 0.540170
+2025-12-13 17:16:22,923 INFO     Valid HITS@3 at step 20000: 0.657050
+2025-12-13 17:16:22,923 INFO     Valid HITS@10 at step 20000: 0.741450
+2025-12-13 17:16:22,923 INFO     Evaluating on Test Dataset...
+2025-12-13 17:16:23,482 INFO     Evaluating the model... (0/29536)
+2025-12-13 17:16:31,525 INFO     Evaluating the model... (500/29536)
+2025-12-13 17:16:40,579 INFO     Evaluating the model... (1000/29536)
+2025-12-13 17:16:48,694 INFO     Evaluating the model... (1500/29536)
+2025-12-13 17:16:56,598 INFO     Evaluating the model... (2000/29536)
+2025-12-13 17:17:04,418 INFO     Evaluating the model... (2500/29536)
+2025-12-13 17:17:12,818 INFO     Evaluating the model... (3000/29536)
+2025-12-13 17:17:20,680 INFO     Evaluating the model... (3500/29536)
+2025-12-13 17:17:28,522 INFO     Evaluating the model... (4000/29536)
+2025-12-13 17:17:37,137 INFO     Evaluating the model... (4500/29536)
+2025-12-13 17:17:45,251 INFO     Evaluating the model... (5000/29536)
+2025-12-13 17:17:53,097 INFO     Evaluating the model... (5500/29536)
+2025-12-13 17:18:00,884 INFO     Evaluating the model... (6000/29536)
+2025-12-13 17:18:09,303 INFO     Evaluating the model... (6500/29536)
+2025-12-13 17:18:17,162 INFO     Evaluating the model... (7000/29536)
+2025-12-13 17:18:24,949 INFO     Evaluating the model... (7500/29536)
+2025-12-13 17:18:33,438 INFO     Evaluating the model... (8000/29536)
+2025-12-13 17:18:41,514 INFO     Evaluating the model... (8500/29536)
+2025-12-13 17:18:49,609 INFO     Evaluating the model... (9000/29536)
+2025-12-13 17:18:57,460 INFO     Evaluating the model... (9500/29536)
+2025-12-13 17:19:05,834 INFO     Evaluating the model... (10000/29536)
+2025-12-13 17:19:13,621 INFO     Evaluating the model... (10500/29536)
+2025-12-13 17:19:21,469 INFO     Evaluating the model... (11000/29536)
+2025-12-13 17:19:29,798 INFO     Evaluating the model... (11500/29536)
+2025-12-13 17:19:37,711 INFO     Evaluating the model... (12000/29536)
+2025-12-13 17:19:45,676 INFO     Evaluating the model... (12500/29536)
+2025-12-13 17:19:53,507 INFO     Evaluating the model... (13000/29536)
+2025-12-13 17:20:01,956 INFO     Evaluating the model... (13500/29536)
+2025-12-13 17:20:09,802 INFO     Evaluating the model... (14000/29536)
+2025-12-13 17:20:17,692 INFO     Evaluating the model... (14500/29536)
+2025-12-13 17:20:26,035 INFO     Evaluating the model... (15000/29536)
+2025-12-13 17:20:34,761 INFO     Evaluating the model... (15500/29536)
+2025-12-13 17:20:42,902 INFO     Evaluating the model... (16000/29536)
+2025-12-13 17:20:50,885 INFO     Evaluating the model... (16500/29536)
+2025-12-13 17:20:58,854 INFO     Evaluating the model... (17000/29536)
+2025-12-13 17:21:07,413 INFO     Evaluating the model... (17500/29536)
+2025-12-13 17:21:15,354 INFO     Evaluating the model... (18000/29536)
+2025-12-13 17:21:23,369 INFO     Evaluating the model... (18500/29536)
+2025-12-13 17:21:31,845 INFO     Evaluating the model... (19000/29536)
+2025-12-13 17:21:39,851 INFO     Evaluating the model... (19500/29536)
+2025-12-13 17:21:47,820 INFO     Evaluating the model... (20000/29536)
+2025-12-13 17:21:55,831 INFO     Evaluating the model... (20500/29536)
+2025-12-13 17:22:04,262 INFO     Evaluating the model... (21000/29536)
+2025-12-13 17:22:12,153 INFO     Evaluating the model... (21500/29536)
+2025-12-13 17:22:20,078 INFO     Evaluating the model... (22000/29536)
+2025-12-13 17:22:28,514 INFO     Evaluating the model... (22500/29536)
+2025-12-13 17:22:36,506 INFO     Evaluating the model... (23000/29536)
+2025-12-13 17:22:44,581 INFO     Evaluating the model... (23500/29536)
+2025-12-13 17:22:52,491 INFO     Evaluating the model... (24000/29536)
+2025-12-13 17:23:00,737 INFO     Evaluating the model... (24500/29536)
+2025-12-13 17:23:08,633 INFO     Evaluating the model... (25000/29536)
+2025-12-13 17:23:16,548 INFO     Evaluating the model... (25500/29536)
+2025-12-13 17:23:25,151 INFO     Evaluating the model... (26000/29536)
+2025-12-13 17:23:33,053 INFO     Evaluating the model... (26500/29536)
+2025-12-13 17:23:41,097 INFO     Evaluating the model... (27000/29536)
+2025-12-13 17:23:49,113 INFO     Evaluating the model... (27500/29536)
+2025-12-13 17:23:57,901 INFO     Evaluating the model... (28000/29536)
+2025-12-13 17:24:05,776 INFO     Evaluating the model... (28500/29536)
+2025-12-13 17:24:13,680 INFO     Evaluating the model... (29000/29536)
+2025-12-13 17:24:22,461 INFO     Evaluating the model... (29500/29536)
+2025-12-13 17:24:23,285 INFO     Test MRR at step 20000: 0.609058
+2025-12-13 17:24:23,285 INFO     Test MR at step 20000: 513.733312
+2025-12-13 17:24:23,285 INFO     Test HITS@1 at step 20000: 0.536414
+2025-12-13 17:24:23,285 INFO     Test HITS@3 at step 20000: 0.654043
+2025-12-13 17:24:23,285 INFO     Test HITS@10 at step 20000: 0.739297
+2025-12-13 17:24:36,546 INFO     Training average regularization at step 20200: 0.323866
+2025-12-13 17:24:36,546 INFO     Training average positive_sample_loss at step 20200: 0.131529
+2025-12-13 17:24:36,546 INFO     Training average negative_sample_loss at step 20200: 0.112867
+2025-12-13 17:24:36,546 INFO     Training average loss at step 20200: 0.446064
+2025-12-13 17:24:49,921 INFO     Training average regularization at step 20400: 0.310775
+2025-12-13 17:24:49,921 INFO     Training average positive_sample_loss at step 20400: 0.132999
+2025-12-13 17:24:49,921 INFO     Training average negative_sample_loss at step 20400: 0.111255
+2025-12-13 17:24:49,921 INFO     Training average loss at step 20400: 0.432901
+2025-12-13 17:25:03,151 INFO     Training average regularization at step 20600: 0.306152
+2025-12-13 17:25:03,152 INFO     Training average positive_sample_loss at step 20600: 0.125786
+2025-12-13 17:25:03,152 INFO     Training average negative_sample_loss at step 20600: 0.108951
+2025-12-13 17:25:03,152 INFO     Training average loss at step 20600: 0.423521
+2025-12-13 17:25:16,334 INFO     Training average regularization at step 20800: 0.303516
+2025-12-13 17:25:16,334 INFO     Training average positive_sample_loss at step 20800: 0.122618
+2025-12-13 17:25:16,335 INFO     Training average negative_sample_loss at step 20800: 0.102850
+2025-12-13 17:25:16,335 INFO     Training average loss at step 20800: 0.416250
+2025-12-13 17:25:29,552 INFO     Training average regularization at step 21000: 0.301603
+2025-12-13 17:25:29,552 INFO     Training average positive_sample_loss at step 21000: 0.114296
+2025-12-13 17:25:29,552 INFO     Training average negative_sample_loss at step 21000: 0.098557
+2025-12-13 17:25:29,552 INFO     Training average loss at step 21000: 0.408030
+2025-12-13 17:25:42,896 INFO     Training average regularization at step 21200: 0.300008
+2025-12-13 17:25:42,897 INFO     Training average positive_sample_loss at step 21200: 0.112270
+2025-12-13 17:25:42,897 INFO     Training average negative_sample_loss at step 21200: 0.092714
+2025-12-13 17:25:42,897 INFO     Training average loss at step 21200: 0.402500
+2025-12-13 17:25:56,122 INFO     Training average regularization at step 21400: 0.298596
+2025-12-13 17:25:56,122 INFO     Training average positive_sample_loss at step 21400: 0.100259
+2025-12-13 17:25:56,122 INFO     Training average negative_sample_loss at step 21400: 0.090261
+2025-12-13 17:25:56,122 INFO     Training average loss at step 21400: 0.393857
+2025-12-13 17:26:09,316 INFO     Training average regularization at step 21600: 0.297308
+2025-12-13 17:26:09,317 INFO     Training average positive_sample_loss at step 21600: 0.097824
+2025-12-13 17:26:09,317 INFO     Training average negative_sample_loss at step 21600: 0.086939
+2025-12-13 17:26:09,317 INFO     Training average loss at step 21600: 0.389690
+2025-12-13 17:26:22,518 INFO     Training average regularization at step 21800: 0.296089
+2025-12-13 17:26:22,519 INFO     Training average positive_sample_loss at step 21800: 0.091652
+2025-12-13 17:26:22,519 INFO     Training average negative_sample_loss at step 21800: 0.083024
+2025-12-13 17:26:22,519 INFO     Training average loss at step 21800: 0.383428
+2025-12-13 17:26:35,733 INFO     Training average regularization at step 22000: 0.294940
+2025-12-13 17:26:35,733 INFO     Training average positive_sample_loss at step 22000: 0.086967
+2025-12-13 17:26:35,733 INFO     Training average negative_sample_loss at step 22000: 0.083840
+2025-12-13 17:26:35,733 INFO     Training average loss at step 22000: 0.380344
+2025-12-13 17:26:49,069 INFO     Training average regularization at step 22200: 0.293829
+2025-12-13 17:26:49,077 INFO     Training average positive_sample_loss at step 22200: 0.080973
+2025-12-13 17:26:49,077 INFO     Training average negative_sample_loss at step 22200: 0.076650
+2025-12-13 17:26:49,077 INFO     Training average loss at step 22200: 0.372641
+2025-12-13 17:27:02,284 INFO     Training average regularization at step 22400: 0.292740
+2025-12-13 17:27:02,285 INFO     Training average positive_sample_loss at step 22400: 0.076635
+2025-12-13 17:27:02,285 INFO     Training average negative_sample_loss at step 22400: 0.076781
+2025-12-13 17:27:02,285 INFO     Training average loss at step 22400: 0.369448
+2025-12-13 17:27:15,507 INFO     Training average regularization at step 22600: 0.291687
+2025-12-13 17:27:15,507 INFO     Training average positive_sample_loss at step 22600: 0.075009
+2025-12-13 17:27:15,507 INFO     Training average negative_sample_loss at step 22600: 0.074084
+2025-12-13 17:27:15,507 INFO     Training average loss at step 22600: 0.366234
+2025-12-13 17:27:28,738 INFO     Training average regularization at step 22800: 0.290653
+2025-12-13 17:27:28,739 INFO     Training average positive_sample_loss at step 22800: 0.072558
+2025-12-13 17:27:28,739 INFO     Training average negative_sample_loss at step 22800: 0.069950
+2025-12-13 17:27:28,739 INFO     Training average loss at step 22800: 0.361907
+2025-12-13 17:27:42,069 INFO     Training average regularization at step 23000: 0.289626
+2025-12-13 17:27:42,070 INFO     Training average positive_sample_loss at step 23000: 0.067196
+2025-12-13 17:27:42,070 INFO     Training average negative_sample_loss at step 23000: 0.069014
+2025-12-13 17:27:42,070 INFO     Training average loss at step 23000: 0.357732
+2025-12-13 17:27:55,328 INFO     Training average regularization at step 23200: 0.288603
+2025-12-13 17:27:55,328 INFO     Training average positive_sample_loss at step 23200: 0.069676
+2025-12-13 17:27:55,328 INFO     Training average negative_sample_loss at step 23200: 0.071053
+2025-12-13 17:27:55,328 INFO     Training average loss at step 23200: 0.358967
+2025-12-13 17:28:08,519 INFO     Training average regularization at step 23400: 0.287599
+2025-12-13 17:28:08,519 INFO     Training average positive_sample_loss at step 23400: 0.060670
+2025-12-13 17:28:08,520 INFO     Training average negative_sample_loss at step 23400: 0.064636
+2025-12-13 17:28:08,520 INFO     Training average loss at step 23400: 0.350251
+2025-12-13 17:28:21,722 INFO     Training average regularization at step 23600: 0.286595
+2025-12-13 17:28:21,728 INFO     Training average positive_sample_loss at step 23600: 0.058022
+2025-12-13 17:28:21,728 INFO     Training average negative_sample_loss at step 23600: 0.063507
+2025-12-13 17:28:21,728 INFO     Training average loss at step 23600: 0.347360
+2025-12-13 17:28:34,905 INFO     Training average regularization at step 23800: 0.285586
+2025-12-13 17:28:34,905 INFO     Training average positive_sample_loss at step 23800: 0.058856
+2025-12-13 17:28:34,905 INFO     Training average negative_sample_loss at step 23800: 0.063685
+2025-12-13 17:28:34,905 INFO     Training average loss at step 23800: 0.346856
+2025-12-13 17:28:48,351 INFO     Training average regularization at step 24000: 0.284583
+2025-12-13 17:28:48,356 INFO     Training average positive_sample_loss at step 24000: 0.053968
+2025-12-13 17:28:48,356 INFO     Training average negative_sample_loss at step 24000: 0.062449
+2025-12-13 17:28:48,356 INFO     Training average loss at step 24000: 0.342792
+2025-12-13 17:29:02,540 INFO     Training average regularization at step 24200: 0.283580
+2025-12-13 17:29:02,540 INFO     Training average positive_sample_loss at step 24200: 0.048639
+2025-12-13 17:29:02,540 INFO     Training average negative_sample_loss at step 24200: 0.059792
+2025-12-13 17:29:02,540 INFO     Training average loss at step 24200: 0.337796
+2025-12-13 17:29:15,744 INFO     Training average regularization at step 24400: 0.282527
+2025-12-13 17:29:15,744 INFO     Training average positive_sample_loss at step 24400: 0.034724
+2025-12-13 17:29:15,744 INFO     Training average negative_sample_loss at step 24400: 0.050078
+2025-12-13 17:29:15,744 INFO     Training average loss at step 24400: 0.324928
+2025-12-13 17:29:28,949 INFO     Training average regularization at step 24600: 0.281488
+2025-12-13 17:29:28,949 INFO     Training average positive_sample_loss at step 24600: 0.035606
+2025-12-13 17:29:28,949 INFO     Training average negative_sample_loss at step 24600: 0.047520
+2025-12-13 17:29:28,950 INFO     Training average loss at step 24600: 0.323051
+2025-12-13 17:29:42,284 INFO     Training average regularization at step 24800: 0.280442
+2025-12-13 17:29:42,284 INFO     Training average positive_sample_loss at step 24800: 0.034618
+2025-12-13 17:29:42,284 INFO     Training average negative_sample_loss at step 24800: 0.045041
+2025-12-13 17:29:42,285 INFO     Training average loss at step 24800: 0.320271
+2025-12-13 17:29:55,571 INFO     Training average regularization at step 25000: 0.279385
+2025-12-13 17:29:55,625 INFO     Training average positive_sample_loss at step 25000: 0.033661
+2025-12-13 17:29:55,625 INFO     Training average negative_sample_loss at step 25000: 0.045652
+2025-12-13 17:29:55,625 INFO     Training average loss at step 25000: 0.319042
+2025-12-13 17:30:08,841 INFO     Training average regularization at step 25200: 0.278306
+2025-12-13 17:30:08,841 INFO     Training average positive_sample_loss at step 25200: 0.033770
+2025-12-13 17:30:08,841 INFO     Training average negative_sample_loss at step 25200: 0.043729
+2025-12-13 17:30:08,841 INFO     Training average loss at step 25200: 0.317055
+2025-12-13 17:30:22,008 INFO     Training average regularization at step 25400: 0.277227
+2025-12-13 17:30:22,009 INFO     Training average positive_sample_loss at step 25400: 0.033243
+2025-12-13 17:30:22,009 INFO     Training average negative_sample_loss at step 25400: 0.045785
+2025-12-13 17:30:22,009 INFO     Training average loss at step 25400: 0.316741
+2025-12-13 17:30:35,201 INFO     Training average regularization at step 25600: 0.276130
+2025-12-13 17:30:35,202 INFO     Training average positive_sample_loss at step 25600: 0.033735
+2025-12-13 17:30:35,202 INFO     Training average negative_sample_loss at step 25600: 0.046602
+2025-12-13 17:30:35,202 INFO     Training average loss at step 25600: 0.316299
+2025-12-13 17:30:48,600 INFO     Training average regularization at step 25800: 0.275035
+2025-12-13 17:30:48,600 INFO     Training average positive_sample_loss at step 25800: 0.032958
+2025-12-13 17:30:48,600 INFO     Training average negative_sample_loss at step 25800: 0.044993
+2025-12-13 17:30:48,600 INFO     Training average loss at step 25800: 0.314011
+2025-12-13 17:31:01,799 INFO     Training average regularization at step 26000: 0.273932
+2025-12-13 17:31:01,800 INFO     Training average positive_sample_loss at step 26000: 0.033736
+2025-12-13 17:31:01,800 INFO     Training average negative_sample_loss at step 26000: 0.044039
+2025-12-13 17:31:01,800 INFO     Training average loss at step 26000: 0.312820
+2025-12-13 17:31:15,011 INFO     Training average regularization at step 26200: 0.272842
+2025-12-13 17:31:15,011 INFO     Training average positive_sample_loss at step 26200: 0.032961
+2025-12-13 17:31:15,011 INFO     Training average negative_sample_loss at step 26200: 0.044316
+2025-12-13 17:31:15,011 INFO     Training average loss at step 26200: 0.311480
+2025-12-13 17:31:28,226 INFO     Training average regularization at step 26400: 0.271742
+2025-12-13 17:31:28,228 INFO     Training average positive_sample_loss at step 26400: 0.032501
+2025-12-13 17:31:28,228 INFO     Training average negative_sample_loss at step 26400: 0.044422
+2025-12-13 17:31:28,228 INFO     Training average loss at step 26400: 0.310203
+2025-12-13 17:31:41,555 INFO     Training average regularization at step 26600: 0.270637
+2025-12-13 17:31:41,556 INFO     Training average positive_sample_loss at step 26600: 0.032186
+2025-12-13 17:31:41,556 INFO     Training average negative_sample_loss at step 26600: 0.042437
+2025-12-13 17:31:41,556 INFO     Training average loss at step 26600: 0.307949
+2025-12-13 17:31:54,819 INFO     Training average regularization at step 26800: 0.269533
+2025-12-13 17:31:54,820 INFO     Training average positive_sample_loss at step 26800: 0.030836
+2025-12-13 17:31:54,820 INFO     Training average negative_sample_loss at step 26800: 0.041928
+2025-12-13 17:31:54,820 INFO     Training average loss at step 26800: 0.305915
+2025-12-13 17:32:08,042 INFO     Training average regularization at step 27000: 0.268410
+2025-12-13 17:32:08,043 INFO     Training average positive_sample_loss at step 27000: 0.029782
+2025-12-13 17:32:08,043 INFO     Training average negative_sample_loss at step 27000: 0.042681
+2025-12-13 17:32:08,043 INFO     Training average loss at step 27000: 0.304642
+2025-12-13 17:32:21,230 INFO     Training average regularization at step 27200: 0.267315
+2025-12-13 17:32:21,231 INFO     Training average positive_sample_loss at step 27200: 0.028892
+2025-12-13 17:32:21,231 INFO     Training average negative_sample_loss at step 27200: 0.039810
+2025-12-13 17:32:21,231 INFO     Training average loss at step 27200: 0.301666
+2025-12-13 17:32:34,419 INFO     Training average regularization at step 27400: 0.266191
+2025-12-13 17:32:34,420 INFO     Training average positive_sample_loss at step 27400: 0.027058
+2025-12-13 17:32:34,420 INFO     Training average negative_sample_loss at step 27400: 0.038270
+2025-12-13 17:32:34,420 INFO     Training average loss at step 27400: 0.298855
+2025-12-13 17:32:47,855 INFO     Training average regularization at step 27600: 0.265070
+2025-12-13 17:32:47,855 INFO     Training average positive_sample_loss at step 27600: 0.027393
+2025-12-13 17:32:47,855 INFO     Training average negative_sample_loss at step 27600: 0.041759
+2025-12-13 17:32:47,855 INFO     Training average loss at step 27600: 0.299646
+2025-12-13 17:33:01,056 INFO     Training average regularization at step 27800: 0.263958
+2025-12-13 17:33:01,056 INFO     Training average positive_sample_loss at step 27800: 0.028825
+2025-12-13 17:33:01,056 INFO     Training average negative_sample_loss at step 27800: 0.039840
+2025-12-13 17:33:01,056 INFO     Training average loss at step 27800: 0.298291
+2025-12-13 17:33:14,257 INFO     Training average regularization at step 28000: 0.262846
+2025-12-13 17:33:14,257 INFO     Training average positive_sample_loss at step 28000: 0.026542
+2025-12-13 17:33:14,257 INFO     Training average negative_sample_loss at step 28000: 0.040179
+2025-12-13 17:33:14,257 INFO     Training average loss at step 28000: 0.296207
+2025-12-13 17:33:27,488 INFO     Training average regularization at step 28200: 0.261724
+2025-12-13 17:33:27,489 INFO     Training average positive_sample_loss at step 28200: 0.028140
+2025-12-13 17:33:27,489 INFO     Training average negative_sample_loss at step 28200: 0.039919
+2025-12-13 17:33:27,489 INFO     Training average loss at step 28200: 0.295754
+2025-12-13 17:33:40,787 INFO     Training average regularization at step 28400: 0.260614
+2025-12-13 17:33:40,787 INFO     Training average positive_sample_loss at step 28400: 0.025179
+2025-12-13 17:33:40,787 INFO     Training average negative_sample_loss at step 28400: 0.036919
+2025-12-13 17:33:40,787 INFO     Training average loss at step 28400: 0.291664
+2025-12-13 17:33:54,068 INFO     Training average regularization at step 28600: 0.259492
+2025-12-13 17:33:54,068 INFO     Training average positive_sample_loss at step 28600: 0.024801
+2025-12-13 17:33:54,068 INFO     Training average negative_sample_loss at step 28600: 0.038518
+2025-12-13 17:33:54,068 INFO     Training average loss at step 28600: 0.291152
+2025-12-13 17:34:07,242 INFO     Training average regularization at step 28800: 0.258377
+2025-12-13 17:34:07,243 INFO     Training average positive_sample_loss at step 28800: 0.024814
+2025-12-13 17:34:07,243 INFO     Training average negative_sample_loss at step 28800: 0.040447
+2025-12-13 17:34:07,243 INFO     Training average loss at step 28800: 0.291008
+2025-12-13 17:34:21,371 INFO     Training average regularization at step 29000: 0.257290
+2025-12-13 17:34:21,372 INFO     Training average positive_sample_loss at step 29000: 0.022710
+2025-12-13 17:34:21,372 INFO     Training average negative_sample_loss at step 29000: 0.036496
+2025-12-13 17:34:21,372 INFO     Training average loss at step 29000: 0.286893
+2025-12-13 17:34:34,545 INFO     Training average regularization at step 29200: 0.256126
+2025-12-13 17:34:34,546 INFO     Training average positive_sample_loss at step 29200: 0.017229
+2025-12-13 17:34:34,546 INFO     Training average negative_sample_loss at step 29200: 0.031979
+2025-12-13 17:34:34,546 INFO     Training average loss at step 29200: 0.280730
+2025-12-13 17:34:47,922 INFO     Training average regularization at step 29400: 0.254956
+2025-12-13 17:34:47,922 INFO     Training average positive_sample_loss at step 29400: 0.017950
+2025-12-13 17:34:47,922 INFO     Training average negative_sample_loss at step 29400: 0.029825
+2025-12-13 17:34:47,922 INFO     Training average loss at step 29400: 0.278844
+2025-12-13 17:35:01,096 INFO     Training average regularization at step 29600: 0.253797
+2025-12-13 17:35:01,097 INFO     Training average positive_sample_loss at step 29600: 0.018261
+2025-12-13 17:35:01,097 INFO     Training average negative_sample_loss at step 29600: 0.030780
+2025-12-13 17:35:01,097 INFO     Training average loss at step 29600: 0.278317
+2025-12-13 17:35:14,258 INFO     Training average regularization at step 29800: 0.252637
+2025-12-13 17:35:14,258 INFO     Training average positive_sample_loss at step 29800: 0.018452
+2025-12-13 17:35:14,258 INFO     Training average negative_sample_loss at step 29800: 0.030689
+2025-12-13 17:35:14,258 INFO     Training average loss at step 29800: 0.277208
+2025-12-13 17:35:27,459 INFO     Training average regularization at step 30000: 0.251489
+2025-12-13 17:35:27,460 INFO     Training average positive_sample_loss at step 30000: 0.019179
+2025-12-13 17:35:27,460 INFO     Training average negative_sample_loss at step 30000: 0.031766
+2025-12-13 17:35:27,460 INFO     Training average loss at step 30000: 0.276962
+2025-12-13 17:35:27,460 INFO     Evaluating on Valid Dataset...
+2025-12-13 17:35:28,158 INFO     Evaluating the model... (0/25000)
+2025-12-13 17:35:37,005 INFO     Evaluating the model... (500/25000)
+2025-12-13 17:35:45,191 INFO     Evaluating the model... (1000/25000)
+2025-12-13 17:35:53,107 INFO     Evaluating the model... (1500/25000)
+2025-12-13 17:36:00,953 INFO     Evaluating the model... (2000/25000)
+2025-12-13 17:36:09,231 INFO     Evaluating the model... (2500/25000)
+2025-12-13 17:36:17,054 INFO     Evaluating the model... (3000/25000)
+2025-12-13 17:36:24,845 INFO     Evaluating the model... (3500/25000)
+2025-12-13 17:36:33,416 INFO     Evaluating the model... (4000/25000)
+2025-12-13 17:36:41,386 INFO     Evaluating the model... (4500/25000)
+2025-12-13 17:36:49,374 INFO     Evaluating the model... (5000/25000)
+2025-12-13 17:36:57,283 INFO     Evaluating the model... (5500/25000)
+2025-12-13 17:37:05,344 INFO     Evaluating the model... (6000/25000)
+2025-12-13 17:37:13,182 INFO     Evaluating the model... (6500/25000)
+2025-12-13 17:37:21,012 INFO     Evaluating the model... (7000/25000)
+2025-12-13 17:37:29,261 INFO     Evaluating the model... (7500/25000)
+2025-12-13 17:37:37,145 INFO     Evaluating the model... (8000/25000)
+2025-12-13 17:37:45,131 INFO     Evaluating the model... (8500/25000)
+2025-12-13 17:37:52,973 INFO     Evaluating the model... (9000/25000)
+2025-12-13 17:38:01,322 INFO     Evaluating the model... (9500/25000)
+2025-12-13 17:38:09,168 INFO     Evaluating the model... (10000/25000)
+2025-12-13 17:38:17,010 INFO     Evaluating the model... (10500/25000)
+2025-12-13 17:38:25,617 INFO     Evaluating the model... (11000/25000)
+2025-12-13 17:38:33,457 INFO     Evaluating the model... (11500/25000)
+2025-12-13 17:38:41,511 INFO     Evaluating the model... (12000/25000)
+2025-12-13 17:38:49,928 INFO     Evaluating the model... (12500/25000)
+2025-12-13 17:38:58,748 INFO     Evaluating the model... (13000/25000)
+2025-12-13 17:39:06,697 INFO     Evaluating the model... (13500/25000)
+2025-12-13 17:39:14,571 INFO     Evaluating the model... (14000/25000)
+2025-12-13 17:39:22,805 INFO     Evaluating the model... (14500/25000)
+2025-12-13 17:39:30,631 INFO     Evaluating the model... (15000/25000)
+2025-12-13 17:39:38,612 INFO     Evaluating the model... (15500/25000)
+2025-12-13 17:39:46,711 INFO     Evaluating the model... (16000/25000)
+2025-12-13 17:39:55,083 INFO     Evaluating the model... (16500/25000)
+2025-12-13 17:40:03,006 INFO     Evaluating the model... (17000/25000)
+2025-12-13 17:40:10,977 INFO     Evaluating the model... (17500/25000)
+2025-12-13 17:40:19,411 INFO     Evaluating the model... (18000/25000)
+2025-12-13 17:40:27,322 INFO     Evaluating the model... (18500/25000)
+2025-12-13 17:40:35,243 INFO     Evaluating the model... (19000/25000)
+2025-12-13 17:40:43,462 INFO     Evaluating the model... (19500/25000)
+2025-12-13 17:40:51,880 INFO     Evaluating the model... (20000/25000)
+2025-12-13 17:40:59,826 INFO     Evaluating the model... (20500/25000)
+2025-12-13 17:41:07,830 INFO     Evaluating the model... (21000/25000)
+2025-12-13 17:41:16,611 INFO     Evaluating the model... (21500/25000)
+2025-12-13 17:41:24,503 INFO     Evaluating the model... (22000/25000)
+2025-12-13 17:41:32,439 INFO     Evaluating the model... (22500/25000)
+2025-12-13 17:41:40,508 INFO     Evaluating the model... (23000/25000)
+2025-12-13 17:41:49,192 INFO     Evaluating the model... (23500/25000)
+2025-12-13 17:41:57,098 INFO     Evaluating the model... (24000/25000)
+2025-12-13 17:42:04,976 INFO     Evaluating the model... (24500/25000)
+2025-12-13 17:42:13,892 INFO     Valid MRR at step 30000: 0.712131
+2025-12-13 17:42:13,892 INFO     Valid MR at step 30000: 208.373730
+2025-12-13 17:42:13,892 INFO     Valid HITS@1 at step 30000: 0.640730
+2025-12-13 17:42:13,892 INFO     Valid HITS@3 at step 30000: 0.759840
+2025-12-13 17:42:13,892 INFO     Valid HITS@10 at step 30000: 0.836470
+2025-12-13 17:42:15,866 INFO     Evaluating on Test Dataset...
+2025-12-13 17:42:16,547 INFO     Evaluating the model... (0/29536)
+2025-12-13 17:42:24,488 INFO     Evaluating the model... (500/29536)
+2025-12-13 17:42:32,343 INFO     Evaluating the model... (1000/29536)
+2025-12-13 17:42:40,358 INFO     Evaluating the model... (1500/29536)
+2025-12-13 17:42:49,220 INFO     Evaluating the model... (2000/29536)
+2025-12-13 17:42:57,047 INFO     Evaluating the model... (2500/29536)
+2025-12-13 17:43:04,860 INFO     Evaluating the model... (3000/29536)
+2025-12-13 17:43:13,252 INFO     Evaluating the model... (3500/29536)
+2025-12-13 17:43:20,994 INFO     Evaluating the model... (4000/29536)
+2025-12-13 17:43:28,808 INFO     Evaluating the model... (4500/29536)
+2025-12-13 17:43:36,656 INFO     Evaluating the model... (5000/29536)
+2025-12-13 17:43:45,265 INFO     Evaluating the model... (5500/29536)
+2025-12-13 17:43:53,007 INFO     Evaluating the model... (6000/29536)
+2025-12-13 17:44:00,912 INFO     Evaluating the model... (6500/29536)
+2025-12-13 17:44:09,295 INFO     Evaluating the model... (7000/29536)
+2025-12-13 17:44:17,076 INFO     Evaluating the model... (7500/29536)
+2025-12-13 17:44:24,857 INFO     Evaluating the model... (8000/29536)
+2025-12-13 17:44:32,654 INFO     Evaluating the model... (8500/29536)
+2025-12-13 17:44:41,242 INFO     Evaluating the model... (9000/29536)
+2025-12-13 17:44:49,230 INFO     Evaluating the model... (9500/29536)
+2025-12-13 17:44:57,102 INFO     Evaluating the model... (10000/29536)
+2025-12-13 17:45:05,441 INFO     Evaluating the model... (10500/29536)
+2025-12-13 17:45:13,273 INFO     Evaluating the model... (11000/29536)
+2025-12-13 17:45:21,215 INFO     Evaluating the model... (11500/29536)
+2025-12-13 17:45:29,086 INFO     Evaluating the model... (12000/29536)
+2025-12-13 17:45:37,442 INFO     Evaluating the model... (12500/29536)
+2025-12-13 17:45:45,512 INFO     Evaluating the model... (13000/29536)
+2025-12-13 17:45:53,371 INFO     Evaluating the model... (13500/29536)
+2025-12-13 17:46:02,019 INFO     Evaluating the model... (14000/29536)
+2025-12-13 17:46:09,842 INFO     Evaluating the model... (14500/29536)
+2025-12-13 17:46:18,118 INFO     Evaluating the model... (15000/29536)
+2025-12-13 17:46:26,097 INFO     Evaluating the model... (15500/29536)
+2025-12-13 17:46:33,936 INFO     Evaluating the model... (16000/29536)
+2025-12-13 17:46:42,513 INFO     Evaluating the model... (16500/29536)
+2025-12-13 17:46:50,536 INFO     Evaluating the model... (17000/29536)
+2025-12-13 17:46:58,466 INFO     Evaluating the model... (17500/29536)
+2025-12-13 17:47:06,946 INFO     Evaluating the model... (18000/29536)
+2025-12-13 17:47:14,870 INFO     Evaluating the model... (18500/29536)
+2025-12-13 17:47:22,777 INFO     Evaluating the model... (19000/29536)
+2025-12-13 17:47:30,626 INFO     Evaluating the model... (19500/29536)
+2025-12-13 17:47:39,221 INFO     Evaluating the model... (20000/29536)
+2025-12-13 17:47:47,326 INFO     Evaluating the model... (20500/29536)
+2025-12-13 17:47:55,233 INFO     Evaluating the model... (21000/29536)
+2025-12-13 17:48:03,716 INFO     Evaluating the model... (21500/29536)
+2025-12-13 17:48:11,639 INFO     Evaluating the model... (22000/29536)
+2025-12-13 17:48:19,566 INFO     Evaluating the model... (22500/29536)
+2025-12-13 17:48:27,442 INFO     Evaluating the model... (23000/29536)
+2025-12-13 17:48:35,947 INFO     Evaluating the model... (23500/29536)
+2025-12-13 17:48:44,100 INFO     Evaluating the model... (24000/29536)
+2025-12-13 17:48:52,071 INFO     Evaluating the model... (24500/29536)
+2025-12-13 17:49:00,504 INFO     Evaluating the model... (25000/29536)
+2025-12-13 17:49:08,436 INFO     Evaluating the model... (25500/29536)
+2025-12-13 17:49:16,392 INFO     Evaluating the model... (26000/29536)
+2025-12-13 17:49:24,273 INFO     Evaluating the model... (26500/29536)
+2025-12-13 17:49:32,769 INFO     Evaluating the model... (27000/29536)
+2025-12-13 17:49:40,843 INFO     Evaluating the model... (27500/29536)
+2025-12-13 17:49:48,837 INFO     Evaluating the model... (28000/29536)
+2025-12-13 17:49:57,549 INFO     Evaluating the model... (28500/29536)
+2025-12-13 17:50:05,484 INFO     Evaluating the model... (29000/29536)
+2025-12-13 17:50:13,367 INFO     Evaluating the model... (29500/29536)
+2025-12-13 17:50:14,157 INFO     Test MRR at step 30000: 0.710982
+2025-12-13 17:50:14,158 INFO     Test MR at step 30000: 219.421112
+2025-12-13 17:50:14,158 INFO     Test HITS@1 at step 30000: 0.639713
+2025-12-13 17:50:14,158 INFO     Test HITS@3 at step 30000: 0.758875
+2025-12-13 17:50:14,158 INFO     Test HITS@10 at step 30000: 0.835359
+2025-12-13 17:50:27,436 INFO     Training average regularization at step 30200: 0.250343
+2025-12-13 17:50:27,437 INFO     Training average positive_sample_loss at step 30200: 0.018777
+2025-12-13 17:50:27,437 INFO     Training average negative_sample_loss at step 30200: 0.032365
+2025-12-13 17:50:27,437 INFO     Training average loss at step 30200: 0.275914
+2025-12-13 17:50:40,783 INFO     Training average regularization at step 30400: 0.249185
+2025-12-13 17:50:40,783 INFO     Training average positive_sample_loss at step 30400: 0.018933
+2025-12-13 17:50:40,783 INFO     Training average negative_sample_loss at step 30400: 0.030688
+2025-12-13 17:50:40,783 INFO     Training average loss at step 30400: 0.273996
+2025-12-13 17:50:54,010 INFO     Training average regularization at step 30600: 0.248035
+2025-12-13 17:50:54,012 INFO     Training average positive_sample_loss at step 30600: 0.019427
+2025-12-13 17:50:54,012 INFO     Training average negative_sample_loss at step 30600: 0.031435
+2025-12-13 17:50:54,012 INFO     Training average loss at step 30600: 0.273466
+2025-12-13 17:51:07,224 INFO     Training average regularization at step 30800: 0.246864
+2025-12-13 17:51:07,224 INFO     Training average positive_sample_loss at step 30800: 0.019027
+2025-12-13 17:51:07,224 INFO     Training average negative_sample_loss at step 30800: 0.031752
+2025-12-13 17:51:07,224 INFO     Training average loss at step 30800: 0.272253
+2025-12-13 17:51:20,406 INFO     Training average regularization at step 31000: 0.245719
+2025-12-13 17:51:20,407 INFO     Training average positive_sample_loss at step 31000: 0.018517
+2025-12-13 17:51:20,407 INFO     Training average negative_sample_loss at step 31000: 0.030833
+2025-12-13 17:51:20,407 INFO     Training average loss at step 31000: 0.270394
+2025-12-13 17:51:33,594 INFO     Training average regularization at step 31200: 0.244570
+2025-12-13 17:51:33,595 INFO     Training average positive_sample_loss at step 31200: 0.018685
+2025-12-13 17:51:33,595 INFO     Training average negative_sample_loss at step 31200: 0.031016
+2025-12-13 17:51:33,595 INFO     Training average loss at step 31200: 0.269420
+2025-12-13 17:51:47,045 INFO     Training average regularization at step 31400: 0.243434
+2025-12-13 17:51:47,046 INFO     Training average positive_sample_loss at step 31400: 0.018838
+2025-12-13 17:51:47,046 INFO     Training average negative_sample_loss at step 31400: 0.031780
+2025-12-13 17:51:47,046 INFO     Training average loss at step 31400: 0.268743
+2025-12-13 17:52:00,239 INFO     Training average regularization at step 31600: 0.242308
+2025-12-13 17:52:00,239 INFO     Training average positive_sample_loss at step 31600: 0.018689
+2025-12-13 17:52:00,239 INFO     Training average negative_sample_loss at step 31600: 0.030344
+2025-12-13 17:52:00,239 INFO     Training average loss at step 31600: 0.266824
+2025-12-13 17:52:13,412 INFO     Training average regularization at step 31800: 0.241191
+2025-12-13 17:52:13,412 INFO     Training average positive_sample_loss at step 31800: 0.019261
+2025-12-13 17:52:13,412 INFO     Training average negative_sample_loss at step 31800: 0.030786
+2025-12-13 17:52:13,412 INFO     Training average loss at step 31800: 0.266214
+2025-12-13 17:52:26,590 INFO     Training average regularization at step 32000: 0.240095
+2025-12-13 17:52:26,591 INFO     Training average positive_sample_loss at step 32000: 0.019675
+2025-12-13 17:52:26,591 INFO     Training average negative_sample_loss at step 32000: 0.032600
+2025-12-13 17:52:26,591 INFO     Training average loss at step 32000: 0.266233
+2025-12-13 17:52:39,898 INFO     Training average regularization at step 32200: 0.239006
+2025-12-13 17:52:39,899 INFO     Training average positive_sample_loss at step 32200: 0.019283
+2025-12-13 17:52:39,899 INFO     Training average negative_sample_loss at step 32200: 0.033018
+2025-12-13 17:52:39,899 INFO     Training average loss at step 32200: 0.265157
+2025-12-13 17:52:53,198 INFO     Training average regularization at step 32400: 0.237938
+2025-12-13 17:52:53,199 INFO     Training average positive_sample_loss at step 32400: 0.019333
+2025-12-13 17:52:53,199 INFO     Training average negative_sample_loss at step 32400: 0.031879
+2025-12-13 17:52:53,199 INFO     Training average loss at step 32400: 0.263543
+2025-12-13 17:53:06,388 INFO     Training average regularization at step 32600: 0.236870
+2025-12-13 17:53:06,389 INFO     Training average positive_sample_loss at step 32600: 0.018494
+2025-12-13 17:53:06,389 INFO     Training average negative_sample_loss at step 32600: 0.030717
+2025-12-13 17:53:06,389 INFO     Training average loss at step 32600: 0.261476
+2025-12-13 17:53:19,580 INFO     Training average regularization at step 32800: 0.235810
+2025-12-13 17:53:19,581 INFO     Training average positive_sample_loss at step 32800: 0.018446
+2025-12-13 17:53:19,581 INFO     Training average negative_sample_loss at step 32800: 0.031620
+2025-12-13 17:53:19,581 INFO     Training average loss at step 32800: 0.260842
+2025-12-13 17:53:32,755 INFO     Training average regularization at step 33000: 0.234759
+2025-12-13 17:53:32,755 INFO     Training average positive_sample_loss at step 33000: 0.018436
+2025-12-13 17:53:32,755 INFO     Training average negative_sample_loss at step 33000: 0.030212
+2025-12-13 17:53:32,755 INFO     Training average loss at step 33000: 0.259083
+2025-12-13 17:53:46,171 INFO     Training average regularization at step 33200: 0.233712
+2025-12-13 17:53:46,171 INFO     Training average positive_sample_loss at step 33200: 0.017926
+2025-12-13 17:53:46,171 INFO     Training average negative_sample_loss at step 33200: 0.030155
+2025-12-13 17:53:46,171 INFO     Training average loss at step 33200: 0.257753
+2025-12-13 17:53:59,370 INFO     Training average regularization at step 33400: 0.232703
+2025-12-13 17:53:59,370 INFO     Training average positive_sample_loss at step 33400: 0.018115
+2025-12-13 17:53:59,370 INFO     Training average negative_sample_loss at step 33400: 0.031736
+2025-12-13 17:53:59,370 INFO     Training average loss at step 33400: 0.257628
+2025-12-13 17:54:12,542 INFO     Training average regularization at step 33600: 0.231703
+2025-12-13 17:54:12,543 INFO     Training average positive_sample_loss at step 33600: 0.018011
+2025-12-13 17:54:12,543 INFO     Training average negative_sample_loss at step 33600: 0.030541
+2025-12-13 17:54:12,543 INFO     Training average loss at step 33600: 0.255979
+2025-12-13 17:54:25,692 INFO     Training average regularization at step 33800: 0.230695
+2025-12-13 17:54:25,693 INFO     Training average positive_sample_loss at step 33800: 0.017628
+2025-12-13 17:54:25,693 INFO     Training average negative_sample_loss at step 33800: 0.032488
+2025-12-13 17:54:25,693 INFO     Training average loss at step 33800: 0.255753
+2025-12-13 17:54:39,911 INFO     Training average regularization at step 34000: 0.229678
+2025-12-13 17:54:39,912 INFO     Training average positive_sample_loss at step 34000: 0.014491
+2025-12-13 17:54:39,912 INFO     Training average negative_sample_loss at step 34000: 0.028834
+2025-12-13 17:54:39,912 INFO     Training average loss at step 34000: 0.251340
+2025-12-13 17:54:53,178 INFO     Training average regularization at step 34200: 0.228646
+2025-12-13 17:54:53,178 INFO     Training average positive_sample_loss at step 34200: 0.014133
+2025-12-13 17:54:53,178 INFO     Training average negative_sample_loss at step 34200: 0.027504
+2025-12-13 17:54:53,178 INFO     Training average loss at step 34200: 0.249465
+2025-12-13 17:55:06,343 INFO     Training average regularization at step 34400: 0.227607
+2025-12-13 17:55:06,344 INFO     Training average positive_sample_loss at step 34400: 0.014361
+2025-12-13 17:55:06,344 INFO     Training average negative_sample_loss at step 34400: 0.027035
+2025-12-13 17:55:06,344 INFO     Training average loss at step 34400: 0.248305
+2025-12-13 17:55:19,516 INFO     Training average regularization at step 34600: 0.226586
+2025-12-13 17:55:19,517 INFO     Training average positive_sample_loss at step 34600: 0.015436
+2025-12-13 17:55:19,517 INFO     Training average negative_sample_loss at step 34600: 0.028854
+2025-12-13 17:55:19,517 INFO     Training average loss at step 34600: 0.248732
+2025-12-13 17:55:32,694 INFO     Training average regularization at step 34800: 0.225594
+2025-12-13 17:55:32,694 INFO     Training average positive_sample_loss at step 34800: 0.015223
+2025-12-13 17:55:32,694 INFO     Training average negative_sample_loss at step 34800: 0.029085
+2025-12-13 17:55:32,694 INFO     Training average loss at step 34800: 0.247748
+2025-12-13 17:55:46,067 INFO     Training average regularization at step 35000: 0.224587
+2025-12-13 17:55:46,068 INFO     Training average positive_sample_loss at step 35000: 0.015675
+2025-12-13 17:55:46,068 INFO     Training average negative_sample_loss at step 35000: 0.029325
+2025-12-13 17:55:46,068 INFO     Training average loss at step 35000: 0.247087
+2025-12-13 17:55:59,212 INFO     Training average regularization at step 35200: 0.223609
+2025-12-13 17:55:59,212 INFO     Training average positive_sample_loss at step 35200: 0.015872
+2025-12-13 17:55:59,212 INFO     Training average negative_sample_loss at step 35200: 0.027879
+2025-12-13 17:55:59,212 INFO     Training average loss at step 35200: 0.245484
+2025-12-13 17:56:12,405 INFO     Training average regularization at step 35400: 0.222624
+2025-12-13 17:56:12,405 INFO     Training average positive_sample_loss at step 35400: 0.015350
+2025-12-13 17:56:12,405 INFO     Training average negative_sample_loss at step 35400: 0.028492
+2025-12-13 17:56:12,405 INFO     Training average loss at step 35400: 0.244545
+2025-12-13 17:56:25,570 INFO     Training average regularization at step 35600: 0.221653
+2025-12-13 17:56:25,571 INFO     Training average positive_sample_loss at step 35600: 0.016340
+2025-12-13 17:56:25,571 INFO     Training average negative_sample_loss at step 35600: 0.028898
+2025-12-13 17:56:25,571 INFO     Training average loss at step 35600: 0.244273
+2025-12-13 17:56:38,839 INFO     Training average regularization at step 35800: 0.220697
+2025-12-13 17:56:38,839 INFO     Training average positive_sample_loss at step 35800: 0.016518
+2025-12-13 17:56:38,839 INFO     Training average negative_sample_loss at step 35800: 0.028572
+2025-12-13 17:56:38,839 INFO     Training average loss at step 35800: 0.243242
+2025-12-13 17:56:52,176 INFO     Training average regularization at step 36000: 0.219750
+2025-12-13 17:56:52,177 INFO     Training average positive_sample_loss at step 36000: 0.016132
+2025-12-13 17:56:52,177 INFO     Training average negative_sample_loss at step 36000: 0.031036
+2025-12-13 17:56:52,177 INFO     Training average loss at step 36000: 0.243335
+2025-12-13 17:57:05,391 INFO     Training average regularization at step 36200: 0.218832
+2025-12-13 17:57:05,391 INFO     Training average positive_sample_loss at step 36200: 0.016408
+2025-12-13 17:57:05,391 INFO     Training average negative_sample_loss at step 36200: 0.028857
+2025-12-13 17:57:05,392 INFO     Training average loss at step 36200: 0.241464
+2025-12-13 17:57:18,591 INFO     Training average regularization at step 36400: 0.217929
+2025-12-13 17:57:18,591 INFO     Training average positive_sample_loss at step 36400: 0.017073
+2025-12-13 17:57:18,591 INFO     Training average negative_sample_loss at step 36400: 0.031208
+2025-12-13 17:57:18,591 INFO     Training average loss at step 36400: 0.242070
+2025-12-13 17:57:31,758 INFO     Training average regularization at step 36600: 0.217042
+2025-12-13 17:57:31,759 INFO     Training average positive_sample_loss at step 36600: 0.018383
+2025-12-13 17:57:31,759 INFO     Training average negative_sample_loss at step 36600: 0.028498
+2025-12-13 17:57:31,759 INFO     Training average loss at step 36600: 0.240482
+2025-12-13 17:57:45,139 INFO     Training average regularization at step 36800: 0.216148
+2025-12-13 17:57:45,139 INFO     Training average positive_sample_loss at step 36800: 0.017109
+2025-12-13 17:57:45,139 INFO     Training average negative_sample_loss at step 36800: 0.031710
+2025-12-13 17:57:45,139 INFO     Training average loss at step 36800: 0.240558
+2025-12-13 17:57:58,302 INFO     Training average regularization at step 37000: 0.215286
+2025-12-13 17:57:58,302 INFO     Training average positive_sample_loss at step 37000: 0.017979
+2025-12-13 17:57:58,302 INFO     Training average negative_sample_loss at step 37000: 0.028800
+2025-12-13 17:57:58,302 INFO     Training average loss at step 37000: 0.238675
+2025-12-13 17:58:11,459 INFO     Training average regularization at step 37200: 0.214425
+2025-12-13 17:58:11,459 INFO     Training average positive_sample_loss at step 37200: 0.017088
+2025-12-13 17:58:11,459 INFO     Training average negative_sample_loss at step 37200: 0.027476
+2025-12-13 17:58:11,459 INFO     Training average loss at step 37200: 0.236707
+2025-12-13 17:58:24,634 INFO     Training average regularization at step 37400: 0.213574
+2025-12-13 17:58:24,635 INFO     Training average positive_sample_loss at step 37400: 0.016573
+2025-12-13 17:58:24,635 INFO     Training average negative_sample_loss at step 37400: 0.029858
+2025-12-13 17:58:24,635 INFO     Training average loss at step 37400: 0.236790
+2025-12-13 17:58:37,868 INFO     Training average regularization at step 37600: 0.212742
+2025-12-13 17:58:37,869 INFO     Training average positive_sample_loss at step 37600: 0.017125
+2025-12-13 17:58:37,869 INFO     Training average negative_sample_loss at step 37600: 0.032902
+2025-12-13 17:58:37,869 INFO     Training average loss at step 37600: 0.237755
+2025-12-13 17:58:51,217 INFO     Training average regularization at step 37800: 0.211928
+2025-12-13 17:58:51,217 INFO     Training average positive_sample_loss at step 37800: 0.017265
+2025-12-13 17:58:51,217 INFO     Training average negative_sample_loss at step 37800: 0.030106
+2025-12-13 17:58:51,217 INFO     Training average loss at step 37800: 0.235613
+2025-12-13 17:59:04,416 INFO     Training average regularization at step 38000: 0.211124
+2025-12-13 17:59:04,417 INFO     Training average positive_sample_loss at step 38000: 0.015807
+2025-12-13 17:59:04,417 INFO     Training average negative_sample_loss at step 38000: 0.030413
+2025-12-13 17:59:04,417 INFO     Training average loss at step 38000: 0.234234
+2025-12-13 17:59:17,618 INFO     Training average regularization at step 38200: 0.210313
+2025-12-13 17:59:17,618 INFO     Training average positive_sample_loss at step 38200: 0.015561
+2025-12-13 17:59:17,618 INFO     Training average negative_sample_loss at step 38200: 0.031987
+2025-12-13 17:59:17,618 INFO     Training average loss at step 38200: 0.234087
+2025-12-13 17:59:30,792 INFO     Training average regularization at step 38400: 0.209537
+2025-12-13 17:59:30,793 INFO     Training average positive_sample_loss at step 38400: 0.016845
+2025-12-13 17:59:30,793 INFO     Training average negative_sample_loss at step 38400: 0.029827
+2025-12-13 17:59:30,793 INFO     Training average loss at step 38400: 0.232873
+2025-12-13 17:59:44,166 INFO     Training average regularization at step 38600: 0.208790
+2025-12-13 17:59:44,166 INFO     Training average positive_sample_loss at step 38600: 0.016776
+2025-12-13 17:59:44,166 INFO     Training average negative_sample_loss at step 38600: 0.035827
+2025-12-13 17:59:44,166 INFO     Training average loss at step 38600: 0.235091
+2025-12-13 17:59:58,375 INFO     Training average regularization at step 38800: 0.208025
+2025-12-13 17:59:58,376 INFO     Training average positive_sample_loss at step 38800: 0.013817
+2025-12-13 17:59:58,376 INFO     Training average negative_sample_loss at step 38800: 0.026328
+2025-12-13 17:59:58,376 INFO     Training average loss at step 38800: 0.228098
+2025-12-13 18:00:11,547 INFO     Training average regularization at step 39000: 0.207185
+2025-12-13 18:00:11,548 INFO     Training average positive_sample_loss at step 39000: 0.012948
+2025-12-13 18:00:11,548 INFO     Training average negative_sample_loss at step 39000: 0.028352
+2025-12-13 18:00:11,548 INFO     Training average loss at step 39000: 0.227835
+2025-12-13 18:00:24,725 INFO     Training average regularization at step 39200: 0.206393
+2025-12-13 18:00:24,729 INFO     Training average positive_sample_loss at step 39200: 0.014105
+2025-12-13 18:00:24,729 INFO     Training average negative_sample_loss at step 39200: 0.028083
+2025-12-13 18:00:24,729 INFO     Training average loss at step 39200: 0.227487
+2025-12-13 18:00:37,977 INFO     Training average regularization at step 39400: 0.205639
+2025-12-13 18:00:37,978 INFO     Training average positive_sample_loss at step 39400: 0.013879
+2025-12-13 18:00:37,978 INFO     Training average negative_sample_loss at step 39400: 0.026846
+2025-12-13 18:00:37,978 INFO     Training average loss at step 39400: 0.226001
+2025-12-13 18:00:51,306 INFO     Training average regularization at step 39600: 0.204839
+2025-12-13 18:00:51,307 INFO     Training average positive_sample_loss at step 39600: 0.014013
+2025-12-13 18:00:51,307 INFO     Training average negative_sample_loss at step 39600: 0.025773
+2025-12-13 18:00:51,307 INFO     Training average loss at step 39600: 0.224732
+2025-12-13 18:01:04,499 INFO     Training average regularization at step 39800: 0.204057
+2025-12-13 18:01:04,500 INFO     Training average positive_sample_loss at step 39800: 0.014576
+2025-12-13 18:01:04,500 INFO     Training average negative_sample_loss at step 39800: 0.026256
+2025-12-13 18:01:04,500 INFO     Training average loss at step 39800: 0.224472
+2025-12-13 18:01:17,713 INFO     Change learning_rate to 0.000026 at step 40000
+2025-12-13 18:01:18,844 INFO     Training average regularization at step 40000: 0.203271
+2025-12-13 18:01:18,844 INFO     Training average positive_sample_loss at step 40000: 0.015069
+2025-12-13 18:01:18,844 INFO     Training average negative_sample_loss at step 40000: 0.026500
+2025-12-13 18:01:18,844 INFO     Training average loss at step 40000: 0.224056
+2025-12-13 18:01:18,844 INFO     Evaluating on Valid Dataset...
+2025-12-13 18:01:19,589 INFO     Evaluating the model... (0/25000)
+2025-12-13 18:01:27,448 INFO     Evaluating the model... (500/25000)
+2025-12-13 18:01:35,481 INFO     Evaluating the model... (1000/25000)
+2025-12-13 18:01:44,287 INFO     Evaluating the model... (1500/25000)
+2025-12-13 18:01:52,200 INFO     Evaluating the model... (2000/25000)
+2025-12-13 18:01:59,967 INFO     Evaluating the model... (2500/25000)
+2025-12-13 18:02:08,037 INFO     Evaluating the model... (3000/25000)
+2025-12-13 18:02:15,867 INFO     Evaluating the model... (3500/25000)
+2025-12-13 18:02:23,681 INFO     Evaluating the model... (4000/25000)
+2025-12-13 18:02:31,555 INFO     Evaluating the model... (4500/25000)
+2025-12-13 18:02:39,824 INFO     Evaluating the model... (5000/25000)
+2025-12-13 18:02:47,800 INFO     Evaluating the model... (5500/25000)
+2025-12-13 18:02:55,584 INFO     Evaluating the model... (6000/25000)
+2025-12-13 18:03:03,907 INFO     Evaluating the model... (6500/25000)
+2025-12-13 18:03:11,793 INFO     Evaluating the model... (7000/25000)
+2025-12-13 18:03:19,581 INFO     Evaluating the model... (7500/25000)
+2025-12-13 18:03:27,410 INFO     Evaluating the model... (8000/25000)
+2025-12-13 18:03:35,776 INFO     Evaluating the model... (8500/25000)
+2025-12-13 18:03:43,761 INFO     Evaluating the model... (9000/25000)
+2025-12-13 18:03:51,650 INFO     Evaluating the model... (9500/25000)
+2025-12-13 18:04:00,344 INFO     Evaluating the model... (10000/25000)
+2025-12-13 18:04:08,220 INFO     Evaluating the model... (10500/25000)
+2025-12-13 18:04:16,049 INFO     Evaluating the model... (11000/25000)
+2025-12-13 18:04:23,985 INFO     Evaluating the model... (11500/25000)
+2025-12-13 18:04:32,665 INFO     Evaluating the model... (12000/25000)
+2025-12-13 18:04:41,087 INFO     Evaluating the model... (12500/25000)
+2025-12-13 18:04:49,111 INFO     Evaluating the model... (13000/25000)
+2025-12-13 18:04:57,714 INFO     Evaluating the model... (13500/25000)
+2025-12-13 18:05:05,624 INFO     Evaluating the model... (14000/25000)
+2025-12-13 18:05:13,432 INFO     Evaluating the model... (14500/25000)
+2025-12-13 18:05:21,330 INFO     Evaluating the model... (15000/25000)
+2025-12-13 18:05:29,696 INFO     Evaluating the model... (15500/25000)
+2025-12-13 18:05:37,666 INFO     Evaluating the model... (16000/25000)
+2025-12-13 18:05:45,836 INFO     Evaluating the model... (16500/25000)
+2025-12-13 18:05:54,260 INFO     Evaluating the model... (17000/25000)
+2025-12-13 18:06:02,148 INFO     Evaluating the model... (17500/25000)
+2025-12-13 18:06:10,066 INFO     Evaluating the model... (18000/25000)
+2025-12-13 18:06:17,967 INFO     Evaluating the model... (18500/25000)
+2025-12-13 18:06:26,376 INFO     Evaluating the model... (19000/25000)
+2025-12-13 18:06:34,254 INFO     Evaluating the model... (19500/25000)
+2025-12-13 18:06:42,350 INFO     Evaluating the model... (20000/25000)
+2025-12-13 18:06:50,988 INFO     Evaluating the model... (20500/25000)
+2025-12-13 18:06:58,907 INFO     Evaluating the model... (21000/25000)
+2025-12-13 18:07:06,778 INFO     Evaluating the model... (21500/25000)
+2025-12-13 18:07:14,677 INFO     Evaluating the model... (22000/25000)
+2025-12-13 18:07:23,176 INFO     Evaluating the model... (22500/25000)
+2025-12-13 18:07:31,067 INFO     Evaluating the model... (23000/25000)
+2025-12-13 18:07:39,108 INFO     Evaluating the model... (23500/25000)
+2025-12-13 18:07:48,053 INFO     Evaluating the model... (24000/25000)
+2025-12-13 18:07:56,015 INFO     Evaluating the model... (24500/25000)
+2025-12-13 18:08:04,224 INFO     Valid MRR at step 40000: 0.692268
+2025-12-13 18:08:04,225 INFO     Valid MR at step 40000: 243.616470
+2025-12-13 18:08:04,225 INFO     Valid HITS@1 at step 40000: 0.621300
+2025-12-13 18:08:04,225 INFO     Valid HITS@3 at step 40000: 0.738640
+2025-12-13 18:08:04,225 INFO     Valid HITS@10 at step 40000: 0.817230
+2025-12-13 18:08:04,225 INFO     Evaluating on Test Dataset...
+2025-12-13 18:08:04,778 INFO     Evaluating the model... (0/29536)
+2025-12-13 18:08:12,725 INFO     Evaluating the model... (500/29536)
+2025-12-13 18:08:21,327 INFO     Evaluating the model... (1000/29536)
+2025-12-13 18:08:29,267 INFO     Evaluating the model... (1500/29536)
+2025-12-13 18:08:37,155 INFO     Evaluating the model... (2000/29536)
+2025-12-13 18:08:45,984 INFO     Evaluating the model... (2500/29536)
+2025-12-13 18:08:53,818 INFO     Evaluating the model... (3000/29536)
+2025-12-13 18:09:01,758 INFO     Evaluating the model... (3500/29536)
+2025-12-13 18:09:09,628 INFO     Evaluating the model... (4000/29536)
+2025-12-13 18:09:18,001 INFO     Evaluating the model... (4500/29536)
+2025-12-13 18:09:25,861 INFO     Evaluating the model... (5000/29536)
+2025-12-13 18:09:33,698 INFO     Evaluating the model... (5500/29536)
+2025-12-13 18:09:42,340 INFO     Evaluating the model... (6000/29536)
+2025-12-13 18:09:50,238 INFO     Evaluating the model... (6500/29536)
+2025-12-13 18:09:58,039 INFO     Evaluating the model... (7000/29536)
+2025-12-13 18:10:05,852 INFO     Evaluating the model... (7500/29536)
+2025-12-13 18:10:14,061 INFO     Evaluating the model... (8000/29536)
+2025-12-13 18:10:21,819 INFO     Evaluating the model... (8500/29536)
+2025-12-13 18:10:29,603 INFO     Evaluating the model... (9000/29536)
+2025-12-13 18:10:38,026 INFO     Evaluating the model... (9500/29536)
+2025-12-13 18:10:46,079 INFO     Evaluating the model... (10000/29536)
+2025-12-13 18:10:53,842 INFO     Evaluating the model... (10500/29536)
+2025-12-13 18:11:01,629 INFO     Evaluating the model... (11000/29536)
+2025-12-13 18:11:10,059 INFO     Evaluating the model... (11500/29536)
+2025-12-13 18:11:17,844 INFO     Evaluating the model... (12000/29536)
+2025-12-13 18:11:25,734 INFO     Evaluating the model... (12500/29536)
+2025-12-13 18:11:34,485 INFO     Evaluating the model... (13000/29536)
+2025-12-13 18:11:42,519 INFO     Evaluating the model... (13500/29536)
+2025-12-13 18:11:50,424 INFO     Evaluating the model... (14000/29536)
+2025-12-13 18:11:58,270 INFO     Evaluating the model... (14500/29536)
+2025-12-13 18:12:07,119 INFO     Evaluating the model... (15000/29536)
+2025-12-13 18:12:15,722 INFO     Evaluating the model... (15500/29536)
+2025-12-13 18:12:23,622 INFO     Evaluating the model... (16000/29536)
+2025-12-13 18:12:31,559 INFO     Evaluating the model... (16500/29536)
+2025-12-13 18:12:40,344 INFO     Evaluating the model... (17000/29536)
+2025-12-13 18:12:48,353 INFO     Evaluating the model... (17500/29536)
+2025-12-13 18:12:56,266 INFO     Evaluating the model... (18000/29536)
+2025-12-13 18:13:04,148 INFO     Evaluating the model... (18500/29536)
+2025-12-13 18:13:12,455 INFO     Evaluating the model... (19000/29536)
+2025-12-13 18:13:20,362 INFO     Evaluating the model... (19500/29536)
+2025-12-13 18:13:28,285 INFO     Evaluating the model... (20000/29536)
+2025-12-13 18:13:36,915 INFO     Evaluating the model... (20500/29536)
+2025-12-13 18:13:44,951 INFO     Evaluating the model... (21000/29536)
+2025-12-13 18:13:52,859 INFO     Evaluating the model... (21500/29536)
+2025-12-13 18:14:00,714 INFO     Evaluating the model... (22000/29536)
+2025-12-13 18:14:09,186 INFO     Evaluating the model... (22500/29536)
+2025-12-13 18:14:17,080 INFO     Evaluating the model... (23000/29536)
+2025-12-13 18:14:24,973 INFO     Evaluating the model... (23500/29536)
+2025-12-13 18:14:33,677 INFO     Evaluating the model... (24000/29536)
+2025-12-13 18:14:41,679 INFO     Evaluating the model... (24500/29536)
+2025-12-13 18:14:49,665 INFO     Evaluating the model... (25000/29536)
+2025-12-13 18:14:57,547 INFO     Evaluating the model... (25500/29536)
+2025-12-13 18:15:06,192 INFO     Evaluating the model... (26000/29536)
+2025-12-13 18:15:14,021 INFO     Evaluating the model... (26500/29536)
+2025-12-13 18:15:21,886 INFO     Evaluating the model... (27000/29536)
+2025-12-13 18:15:30,620 INFO     Evaluating the model... (27500/29536)
+2025-12-13 18:15:38,523 INFO     Evaluating the model... (28000/29536)
+2025-12-13 18:15:46,604 INFO     Evaluating the model... (28500/29536)
+2025-12-13 18:15:54,464 INFO     Evaluating the model... (29000/29536)
+2025-12-13 18:16:03,294 INFO     Evaluating the model... (29500/29536)
+2025-12-13 18:16:04,154 INFO     Test MRR at step 40000: 0.689955
+2025-12-13 18:16:04,154 INFO     Test MR at step 40000: 256.028728
+2025-12-13 18:16:04,154 INFO     Test HITS@1 at step 40000: 0.618671
+2025-12-13 18:16:04,154 INFO     Test HITS@3 at step 40000: 0.737096
+2025-12-13 18:16:04,154 INFO     Test HITS@10 at step 40000: 0.815256
+2025-12-13 18:16:17,443 INFO     Training average regularization at step 40200: 0.200972
+2025-12-13 18:16:17,444 INFO     Training average positive_sample_loss at step 40200: 0.016500
+2025-12-13 18:16:17,444 INFO     Training average negative_sample_loss at step 40200: 0.030179
+2025-12-13 18:16:17,444 INFO     Training average loss at step 40200: 0.224312
+2025-12-13 18:16:30,606 INFO     Training average regularization at step 40400: 0.199307
+2025-12-13 18:16:30,606 INFO     Training average positive_sample_loss at step 40400: 0.019309
+2025-12-13 18:16:30,607 INFO     Training average negative_sample_loss at step 40400: 0.029073
+2025-12-13 18:16:30,607 INFO     Training average loss at step 40400: 0.223498
+2025-12-13 18:16:43,956 INFO     Training average regularization at step 40600: 0.198615
+2025-12-13 18:16:43,957 INFO     Training average positive_sample_loss at step 40600: 0.020251
+2025-12-13 18:16:43,957 INFO     Training average negative_sample_loss at step 40600: 0.027453
+2025-12-13 18:16:43,957 INFO     Training average loss at step 40600: 0.222467
+2025-12-13 18:16:57,254 INFO     Training average regularization at step 40800: 0.198194
+2025-12-13 18:16:57,254 INFO     Training average positive_sample_loss at step 40800: 0.022290
+2025-12-13 18:16:57,254 INFO     Training average negative_sample_loss at step 40800: 0.026733
+2025-12-13 18:16:57,254 INFO     Training average loss at step 40800: 0.222706
+2025-12-13 18:17:10,507 INFO     Training average regularization at step 41000: 0.197893
+2025-12-13 18:17:10,508 INFO     Training average positive_sample_loss at step 41000: 0.024947
+2025-12-13 18:17:10,508 INFO     Training average negative_sample_loss at step 41000: 0.027757
+2025-12-13 18:17:10,508 INFO     Training average loss at step 41000: 0.224245
+2025-12-13 18:17:23,799 INFO     Training average regularization at step 41200: 0.197659
+2025-12-13 18:17:23,799 INFO     Training average positive_sample_loss at step 41200: 0.021617
+2025-12-13 18:17:23,799 INFO     Training average negative_sample_loss at step 41200: 0.029640
+2025-12-13 18:17:23,799 INFO     Training average loss at step 41200: 0.223287
+2025-12-13 18:17:37,074 INFO     Training average regularization at step 41400: 0.197463
+2025-12-13 18:17:37,074 INFO     Training average positive_sample_loss at step 41400: 0.021551
+2025-12-13 18:17:37,074 INFO     Training average negative_sample_loss at step 41400: 0.029206
+2025-12-13 18:17:37,074 INFO     Training average loss at step 41400: 0.222841
+2025-12-13 18:17:50,299 INFO     Training average regularization at step 41600: 0.197292
+2025-12-13 18:17:50,299 INFO     Training average positive_sample_loss at step 41600: 0.022798
+2025-12-13 18:17:50,300 INFO     Training average negative_sample_loss at step 41600: 0.028363
+2025-12-13 18:17:50,300 INFO     Training average loss at step 41600: 0.222873
+2025-12-13 18:18:03,444 INFO     Training average regularization at step 41800: 0.197138
+2025-12-13 18:18:03,444 INFO     Training average positive_sample_loss at step 41800: 0.022189
+2025-12-13 18:18:03,444 INFO     Training average negative_sample_loss at step 41800: 0.031487
+2025-12-13 18:18:03,444 INFO     Training average loss at step 41800: 0.223976
+2025-12-13 18:18:16,579 INFO     Training average regularization at step 42000: 0.196997
+2025-12-13 18:18:16,579 INFO     Training average positive_sample_loss at step 42000: 0.023009
+2025-12-13 18:18:16,579 INFO     Training average negative_sample_loss at step 42000: 0.029050
+2025-12-13 18:18:16,579 INFO     Training average loss at step 42000: 0.223027
+2025-12-13 18:18:29,742 INFO     Training average regularization at step 42200: 0.196867
+2025-12-13 18:18:29,746 INFO     Training average positive_sample_loss at step 42200: 0.021771
+2025-12-13 18:18:29,746 INFO     Training average negative_sample_loss at step 42200: 0.028940
+2025-12-13 18:18:29,746 INFO     Training average loss at step 42200: 0.222222
+2025-12-13 18:18:42,901 INFO     Training average regularization at step 42400: 0.196743
+2025-12-13 18:18:42,901 INFO     Training average positive_sample_loss at step 42400: 0.025250
+2025-12-13 18:18:42,901 INFO     Training average negative_sample_loss at step 42400: 0.028180
+2025-12-13 18:18:42,901 INFO     Training average loss at step 42400: 0.223458
+2025-12-13 18:18:56,037 INFO     Training average regularization at step 42600: 0.196626
+2025-12-13 18:18:56,038 INFO     Training average positive_sample_loss at step 42600: 0.021139
+2025-12-13 18:18:56,038 INFO     Training average negative_sample_loss at step 42600: 0.029447
+2025-12-13 18:18:56,038 INFO     Training average loss at step 42600: 0.221919
+2025-12-13 18:19:09,174 INFO     Training average regularization at step 42800: 0.196511
+2025-12-13 18:19:09,174 INFO     Training average positive_sample_loss at step 42800: 0.021723
+2025-12-13 18:19:09,174 INFO     Training average negative_sample_loss at step 42800: 0.027212
+2025-12-13 18:19:09,174 INFO     Training average loss at step 42800: 0.220979
+2025-12-13 18:19:22,288 INFO     Training average regularization at step 43000: 0.196400
+2025-12-13 18:19:22,288 INFO     Training average positive_sample_loss at step 43000: 0.020340
+2025-12-13 18:19:22,288 INFO     Training average negative_sample_loss at step 43000: 0.029591
+2025-12-13 18:19:22,288 INFO     Training average loss at step 43000: 0.221366
+2025-12-13 18:19:35,406 INFO     Training average regularization at step 43200: 0.196293
+2025-12-13 18:19:35,406 INFO     Training average positive_sample_loss at step 43200: 0.022962
+2025-12-13 18:19:35,406 INFO     Training average negative_sample_loss at step 43200: 0.026524
+2025-12-13 18:19:35,406 INFO     Training average loss at step 43200: 0.221036
+2025-12-13 18:19:48,599 INFO     Training average regularization at step 43400: 0.196188
+2025-12-13 18:19:48,600 INFO     Training average positive_sample_loss at step 43400: 0.020551
+2025-12-13 18:19:48,600 INFO     Training average negative_sample_loss at step 43400: 0.031414
+2025-12-13 18:19:48,600 INFO     Training average loss at step 43400: 0.222171
+2025-12-13 18:20:02,787 INFO     Training average regularization at step 43600: 0.196086
+2025-12-13 18:20:02,787 INFO     Training average positive_sample_loss at step 43600: 0.016844
+2025-12-13 18:20:02,787 INFO     Training average negative_sample_loss at step 43600: 0.027088
+2025-12-13 18:20:02,787 INFO     Training average loss at step 43600: 0.218052
+2025-12-13 18:20:15,932 INFO     Training average regularization at step 43800: 0.195976
+2025-12-13 18:20:15,933 INFO     Training average positive_sample_loss at step 43800: 0.016351
+2025-12-13 18:20:15,933 INFO     Training average negative_sample_loss at step 43800: 0.024804
+2025-12-13 18:20:15,933 INFO     Training average loss at step 43800: 0.216553
+2025-12-13 18:20:29,055 INFO     Training average regularization at step 44000: 0.195867
+2025-12-13 18:20:29,056 INFO     Training average positive_sample_loss at step 44000: 0.015337
+2025-12-13 18:20:29,056 INFO     Training average negative_sample_loss at step 44000: 0.026942
+2025-12-13 18:20:29,056 INFO     Training average loss at step 44000: 0.217006
+2025-12-13 18:20:42,238 INFO     Training average regularization at step 44200: 0.195762
+2025-12-13 18:20:42,238 INFO     Training average positive_sample_loss at step 44200: 0.017680
+2025-12-13 18:20:42,238 INFO     Training average negative_sample_loss at step 44200: 0.024338
+2025-12-13 18:20:42,238 INFO     Training average loss at step 44200: 0.216771
+2025-12-13 18:20:55,389 INFO     Training average regularization at step 44400: 0.195659
+2025-12-13 18:20:55,390 INFO     Training average positive_sample_loss at step 44400: 0.017842
+2025-12-13 18:20:55,390 INFO     Training average negative_sample_loss at step 44400: 0.022821
+2025-12-13 18:20:55,390 INFO     Training average loss at step 44400: 0.215991
+2025-12-13 18:21:08,513 INFO     Training average regularization at step 44600: 0.195557
+2025-12-13 18:21:08,514 INFO     Training average positive_sample_loss at step 44600: 0.016103
+2025-12-13 18:21:08,514 INFO     Training average negative_sample_loss at step 44600: 0.023525
+2025-12-13 18:21:08,514 INFO     Training average loss at step 44600: 0.215371
+2025-12-13 18:21:21,656 INFO     Training average regularization at step 44800: 0.195456
+2025-12-13 18:21:21,657 INFO     Training average positive_sample_loss at step 44800: 0.015627
+2025-12-13 18:21:21,657 INFO     Training average negative_sample_loss at step 44800: 0.027097
+2025-12-13 18:21:21,657 INFO     Training average loss at step 44800: 0.216818
+2025-12-13 18:21:34,832 INFO     Training average regularization at step 45000: 0.195357
+2025-12-13 18:21:34,832 INFO     Training average positive_sample_loss at step 45000: 0.017404
+2025-12-13 18:21:34,832 INFO     Training average negative_sample_loss at step 45000: 0.026978
+2025-12-13 18:21:34,832 INFO     Training average loss at step 45000: 0.217548
+2025-12-13 18:21:47,976 INFO     Training average regularization at step 45200: 0.195260
+2025-12-13 18:21:47,976 INFO     Training average positive_sample_loss at step 45200: 0.016149
+2025-12-13 18:21:47,976 INFO     Training average negative_sample_loss at step 45200: 0.027458
+2025-12-13 18:21:47,976 INFO     Training average loss at step 45200: 0.217063
+2025-12-13 18:22:01,075 INFO     Training average regularization at step 45400: 0.195164
+2025-12-13 18:22:01,075 INFO     Training average positive_sample_loss at step 45400: 0.014953
+2025-12-13 18:22:01,075 INFO     Training average negative_sample_loss at step 45400: 0.025276
+2025-12-13 18:22:01,075 INFO     Training average loss at step 45400: 0.215279
+2025-12-13 18:22:14,237 INFO     Training average regularization at step 45600: 0.195069
+2025-12-13 18:22:14,238 INFO     Training average positive_sample_loss at step 45600: 0.015615
+2025-12-13 18:22:14,238 INFO     Training average negative_sample_loss at step 45600: 0.026697
+2025-12-13 18:22:14,238 INFO     Training average loss at step 45600: 0.216225
+2025-12-13 18:22:27,316 INFO     Training average regularization at step 45800: 0.194974
+2025-12-13 18:22:27,316 INFO     Training average positive_sample_loss at step 45800: 0.015293
+2025-12-13 18:22:27,316 INFO     Training average negative_sample_loss at step 45800: 0.025634
+2025-12-13 18:22:27,316 INFO     Training average loss at step 45800: 0.215437
+2025-12-13 18:22:40,443 INFO     Training average regularization at step 46000: 0.194880
+2025-12-13 18:22:40,444 INFO     Training average positive_sample_loss at step 46000: 0.016388
+2025-12-13 18:22:40,444 INFO     Training average negative_sample_loss at step 46000: 0.024880
+2025-12-13 18:22:40,444 INFO     Training average loss at step 46000: 0.215514
+2025-12-13 18:22:53,636 INFO     Training average regularization at step 46200: 0.194788
+2025-12-13 18:22:53,636 INFO     Training average positive_sample_loss at step 46200: 0.016624
+2025-12-13 18:22:53,636 INFO     Training average negative_sample_loss at step 46200: 0.027268
+2025-12-13 18:22:53,637 INFO     Training average loss at step 46200: 0.216734
+2025-12-13 18:23:06,765 INFO     Training average regularization at step 46400: 0.194694
+2025-12-13 18:23:06,765 INFO     Training average positive_sample_loss at step 46400: 0.015781
+2025-12-13 18:23:06,765 INFO     Training average negative_sample_loss at step 46400: 0.025935
+2025-12-13 18:23:06,765 INFO     Training average loss at step 46400: 0.215552
+2025-12-13 18:23:19,888 INFO     Training average regularization at step 46600: 0.194603
+2025-12-13 18:23:19,889 INFO     Training average positive_sample_loss at step 46600: 0.017032
+2025-12-13 18:23:19,889 INFO     Training average negative_sample_loss at step 46600: 0.025917
+2025-12-13 18:23:19,889 INFO     Training average loss at step 46600: 0.216078
+2025-12-13 18:23:33,008 INFO     Training average regularization at step 46800: 0.194511
+2025-12-13 18:23:33,009 INFO     Training average positive_sample_loss at step 46800: 0.015803
+2025-12-13 18:23:33,009 INFO     Training average negative_sample_loss at step 46800: 0.027918
+2025-12-13 18:23:33,009 INFO     Training average loss at step 46800: 0.216371
+2025-12-13 18:23:46,125 INFO     Training average regularization at step 47000: 0.194419
+2025-12-13 18:23:46,125 INFO     Training average positive_sample_loss at step 47000: 0.014856
+2025-12-13 18:23:46,125 INFO     Training average negative_sample_loss at step 47000: 0.024185
+2025-12-13 18:23:46,125 INFO     Training average loss at step 47000: 0.213939
+2025-12-13 18:23:59,257 INFO     Training average regularization at step 47200: 0.194328
+2025-12-13 18:23:59,257 INFO     Training average positive_sample_loss at step 47200: 0.014871
+2025-12-13 18:23:59,257 INFO     Training average negative_sample_loss at step 47200: 0.023942
+2025-12-13 18:23:59,257 INFO     Training average loss at step 47200: 0.213734
+2025-12-13 18:24:12,374 INFO     Training average regularization at step 47400: 0.194236
+2025-12-13 18:24:12,374 INFO     Training average positive_sample_loss at step 47400: 0.017028
+2025-12-13 18:24:12,374 INFO     Training average negative_sample_loss at step 47400: 0.026362
+2025-12-13 18:24:12,374 INFO     Training average loss at step 47400: 0.215931
+2025-12-13 18:24:25,600 INFO     Training average regularization at step 47600: 0.194146
+2025-12-13 18:24:25,601 INFO     Training average positive_sample_loss at step 47600: 0.014643
+2025-12-13 18:24:25,601 INFO     Training average negative_sample_loss at step 47600: 0.023425
+2025-12-13 18:24:25,601 INFO     Training average loss at step 47600: 0.213180
+2025-12-13 18:24:38,839 INFO     Training average regularization at step 47800: 0.194054
+2025-12-13 18:24:38,840 INFO     Training average positive_sample_loss at step 47800: 0.014905
+2025-12-13 18:24:38,840 INFO     Training average negative_sample_loss at step 47800: 0.025990
+2025-12-13 18:24:38,840 INFO     Training average loss at step 47800: 0.214502
+2025-12-13 18:24:52,239 INFO     Training average regularization at step 48000: 0.193963
+2025-12-13 18:24:52,240 INFO     Training average positive_sample_loss at step 48000: 0.016176
+2025-12-13 18:24:52,240 INFO     Training average negative_sample_loss at step 48000: 0.023871
+2025-12-13 18:24:52,240 INFO     Training average loss at step 48000: 0.213986
+2025-12-13 18:25:05,390 INFO     Training average regularization at step 48200: 0.193871
+2025-12-13 18:25:05,392 INFO     Training average positive_sample_loss at step 48200: 0.014331
+2025-12-13 18:25:05,392 INFO     Training average negative_sample_loss at step 48200: 0.022575
+2025-12-13 18:25:05,392 INFO     Training average loss at step 48200: 0.212324
+2025-12-13 18:25:19,518 INFO     Training average regularization at step 48400: 0.193779
+2025-12-13 18:25:19,519 INFO     Training average positive_sample_loss at step 48400: 0.013757
+2025-12-13 18:25:19,519 INFO     Training average negative_sample_loss at step 48400: 0.023277
+2025-12-13 18:25:19,519 INFO     Training average loss at step 48400: 0.212296
+2025-12-13 18:25:32,683 INFO     Training average regularization at step 48600: 0.193679
+2025-12-13 18:25:32,684 INFO     Training average positive_sample_loss at step 48600: 0.011829
+2025-12-13 18:25:32,684 INFO     Training average negative_sample_loss at step 48600: 0.024379
+2025-12-13 18:25:32,684 INFO     Training average loss at step 48600: 0.211783
+2025-12-13 18:25:45,903 INFO     Training average regularization at step 48800: 0.193579
+2025-12-13 18:25:45,904 INFO     Training average positive_sample_loss at step 48800: 0.012819
+2025-12-13 18:25:45,904 INFO     Training average negative_sample_loss at step 48800: 0.024727
+2025-12-13 18:25:45,904 INFO     Training average loss at step 48800: 0.212351
+2025-12-13 18:25:59,028 INFO     Training average regularization at step 49000: 0.193479
+2025-12-13 18:25:59,033 INFO     Training average positive_sample_loss at step 49000: 0.014013
+2025-12-13 18:25:59,033 INFO     Training average negative_sample_loss at step 49000: 0.026295
+2025-12-13 18:25:59,033 INFO     Training average loss at step 49000: 0.213633
+2025-12-13 18:26:12,169 INFO     Training average regularization at step 49200: 0.193381
+2025-12-13 18:26:12,170 INFO     Training average positive_sample_loss at step 49200: 0.013786
+2025-12-13 18:26:12,170 INFO     Training average negative_sample_loss at step 49200: 0.023266
+2025-12-13 18:26:12,170 INFO     Training average loss at step 49200: 0.211907
+2025-12-13 18:26:25,280 INFO     Training average regularization at step 49400: 0.193283
+2025-12-13 18:26:25,280 INFO     Training average positive_sample_loss at step 49400: 0.013475
+2025-12-13 18:26:25,280 INFO     Training average negative_sample_loss at step 49400: 0.022977
+2025-12-13 18:26:25,280 INFO     Training average loss at step 49400: 0.211509
+2025-12-13 18:26:38,327 INFO     Training average regularization at step 49600: 0.193183
+2025-12-13 18:26:38,328 INFO     Training average positive_sample_loss at step 49600: 0.013008
+2025-12-13 18:26:38,328 INFO     Training average negative_sample_loss at step 49600: 0.022506
+2025-12-13 18:26:38,328 INFO     Training average loss at step 49600: 0.210940
+2025-12-13 18:26:51,506 INFO     Training average regularization at step 49800: 0.193084
+2025-12-13 18:26:51,506 INFO     Training average positive_sample_loss at step 49800: 0.013458
+2025-12-13 18:26:51,506 INFO     Training average negative_sample_loss at step 49800: 0.023508
+2025-12-13 18:26:51,506 INFO     Training average loss at step 49800: 0.211567
+2025-12-13 18:27:04,646 INFO     Training average regularization at step 50000: 0.192986
+2025-12-13 18:27:04,647 INFO     Training average positive_sample_loss at step 50000: 0.014435
+2025-12-13 18:27:04,647 INFO     Training average negative_sample_loss at step 50000: 0.022190
+2025-12-13 18:27:04,647 INFO     Training average loss at step 50000: 0.211298
+2025-12-13 18:27:04,647 INFO     Evaluating on Valid Dataset...
+2025-12-13 18:27:05,299 INFO     Evaluating the model... (0/25000)
+2025-12-13 18:27:13,965 INFO     Evaluating the model... (500/25000)
+2025-12-13 18:27:21,788 INFO     Evaluating the model... (1000/25000)
+2025-12-13 18:27:29,549 INFO     Evaluating the model... (1500/25000)
+2025-12-13 18:27:38,353 INFO     Evaluating the model... (2000/25000)
+2025-12-13 18:27:46,495 INFO     Evaluating the model... (2500/25000)
+2025-12-13 18:27:54,377 INFO     Evaluating the model... (3000/25000)
+2025-12-13 18:28:02,205 INFO     Evaluating the model... (3500/25000)
+2025-12-13 18:28:10,419 INFO     Evaluating the model... (4000/25000)
+2025-12-13 18:28:18,229 INFO     Evaluating the model... (4500/25000)
+2025-12-13 18:28:26,081 INFO     Evaluating the model... (5000/25000)
+2025-12-13 18:28:34,222 INFO     Evaluating the model... (5500/25000)
+2025-12-13 18:28:42,294 INFO     Evaluating the model... (6000/25000)
+2025-12-13 18:28:50,188 INFO     Evaluating the model... (6500/25000)
+2025-12-13 18:28:58,584 INFO     Evaluating the model... (7000/25000)
+2025-12-13 18:29:06,437 INFO     Evaluating the model... (7500/25000)
+2025-12-13 18:29:14,222 INFO     Evaluating the model... (8000/25000)
+2025-12-13 18:29:22,043 INFO     Evaluating the model... (8500/25000)
+2025-12-13 18:29:30,321 INFO     Evaluating the model... (9000/25000)
+2025-12-13 18:29:38,294 INFO     Evaluating the model... (9500/25000)
+2025-12-13 18:29:46,361 INFO     Evaluating the model... (10000/25000)
+2025-12-13 18:29:54,686 INFO     Evaluating the model... (10500/25000)
+2025-12-13 18:30:02,582 INFO     Evaluating the model... (11000/25000)
+2025-12-13 18:30:10,414 INFO     Evaluating the model... (11500/25000)
+2025-12-13 18:30:18,291 INFO     Evaluating the model... (12000/25000)
+2025-12-13 18:30:27,234 INFO     Evaluating the model... (12500/25000)
+2025-12-13 18:30:35,151 INFO     Evaluating the model... (13000/25000)
+2025-12-13 18:30:43,199 INFO     Evaluating the model... (13500/25000)
+2025-12-13 18:30:51,158 INFO     Evaluating the model... (14000/25000)
+2025-12-13 18:30:59,685 INFO     Evaluating the model... (14500/25000)
+2025-12-13 18:31:07,617 INFO     Evaluating the model... (15000/25000)
+2025-12-13 18:31:15,492 INFO     Evaluating the model... (15500/25000)
+2025-12-13 18:31:23,953 INFO     Evaluating the model... (16000/25000)
+2025-12-13 18:31:31,867 INFO     Evaluating the model... (16500/25000)
+2025-12-13 18:31:39,874 INFO     Evaluating the model... (17000/25000)
+2025-12-13 18:31:47,897 INFO     Evaluating the model... (17500/25000)
+2025-12-13 18:31:56,315 INFO     Evaluating the model... (18000/25000)
+2025-12-13 18:32:04,163 INFO     Evaluating the model... (18500/25000)
+2025-12-13 18:32:12,040 INFO     Evaluating the model... (19000/25000)
+2025-12-13 18:32:20,465 INFO     Evaluating the model... (19500/25000)
+2025-12-13 18:32:28,340 INFO     Evaluating the model... (20000/25000)
+2025-12-13 18:32:36,339 INFO     Evaluating the model... (20500/25000)
+2025-12-13 18:32:44,879 INFO     Evaluating the model... (21000/25000)
+2025-12-13 18:32:53,415 INFO     Evaluating the model... (21500/25000)
+2025-12-13 18:33:01,391 INFO     Evaluating the model... (22000/25000)
+2025-12-13 18:33:09,344 INFO     Evaluating the model... (22500/25000)
+2025-12-13 18:33:18,008 INFO     Evaluating the model... (23000/25000)
+2025-12-13 18:33:25,934 INFO     Evaluating the model... (23500/25000)
+2025-12-13 18:33:33,806 INFO     Evaluating the model... (24000/25000)
+2025-12-13 18:33:42,875 INFO     Evaluating the model... (24500/25000)
+2025-12-13 18:33:51,131 INFO     Valid MRR at step 50000: 0.705198
+2025-12-13 18:33:51,131 INFO     Valid MR at step 50000: 253.752660
+2025-12-13 18:33:51,131 INFO     Valid HITS@1 at step 50000: 0.634110
+2025-12-13 18:33:51,131 INFO     Valid HITS@3 at step 50000: 0.752750
+2025-12-13 18:33:51,131 INFO     Valid HITS@10 at step 50000: 0.829910
+2025-12-13 18:33:51,131 INFO     Evaluating on Test Dataset...
+2025-12-13 18:33:51,696 INFO     Evaluating the model... (0/29536)
+2025-12-13 18:33:59,705 INFO     Evaluating the model... (500/29536)
+2025-12-13 18:34:07,543 INFO     Evaluating the model... (1000/29536)
+2025-12-13 18:34:16,282 INFO     Evaluating the model... (1500/29536)
+2025-12-13 18:34:24,136 INFO     Evaluating the model... (2000/29536)
+2025-12-13 18:34:31,962 INFO     Evaluating the model... (2500/29536)
+2025-12-13 18:34:39,894 INFO     Evaluating the model... (3000/29536)
+2025-12-13 18:34:48,569 INFO     Evaluating the model... (3500/29536)
+2025-12-13 18:34:56,408 INFO     Evaluating the model... (4000/29536)
+2025-12-13 18:35:04,244 INFO     Evaluating the model... (4500/29536)
+2025-12-13 18:35:12,676 INFO     Evaluating the model... (5000/29536)
+2025-12-13 18:35:20,498 INFO     Evaluating the model... (5500/29536)
+2025-12-13 18:35:28,297 INFO     Evaluating the model... (6000/29536)
+2025-12-13 18:35:36,155 INFO     Evaluating the model... (6500/29536)
+2025-12-13 18:35:44,999 INFO     Evaluating the model... (7000/29536)
+2025-12-13 18:35:52,844 INFO     Evaluating the model... (7500/29536)
+2025-12-13 18:36:00,613 INFO     Evaluating the model... (8000/29536)
+2025-12-13 18:36:09,394 INFO     Evaluating the model... (8500/29536)
+2025-12-13 18:36:17,227 INFO     Evaluating the model... (9000/29536)
+2025-12-13 18:36:24,998 INFO     Evaluating the model... (9500/29536)
+2025-12-13 18:36:32,825 INFO     Evaluating the model... (10000/29536)
+2025-12-13 18:36:41,616 INFO     Evaluating the model... (10500/29536)
+2025-12-13 18:36:49,580 INFO     Evaluating the model... (11000/29536)
+2025-12-13 18:36:57,406 INFO     Evaluating the model... (11500/29536)
+2025-12-13 18:37:06,047 INFO     Evaluating the model... (12000/29536)
+2025-12-13 18:37:13,898 INFO     Evaluating the model... (12500/29536)
+2025-12-13 18:37:21,703 INFO     Evaluating the model... (13000/29536)
+2025-12-13 18:37:30,065 INFO     Evaluating the model... (13500/29536)
+2025-12-13 18:37:38,450 INFO     Evaluating the model... (14000/29536)
+2025-12-13 18:37:46,410 INFO     Evaluating the model... (14500/29536)
+2025-12-13 18:37:54,618 INFO     Evaluating the model... (15000/29536)
+2025-12-13 18:38:02,555 INFO     Evaluating the model... (15500/29536)
+2025-12-13 18:38:10,995 INFO     Evaluating the model... (16000/29536)
+2025-12-13 18:38:18,833 INFO     Evaluating the model... (16500/29536)
+2025-12-13 18:38:26,756 INFO     Evaluating the model... (17000/29536)
+2025-12-13 18:38:34,664 INFO     Evaluating the model... (17500/29536)
+2025-12-13 18:38:43,311 INFO     Evaluating the model... (18000/29536)
+2025-12-13 18:38:51,287 INFO     Evaluating the model... (18500/29536)
+2025-12-13 18:38:59,185 INFO     Evaluating the model... (19000/29536)
+2025-12-13 18:39:07,560 INFO     Evaluating the model... (19500/29536)
+2025-12-13 18:39:15,372 INFO     Evaluating the model... (20000/29536)
+2025-12-13 18:39:23,264 INFO     Evaluating the model... (20500/29536)
+2025-12-13 18:39:31,198 INFO     Evaluating the model... (21000/29536)
+2025-12-13 18:39:39,920 INFO     Evaluating the model... (21500/29536)
+2025-12-13 18:39:47,930 INFO     Evaluating the model... (22000/29536)
+2025-12-13 18:39:55,898 INFO     Evaluating the model... (22500/29536)
+2025-12-13 18:40:04,259 INFO     Evaluating the model... (23000/29536)
+2025-12-13 18:40:12,174 INFO     Evaluating the model... (23500/29536)
+2025-12-13 18:40:20,109 INFO     Evaluating the model... (24000/29536)
+2025-12-13 18:40:28,038 INFO     Evaluating the model... (24500/29536)
+2025-12-13 18:40:36,488 INFO     Evaluating the model... (25000/29536)
+2025-12-13 18:40:44,540 INFO     Evaluating the model... (25500/29536)
+2025-12-13 18:40:52,497 INFO     Evaluating the model... (26000/29536)
+2025-12-13 18:41:00,901 INFO     Evaluating the model... (26500/29536)
+2025-12-13 18:41:08,784 INFO     Evaluating the model... (27000/29536)
+2025-12-13 18:41:16,728 INFO     Evaluating the model... (27500/29536)
+2025-12-13 18:41:24,685 INFO     Evaluating the model... (28000/29536)
+2025-12-13 18:41:33,176 INFO     Evaluating the model... (28500/29536)
+2025-12-13 18:41:41,194 INFO     Evaluating the model... (29000/29536)
+2025-12-13 18:41:49,226 INFO     Evaluating the model... (29500/29536)
+2025-12-13 18:41:50,037 INFO     Test MRR at step 50000: 0.702990
+2025-12-13 18:41:50,037 INFO     Test MR at step 50000: 266.647323
+2025-12-13 18:41:50,037 INFO     Test HITS@1 at step 50000: 0.631063
+2025-12-13 18:41:50,037 INFO     Test HITS@3 at step 50000: 0.751071
+2025-12-13 18:41:50,037 INFO     Test HITS@10 at step 50000: 0.827927
+2025-12-13 18:42:03,211 INFO     Training average regularization at step 50200: 0.192887
+2025-12-13 18:42:03,211 INFO     Training average positive_sample_loss at step 50200: 0.012702
+2025-12-13 18:42:03,211 INFO     Training average negative_sample_loss at step 50200: 0.021366
+2025-12-13 18:42:03,211 INFO     Training average loss at step 50200: 0.209921
+2025-12-13 18:42:16,345 INFO     Training average regularization at step 50400: 0.192788
+2025-12-13 18:42:16,345 INFO     Training average positive_sample_loss at step 50400: 0.014036
+2025-12-13 18:42:16,345 INFO     Training average negative_sample_loss at step 50400: 0.024626
+2025-12-13 18:42:16,345 INFO     Training average loss at step 50400: 0.212119
+2025-12-13 18:42:29,494 INFO     Training average regularization at step 50600: 0.192689
+2025-12-13 18:42:29,494 INFO     Training average positive_sample_loss at step 50600: 0.013529
+2025-12-13 18:42:29,494 INFO     Training average negative_sample_loss at step 50600: 0.022607
+2025-12-13 18:42:29,494 INFO     Training average loss at step 50600: 0.210757
+2025-12-13 18:42:42,774 INFO     Training average regularization at step 50800: 0.192589
+2025-12-13 18:42:42,774 INFO     Training average positive_sample_loss at step 50800: 0.013115
+2025-12-13 18:42:42,774 INFO     Training average negative_sample_loss at step 50800: 0.021316
+2025-12-13 18:42:42,774 INFO     Training average loss at step 50800: 0.209805
+2025-12-13 18:42:55,883 INFO     Training average regularization at step 51000: 0.192490
+2025-12-13 18:42:55,884 INFO     Training average positive_sample_loss at step 51000: 0.012510
+2025-12-13 18:42:55,884 INFO     Training average negative_sample_loss at step 51000: 0.025202
+2025-12-13 18:42:55,884 INFO     Training average loss at step 51000: 0.211346
+2025-12-13 18:43:09,004 INFO     Training average regularization at step 51200: 0.192393
+2025-12-13 18:43:09,004 INFO     Training average positive_sample_loss at step 51200: 0.013749
+2025-12-13 18:43:09,004 INFO     Training average negative_sample_loss at step 51200: 0.025324
+2025-12-13 18:43:09,004 INFO     Training average loss at step 51200: 0.211929
+2025-12-13 18:43:22,134 INFO     Training average regularization at step 51400: 0.192298
+2025-12-13 18:43:22,135 INFO     Training average positive_sample_loss at step 51400: 0.013565
+2025-12-13 18:43:22,135 INFO     Training average negative_sample_loss at step 51400: 0.023433
+2025-12-13 18:43:22,135 INFO     Training average loss at step 51400: 0.210797
+2025-12-13 18:43:35,239 INFO     Training average regularization at step 51600: 0.192202
+2025-12-13 18:43:35,239 INFO     Training average positive_sample_loss at step 51600: 0.013224
+2025-12-13 18:43:35,239 INFO     Training average negative_sample_loss at step 51600: 0.024212
+2025-12-13 18:43:35,239 INFO     Training average loss at step 51600: 0.210920
+2025-12-13 18:43:48,402 INFO     Training average regularization at step 51800: 0.192108
+2025-12-13 18:43:48,403 INFO     Training average positive_sample_loss at step 51800: 0.012935
+2025-12-13 18:43:48,403 INFO     Training average negative_sample_loss at step 51800: 0.024732
+2025-12-13 18:43:48,403 INFO     Training average loss at step 51800: 0.210942
+2025-12-13 18:44:01,567 INFO     Training average regularization at step 52000: 0.192016
+2025-12-13 18:44:01,567 INFO     Training average positive_sample_loss at step 52000: 0.013950
+2025-12-13 18:44:01,567 INFO     Training average negative_sample_loss at step 52000: 0.022835
+2025-12-13 18:44:01,567 INFO     Training average loss at step 52000: 0.210408
+2025-12-13 18:44:14,687 INFO     Training average regularization at step 52200: 0.191923
+2025-12-13 18:44:14,687 INFO     Training average positive_sample_loss at step 52200: 0.013047
+2025-12-13 18:44:14,687 INFO     Training average negative_sample_loss at step 52200: 0.023689
+2025-12-13 18:44:14,687 INFO     Training average loss at step 52200: 0.210291
+2025-12-13 18:44:27,807 INFO     Training average regularization at step 52400: 0.191828
+2025-12-13 18:44:27,808 INFO     Training average positive_sample_loss at step 52400: 0.012919
+2025-12-13 18:44:27,808 INFO     Training average negative_sample_loss at step 52400: 0.022172
+2025-12-13 18:44:27,808 INFO     Training average loss at step 52400: 0.209373
+2025-12-13 18:44:40,986 INFO     Training average regularization at step 52600: 0.191733
+2025-12-13 18:44:40,987 INFO     Training average positive_sample_loss at step 52600: 0.013290
+2025-12-13 18:44:40,987 INFO     Training average negative_sample_loss at step 52600: 0.023979
+2025-12-13 18:44:40,987 INFO     Training average loss at step 52600: 0.210368
+2025-12-13 18:44:54,168 INFO     Training average regularization at step 52800: 0.191638
+2025-12-13 18:44:54,169 INFO     Training average positive_sample_loss at step 52800: 0.013306
+2025-12-13 18:44:54,169 INFO     Training average negative_sample_loss at step 52800: 0.025273
+2025-12-13 18:44:54,169 INFO     Training average loss at step 52800: 0.210928
+2025-12-13 18:45:07,301 INFO     Training average regularization at step 53000: 0.191545
+2025-12-13 18:45:07,301 INFO     Training average positive_sample_loss at step 53000: 0.012956
+2025-12-13 18:45:07,301 INFO     Training average negative_sample_loss at step 53000: 0.027114
+2025-12-13 18:45:07,301 INFO     Training average loss at step 53000: 0.211580
+2025-12-13 18:45:21,408 INFO     Training average regularization at step 53200: 0.191454
+2025-12-13 18:45:21,409 INFO     Training average positive_sample_loss at step 53200: 0.013685
+2025-12-13 18:45:21,409 INFO     Training average negative_sample_loss at step 53200: 0.023861
+2025-12-13 18:45:21,409 INFO     Training average loss at step 53200: 0.210227
+2025-12-13 18:45:34,632 INFO     Training average regularization at step 53400: 0.191356
+2025-12-13 18:45:34,632 INFO     Training average positive_sample_loss at step 53400: 0.011121
+2025-12-13 18:45:34,632 INFO     Training average negative_sample_loss at step 53400: 0.021583
+2025-12-13 18:45:34,632 INFO     Training average loss at step 53400: 0.207707
+2025-12-13 18:45:47,841 INFO     Training average regularization at step 53600: 0.191256
+2025-12-13 18:45:47,842 INFO     Training average positive_sample_loss at step 53600: 0.011725
+2025-12-13 18:45:47,842 INFO     Training average negative_sample_loss at step 53600: 0.022454
+2025-12-13 18:45:47,842 INFO     Training average loss at step 53600: 0.208346
+2025-12-13 18:46:00,933 INFO     Training average regularization at step 53800: 0.191158
+2025-12-13 18:46:00,934 INFO     Training average positive_sample_loss at step 53800: 0.013359
+2025-12-13 18:46:00,934 INFO     Training average negative_sample_loss at step 53800: 0.022205
+2025-12-13 18:46:00,934 INFO     Training average loss at step 53800: 0.208940
+2025-12-13 18:46:14,023 INFO     Training average regularization at step 54000: 0.191060
+2025-12-13 18:46:14,032 INFO     Training average positive_sample_loss at step 54000: 0.011899
+2025-12-13 18:46:14,032 INFO     Training average negative_sample_loss at step 54000: 0.023019
+2025-12-13 18:46:14,032 INFO     Training average loss at step 54000: 0.208520
+2025-12-13 18:46:27,136 INFO     Training average regularization at step 54200: 0.190962
+2025-12-13 18:46:27,137 INFO     Training average positive_sample_loss at step 54200: 0.011488
+2025-12-13 18:46:27,137 INFO     Training average negative_sample_loss at step 54200: 0.021590
+2025-12-13 18:46:27,137 INFO     Training average loss at step 54200: 0.207502
+2025-12-13 18:46:40,316 INFO     Training average regularization at step 54400: 0.190865
+2025-12-13 18:46:40,316 INFO     Training average positive_sample_loss at step 54400: 0.012383
+2025-12-13 18:46:40,316 INFO     Training average negative_sample_loss at step 54400: 0.020989
+2025-12-13 18:46:40,316 INFO     Training average loss at step 54400: 0.207551
+2025-12-13 18:46:53,467 INFO     Training average regularization at step 54600: 0.190766
+2025-12-13 18:46:53,467 INFO     Training average positive_sample_loss at step 54600: 0.012090
+2025-12-13 18:46:53,467 INFO     Training average negative_sample_loss at step 54600: 0.025587
+2025-12-13 18:46:53,467 INFO     Training average loss at step 54600: 0.209605
+2025-12-13 18:47:06,581 INFO     Training average regularization at step 54800: 0.190669
+2025-12-13 18:47:06,582 INFO     Training average positive_sample_loss at step 54800: 0.011837
+2025-12-13 18:47:06,582 INFO     Training average negative_sample_loss at step 54800: 0.024010
+2025-12-13 18:47:06,582 INFO     Training average loss at step 54800: 0.208592
+2025-12-13 18:47:19,676 INFO     Training average regularization at step 55000: 0.190574
+2025-12-13 18:47:19,677 INFO     Training average positive_sample_loss at step 55000: 0.011594
+2025-12-13 18:47:19,677 INFO     Training average negative_sample_loss at step 55000: 0.021302
+2025-12-13 18:47:19,677 INFO     Training average loss at step 55000: 0.207022
+2025-12-13 18:47:32,770 INFO     Training average regularization at step 55200: 0.190477
+2025-12-13 18:47:32,771 INFO     Training average positive_sample_loss at step 55200: 0.011760
+2025-12-13 18:47:32,771 INFO     Training average negative_sample_loss at step 55200: 0.021169
+2025-12-13 18:47:32,771 INFO     Training average loss at step 55200: 0.206941
+2025-12-13 18:47:45,968 INFO     Training average regularization at step 55400: 0.190381
+2025-12-13 18:47:45,968 INFO     Training average positive_sample_loss at step 55400: 0.012107
+2025-12-13 18:47:45,968 INFO     Training average negative_sample_loss at step 55400: 0.026910
+2025-12-13 18:47:45,968 INFO     Training average loss at step 55400: 0.209890
+2025-12-13 18:47:59,068 INFO     Training average regularization at step 55600: 0.190289
+2025-12-13 18:47:59,068 INFO     Training average positive_sample_loss at step 55600: 0.012877
+2025-12-13 18:47:59,068 INFO     Training average negative_sample_loss at step 55600: 0.022387
+2025-12-13 18:47:59,068 INFO     Training average loss at step 55600: 0.207921
+2025-12-13 18:48:12,207 INFO     Training average regularization at step 55800: 0.190197
+2025-12-13 18:48:12,207 INFO     Training average positive_sample_loss at step 55800: 0.012555
+2025-12-13 18:48:12,207 INFO     Training average negative_sample_loss at step 55800: 0.023224
+2025-12-13 18:48:12,207 INFO     Training average loss at step 55800: 0.208087
+2025-12-13 18:48:25,352 INFO     Training average regularization at step 56000: 0.190104
+2025-12-13 18:48:25,352 INFO     Training average positive_sample_loss at step 56000: 0.012544
+2025-12-13 18:48:25,352 INFO     Training average negative_sample_loss at step 56000: 0.023311
+2025-12-13 18:48:25,352 INFO     Training average loss at step 56000: 0.208031
+2025-12-13 18:48:38,469 INFO     Training average regularization at step 56200: 0.190011
+2025-12-13 18:48:38,469 INFO     Training average positive_sample_loss at step 56200: 0.011971
+2025-12-13 18:48:38,469 INFO     Training average negative_sample_loss at step 56200: 0.021845
+2025-12-13 18:48:38,469 INFO     Training average loss at step 56200: 0.206919
+2025-12-13 18:48:51,670 INFO     Training average regularization at step 56400: 0.189917
+2025-12-13 18:48:51,671 INFO     Training average positive_sample_loss at step 56400: 0.011722
+2025-12-13 18:48:51,671 INFO     Training average negative_sample_loss at step 56400: 0.021552
+2025-12-13 18:48:51,671 INFO     Training average loss at step 56400: 0.206554
+2025-12-13 18:49:04,791 INFO     Training average regularization at step 56600: 0.189825
+2025-12-13 18:49:04,791 INFO     Training average positive_sample_loss at step 56600: 0.012511
+2025-12-13 18:49:04,791 INFO     Training average negative_sample_loss at step 56600: 0.025385
+2025-12-13 18:49:04,791 INFO     Training average loss at step 56600: 0.208773
+2025-12-13 18:49:17,911 INFO     Training average regularization at step 56800: 0.189731
+2025-12-13 18:49:17,911 INFO     Training average positive_sample_loss at step 56800: 0.011353
+2025-12-13 18:49:17,911 INFO     Training average negative_sample_loss at step 56800: 0.023362
+2025-12-13 18:49:17,911 INFO     Training average loss at step 56800: 0.207089
+2025-12-13 18:49:31,047 INFO     Training average regularization at step 57000: 0.189639
+2025-12-13 18:49:31,047 INFO     Training average positive_sample_loss at step 57000: 0.011275
+2025-12-13 18:49:31,047 INFO     Training average negative_sample_loss at step 57000: 0.023603
+2025-12-13 18:49:31,047 INFO     Training average loss at step 57000: 0.207078
+2025-12-13 18:49:44,263 INFO     Training average regularization at step 57200: 0.189548
+2025-12-13 18:49:44,263 INFO     Training average positive_sample_loss at step 57200: 0.012377
+2025-12-13 18:49:44,263 INFO     Training average negative_sample_loss at step 57200: 0.022998
+2025-12-13 18:49:44,263 INFO     Training average loss at step 57200: 0.207235
+2025-12-13 18:49:57,408 INFO     Training average regularization at step 57400: 0.189458
+2025-12-13 18:49:57,408 INFO     Training average positive_sample_loss at step 57400: 0.012310
+2025-12-13 18:49:57,409 INFO     Training average negative_sample_loss at step 57400: 0.025175
+2025-12-13 18:49:57,409 INFO     Training average loss at step 57400: 0.208200
+2025-12-13 18:50:10,562 INFO     Training average regularization at step 57600: 0.189367
+2025-12-13 18:50:10,563 INFO     Training average positive_sample_loss at step 57600: 0.011516
+2025-12-13 18:50:10,563 INFO     Training average negative_sample_loss at step 57600: 0.021001
+2025-12-13 18:50:10,563 INFO     Training average loss at step 57600: 0.205626
+2025-12-13 18:50:23,668 INFO     Training average regularization at step 57800: 0.189276
+2025-12-13 18:50:23,673 INFO     Training average positive_sample_loss at step 57800: 0.011845
+2025-12-13 18:50:23,673 INFO     Training average negative_sample_loss at step 57800: 0.024741
+2025-12-13 18:50:23,673 INFO     Training average loss at step 57800: 0.207569
+2025-12-13 18:50:37,891 INFO     Training average regularization at step 58000: 0.189186
+2025-12-13 18:50:37,891 INFO     Training average positive_sample_loss at step 58000: 0.011870
+2025-12-13 18:50:37,891 INFO     Training average negative_sample_loss at step 58000: 0.023492
+2025-12-13 18:50:37,891 INFO     Training average loss at step 58000: 0.206867
+2025-12-13 18:50:51,178 INFO     Training average regularization at step 58200: 0.189092
+2025-12-13 18:50:51,179 INFO     Training average positive_sample_loss at step 58200: 0.010677
+2025-12-13 18:50:51,179 INFO     Training average negative_sample_loss at step 58200: 0.022835
+2025-12-13 18:50:51,179 INFO     Training average loss at step 58200: 0.205848
+2025-12-13 18:51:04,290 INFO     Training average regularization at step 58400: 0.188995
+2025-12-13 18:51:04,291 INFO     Training average positive_sample_loss at step 58400: 0.011225
+2025-12-13 18:51:04,291 INFO     Training average negative_sample_loss at step 58400: 0.023045
+2025-12-13 18:51:04,291 INFO     Training average loss at step 58400: 0.206130
+2025-12-13 18:51:17,409 INFO     Training average regularization at step 58600: 0.188900
+2025-12-13 18:51:17,410 INFO     Training average positive_sample_loss at step 58600: 0.010615
+2025-12-13 18:51:17,410 INFO     Training average negative_sample_loss at step 58600: 0.019579
+2025-12-13 18:51:17,410 INFO     Training average loss at step 58600: 0.203997
+2025-12-13 18:51:30,542 INFO     Training average regularization at step 58800: 0.188805
+2025-12-13 18:51:30,542 INFO     Training average positive_sample_loss at step 58800: 0.011348
+2025-12-13 18:51:30,542 INFO     Training average negative_sample_loss at step 58800: 0.020360
+2025-12-13 18:51:30,542 INFO     Training average loss at step 58800: 0.204659
+2025-12-13 18:51:43,750 INFO     Training average regularization at step 59000: 0.188709
+2025-12-13 18:51:43,751 INFO     Training average positive_sample_loss at step 59000: 0.010824
+2025-12-13 18:51:43,751 INFO     Training average negative_sample_loss at step 59000: 0.021633
+2025-12-13 18:51:43,751 INFO     Training average loss at step 59000: 0.204937
+2025-12-13 18:51:56,849 INFO     Training average regularization at step 59200: 0.188610
+2025-12-13 18:51:56,849 INFO     Training average positive_sample_loss at step 59200: 0.011087
+2025-12-13 18:51:56,849 INFO     Training average negative_sample_loss at step 59200: 0.022916
+2025-12-13 18:51:56,849 INFO     Training average loss at step 59200: 0.205612
+2025-12-13 18:52:09,933 INFO     Training average regularization at step 59400: 0.188513
+2025-12-13 18:52:09,933 INFO     Training average positive_sample_loss at step 59400: 0.011088
+2025-12-13 18:52:09,934 INFO     Training average negative_sample_loss at step 59400: 0.023338
+2025-12-13 18:52:09,934 INFO     Training average loss at step 59400: 0.205726
+2025-12-13 18:52:23,045 INFO     Training average regularization at step 59600: 0.188417
+2025-12-13 18:52:23,045 INFO     Training average positive_sample_loss at step 59600: 0.010993
+2025-12-13 18:52:23,045 INFO     Training average negative_sample_loss at step 59600: 0.022304
+2025-12-13 18:52:23,045 INFO     Training average loss at step 59600: 0.205066
+2025-12-13 18:52:36,212 INFO     Training average regularization at step 59800: 0.188322
+2025-12-13 18:52:36,212 INFO     Training average positive_sample_loss at step 59800: 0.011313
+2025-12-13 18:52:36,212 INFO     Training average negative_sample_loss at step 59800: 0.025209
+2025-12-13 18:52:36,214 INFO     Training average loss at step 59800: 0.206583
+2025-12-13 18:52:50,867 INFO     Training average regularization at step 60000: 0.188227
+2025-12-13 18:52:50,868 INFO     Training average positive_sample_loss at step 60000: 0.011253
+2025-12-13 18:52:50,868 INFO     Training average negative_sample_loss at step 60000: 0.022181
+2025-12-13 18:52:50,868 INFO     Training average loss at step 60000: 0.204943
+2025-12-13 18:52:50,868 INFO     Evaluating on Valid Dataset...
+2025-12-13 18:52:51,494 INFO     Evaluating the model... (0/25000)
+2025-12-13 18:52:59,515 INFO     Evaluating the model... (500/25000)
+2025-12-13 18:53:08,329 INFO     Evaluating the model... (1000/25000)
+2025-12-13 18:53:16,226 INFO     Evaluating the model... (1500/25000)
+2025-12-13 18:53:24,048 INFO     Evaluating the model... (2000/25000)
+2025-12-13 18:53:32,434 INFO     Evaluating the model... (2500/25000)
+2025-12-13 18:53:40,431 INFO     Evaluating the model... (3000/25000)
+2025-12-13 18:53:48,336 INFO     Evaluating the model... (3500/25000)
+2025-12-13 18:53:56,191 INFO     Evaluating the model... (4000/25000)
+2025-12-13 18:54:04,594 INFO     Evaluating the model... (4500/25000)
+2025-12-13 18:54:12,448 INFO     Evaluating the model... (5000/25000)
+2025-12-13 18:54:20,302 INFO     Evaluating the model... (5500/25000)
+2025-12-13 18:54:28,670 INFO     Evaluating the model... (6000/25000)
+2025-12-13 18:54:36,503 INFO     Evaluating the model... (6500/25000)
+2025-12-13 18:54:44,525 INFO     Evaluating the model... (7000/25000)
+2025-12-13 18:54:52,324 INFO     Evaluating the model... (7500/25000)
+2025-12-13 18:55:00,632 INFO     Evaluating the model... (8000/25000)
+2025-12-13 18:55:08,510 INFO     Evaluating the model... (8500/25000)
+2025-12-13 18:55:16,296 INFO     Evaluating the model... (9000/25000)
+2025-12-13 18:55:24,770 INFO     Evaluating the model... (9500/25000)
+2025-12-13 18:55:32,659 INFO     Evaluating the model... (10000/25000)
+2025-12-13 18:55:40,696 INFO     Evaluating the model... (10500/25000)
+2025-12-13 18:55:48,724 INFO     Evaluating the model... (11000/25000)
+2025-12-13 18:55:57,593 INFO     Evaluating the model... (11500/25000)
+2025-12-13 18:56:05,453 INFO     Evaluating the model... (12000/25000)
+2025-12-13 18:56:13,628 INFO     Evaluating the model... (12500/25000)
+2025-12-13 18:56:21,539 INFO     Evaluating the model... (13000/25000)
+2025-12-13 18:56:30,065 INFO     Evaluating the model... (13500/25000)
+2025-12-13 18:56:38,161 INFO     Evaluating the model... (14000/25000)
+2025-12-13 18:56:46,161 INFO     Evaluating the model... (14500/25000)
+2025-12-13 18:56:54,484 INFO     Evaluating the model... (15000/25000)
+2025-12-13 18:57:02,384 INFO     Evaluating the model... (15500/25000)
+2025-12-13 18:57:10,246 INFO     Evaluating the model... (16000/25000)
+2025-12-13 18:57:18,121 INFO     Evaluating the model... (16500/25000)
+2025-12-13 18:57:26,696 INFO     Evaluating the model... (17000/25000)
+2025-12-13 18:57:34,565 INFO     Evaluating the model... (17500/25000)
+2025-12-13 18:57:42,672 INFO     Evaluating the model... (18000/25000)
+2025-12-13 18:57:51,465 INFO     Evaluating the model... (18500/25000)
+2025-12-13 18:57:59,427 INFO     Evaluating the model... (19000/25000)
+2025-12-13 18:58:07,290 INFO     Evaluating the model... (19500/25000)
+2025-12-13 18:58:15,814 INFO     Evaluating the model... (20000/25000)
+2025-12-13 18:58:23,689 INFO     Evaluating the model... (20500/25000)
+2025-12-13 18:58:31,588 INFO     Evaluating the model... (21000/25000)
+2025-12-13 18:58:39,612 INFO     Evaluating the model... (21500/25000)
+2025-12-13 18:58:48,607 INFO     Evaluating the model... (22000/25000)
+2025-12-13 18:58:56,508 INFO     Evaluating the model... (22500/25000)
+2025-12-13 18:59:04,404 INFO     Evaluating the model... (23000/25000)
+2025-12-13 18:59:13,320 INFO     Evaluating the model... (23500/25000)
+2025-12-13 18:59:21,209 INFO     Evaluating the model... (24000/25000)
+2025-12-13 18:59:29,156 INFO     Evaluating the model... (24500/25000)
+2025-12-13 18:59:37,297 INFO     Valid MRR at step 60000: 0.708191
+2025-12-13 18:59:37,297 INFO     Valid MR at step 60000: 254.965980
+2025-12-13 18:59:37,297 INFO     Valid HITS@1 at step 60000: 0.637660
+2025-12-13 18:59:37,297 INFO     Valid HITS@3 at step 60000: 0.755710
+2025-12-13 18:59:37,297 INFO     Valid HITS@10 at step 60000: 0.832110
+2025-12-13 18:59:37,297 INFO     Evaluating on Test Dataset...
+2025-12-13 18:59:37,979 INFO     Evaluating the model... (0/29536)
+2025-12-13 18:59:47,014 INFO     Evaluating the model... (500/29536)
+2025-12-13 18:59:54,996 INFO     Evaluating the model... (1000/29536)
+2025-12-13 19:00:02,911 INFO     Evaluating the model... (1500/29536)
+2025-12-13 19:00:10,718 INFO     Evaluating the model... (2000/29536)
+2025-12-13 19:00:19,115 INFO     Evaluating the model... (2500/29536)
+2025-12-13 19:00:26,953 INFO     Evaluating the model... (3000/29536)
+2025-12-13 19:00:34,766 INFO     Evaluating the model... (3500/29536)
+2025-12-13 19:00:43,271 INFO     Evaluating the model... (4000/29536)
+2025-12-13 19:00:51,162 INFO     Evaluating the model... (4500/29536)
+2025-12-13 19:00:58,990 INFO     Evaluating the model... (5000/29536)
+2025-12-13 19:01:07,156 INFO     Evaluating the model... (5500/29536)
+2025-12-13 19:01:15,046 INFO     Evaluating the model... (6000/29536)
+2025-12-13 19:01:22,911 INFO     Evaluating the model... (6500/29536)
+2025-12-13 19:01:30,736 INFO     Evaluating the model... (7000/29536)
+2025-12-13 19:01:39,127 INFO     Evaluating the model... (7500/29536)
+2025-12-13 19:01:47,209 INFO     Evaluating the model... (8000/29536)
+2025-12-13 19:01:55,026 INFO     Evaluating the model... (8500/29536)
+2025-12-13 19:02:03,542 INFO     Evaluating the model... (9000/29536)
+2025-12-13 19:02:11,393 INFO     Evaluating the model... (9500/29536)
+2025-12-13 19:02:19,234 INFO     Evaluating the model... (10000/29536)
+2025-12-13 19:02:27,055 INFO     Evaluating the model... (10500/29536)
+2025-12-13 19:02:35,411 INFO     Evaluating the model... (11000/29536)
+2025-12-13 19:02:43,494 INFO     Evaluating the model... (11500/29536)
+2025-12-13 19:02:51,446 INFO     Evaluating the model... (12000/29536)
+2025-12-13 19:02:59,768 INFO     Evaluating the model... (12500/29536)
+2025-12-13 19:03:07,634 INFO     Evaluating the model... (13000/29536)
+2025-12-13 19:03:15,489 INFO     Evaluating the model... (13500/29536)
+2025-12-13 19:03:23,293 INFO     Evaluating the model... (14000/29536)
+2025-12-13 19:03:31,994 INFO     Evaluating the model... (14500/29536)
+2025-12-13 19:03:41,275 INFO     Evaluating the model... (15000/29536)
+2025-12-13 19:03:49,245 INFO     Evaluating the model... (15500/29536)
+2025-12-13 19:03:57,100 INFO     Evaluating the model... (16000/29536)
+2025-12-13 19:04:05,065 INFO     Evaluating the model... (16500/29536)
+2025-12-13 19:04:13,775 INFO     Evaluating the model... (17000/29536)
+2025-12-13 19:04:21,705 INFO     Evaluating the model... (17500/29536)
+2025-12-13 19:04:29,563 INFO     Evaluating the model... (18000/29536)
+2025-12-13 19:04:37,872 INFO     Evaluating the model... (18500/29536)
+2025-12-13 19:04:45,979 INFO     Evaluating the model... (19000/29536)
+2025-12-13 19:04:53,872 INFO     Evaluating the model... (19500/29536)
+2025-12-13 19:05:01,795 INFO     Evaluating the model... (20000/29536)
+2025-12-13 19:05:10,260 INFO     Evaluating the model... (20500/29536)
+2025-12-13 19:05:18,151 INFO     Evaluating the model... (21000/29536)
+2025-12-13 19:05:26,063 INFO     Evaluating the model... (21500/29536)
+2025-12-13 19:05:34,488 INFO     Evaluating the model... (22000/29536)
+2025-12-13 19:05:42,537 INFO     Evaluating the model... (22500/29536)
+2025-12-13 19:05:50,449 INFO     Evaluating the model... (23000/29536)
+2025-12-13 19:05:58,571 INFO     Evaluating the model... (23500/29536)
+2025-12-13 19:06:06,665 INFO     Evaluating the model... (24000/29536)
+2025-12-13 19:06:14,502 INFO     Evaluating the model... (24500/29536)
+2025-12-13 19:06:22,348 INFO     Evaluating the model... (25000/29536)
+2025-12-13 19:06:31,155 INFO     Evaluating the model... (25500/29536)
+2025-12-13 19:06:39,261 INFO     Evaluating the model... (26000/29536)
+2025-12-13 19:06:47,376 INFO     Evaluating the model... (26500/29536)
+2025-12-13 19:06:56,112 INFO     Evaluating the model... (27000/29536)
+2025-12-13 19:07:03,991 INFO     Evaluating the model... (27500/29536)
+2025-12-13 19:07:11,932 INFO     Evaluating the model... (28000/29536)
+2025-12-13 19:07:19,775 INFO     Evaluating the model... (28500/29536)
+2025-12-13 19:07:28,834 INFO     Evaluating the model... (29000/29536)
+2025-12-13 19:07:36,751 INFO     Evaluating the model... (29500/29536)
+2025-12-13 19:07:37,562 INFO     Test MRR at step 60000: 0.706719
+2025-12-13 19:07:37,562 INFO     Test MR at step 60000: 267.882303
+2025-12-13 19:07:37,562 INFO     Test HITS@1 at step 60000: 0.635760
+2025-12-13 19:07:37,562 INFO     Test HITS@3 at step 60000: 0.755345
+2025-12-13 19:07:37,562 INFO     Test HITS@10 at step 60000: 0.829857
+2025-12-13 19:07:50,841 INFO     Training average regularization at step 60200: 0.188133
+2025-12-13 19:07:50,842 INFO     Training average positive_sample_loss at step 60200: 0.011276
+2025-12-13 19:07:50,842 INFO     Training average negative_sample_loss at step 60200: 0.026686
+2025-12-13 19:07:50,842 INFO     Training average loss at step 60200: 0.207114
+2025-12-13 19:08:03,948 INFO     Training average regularization at step 60400: 0.188042
+2025-12-13 19:08:03,949 INFO     Training average positive_sample_loss at step 60400: 0.010947
+2025-12-13 19:08:03,949 INFO     Training average negative_sample_loss at step 60400: 0.019967
+2025-12-13 19:08:03,949 INFO     Training average loss at step 60400: 0.203499
+2025-12-13 19:08:17,063 INFO     Training average regularization at step 60600: 0.187950
+2025-12-13 19:08:17,063 INFO     Training average positive_sample_loss at step 60600: 0.010891
+2025-12-13 19:08:17,063 INFO     Training average negative_sample_loss at step 60600: 0.023584
+2025-12-13 19:08:17,063 INFO     Training average loss at step 60600: 0.205187
+2025-12-13 19:08:30,199 INFO     Training average regularization at step 60800: 0.187856
+2025-12-13 19:08:30,200 INFO     Training average positive_sample_loss at step 60800: 0.011279
+2025-12-13 19:08:30,200 INFO     Training average negative_sample_loss at step 60800: 0.021552
+2025-12-13 19:08:30,200 INFO     Training average loss at step 60800: 0.204272
+2025-12-13 19:08:43,399 INFO     Training average regularization at step 61000: 0.187765
+2025-12-13 19:08:43,400 INFO     Training average positive_sample_loss at step 61000: 0.011601
+2025-12-13 19:08:43,400 INFO     Training average negative_sample_loss at step 61000: 0.021768
+2025-12-13 19:08:43,400 INFO     Training average loss at step 61000: 0.204449
+2025-12-13 19:08:56,613 INFO     Training average regularization at step 61200: 0.187675
+2025-12-13 19:08:56,614 INFO     Training average positive_sample_loss at step 61200: 0.011090
+2025-12-13 19:08:56,614 INFO     Training average negative_sample_loss at step 61200: 0.021919
+2025-12-13 19:08:56,614 INFO     Training average loss at step 61200: 0.204180
+2025-12-13 19:09:09,779 INFO     Training average regularization at step 61400: 0.187583
+2025-12-13 19:09:09,780 INFO     Training average positive_sample_loss at step 61400: 0.010932
+2025-12-13 19:09:09,780 INFO     Training average negative_sample_loss at step 61400: 0.020929
+2025-12-13 19:09:09,780 INFO     Training average loss at step 61400: 0.203514
+2025-12-13 19:09:22,915 INFO     Training average regularization at step 61600: 0.187491
+2025-12-13 19:09:22,915 INFO     Training average positive_sample_loss at step 61600: 0.010910
+2025-12-13 19:09:22,916 INFO     Training average negative_sample_loss at step 61600: 0.021962
+2025-12-13 19:09:22,916 INFO     Training average loss at step 61600: 0.203927
+2025-12-13 19:09:36,060 INFO     Training average regularization at step 61800: 0.187400
+2025-12-13 19:09:36,061 INFO     Training average positive_sample_loss at step 61800: 0.010561
+2025-12-13 19:09:36,061 INFO     Training average negative_sample_loss at step 61800: 0.025726
+2025-12-13 19:09:36,061 INFO     Training average loss at step 61800: 0.205543
+2025-12-13 19:09:49,469 INFO     Training average regularization at step 62000: 0.187311
+2025-12-13 19:09:49,469 INFO     Training average positive_sample_loss at step 62000: 0.011103
+2025-12-13 19:09:49,469 INFO     Training average negative_sample_loss at step 62000: 0.021671
+2025-12-13 19:09:49,469 INFO     Training average loss at step 62000: 0.203698
+2025-12-13 19:10:02,655 INFO     Training average regularization at step 62200: 0.187223
+2025-12-13 19:10:02,655 INFO     Training average positive_sample_loss at step 62200: 0.011678
+2025-12-13 19:10:02,655 INFO     Training average negative_sample_loss at step 62200: 0.023941
+2025-12-13 19:10:02,655 INFO     Training average loss at step 62200: 0.205033
+2025-12-13 19:10:15,831 INFO     Training average regularization at step 62400: 0.187134
+2025-12-13 19:10:15,831 INFO     Training average positive_sample_loss at step 62400: 0.010860
+2025-12-13 19:10:15,831 INFO     Training average negative_sample_loss at step 62400: 0.026070
+2025-12-13 19:10:15,831 INFO     Training average loss at step 62400: 0.205599
+2025-12-13 19:10:28,948 INFO     Training average regularization at step 62600: 0.187046
+2025-12-13 19:10:28,948 INFO     Training average positive_sample_loss at step 62600: 0.011302
+2025-12-13 19:10:28,948 INFO     Training average negative_sample_loss at step 62600: 0.022409
+2025-12-13 19:10:28,948 INFO     Training average loss at step 62600: 0.203902
+2025-12-13 19:10:42,299 INFO     Training average regularization at step 62800: 0.186958
+2025-12-13 19:10:42,299 INFO     Training average positive_sample_loss at step 62800: 0.010801
+2025-12-13 19:10:42,300 INFO     Training average negative_sample_loss at step 62800: 0.020977
+2025-12-13 19:10:42,300 INFO     Training average loss at step 62800: 0.202847
+2025-12-13 19:10:56,513 INFO     Training average regularization at step 63000: 0.186865
+2025-12-13 19:10:56,513 INFO     Training average positive_sample_loss at step 63000: 0.009770
+2025-12-13 19:10:56,513 INFO     Training average negative_sample_loss at step 63000: 0.023122
+2025-12-13 19:10:56,513 INFO     Training average loss at step 63000: 0.203311
+2025-12-13 19:11:09,637 INFO     Training average regularization at step 63200: 0.186767
+2025-12-13 19:11:09,638 INFO     Training average positive_sample_loss at step 63200: 0.009940
+2025-12-13 19:11:09,638 INFO     Training average negative_sample_loss at step 63200: 0.021257
+2025-12-13 19:11:09,638 INFO     Training average loss at step 63200: 0.202366
+2025-12-13 19:11:22,775 INFO     Training average regularization at step 63400: 0.186673
+2025-12-13 19:11:22,776 INFO     Training average positive_sample_loss at step 63400: 0.010555
+2025-12-13 19:11:22,776 INFO     Training average negative_sample_loss at step 63400: 0.022442
+2025-12-13 19:11:22,776 INFO     Training average loss at step 63400: 0.203171
+2025-12-13 19:11:35,865 INFO     Training average regularization at step 63600: 0.186578
+2025-12-13 19:11:35,865 INFO     Training average positive_sample_loss at step 63600: 0.010252
+2025-12-13 19:11:35,865 INFO     Training average negative_sample_loss at step 63600: 0.021146
+2025-12-13 19:11:35,865 INFO     Training average loss at step 63600: 0.202277
+2025-12-13 19:11:49,071 INFO     Training average regularization at step 63800: 0.186482
+2025-12-13 19:11:49,071 INFO     Training average positive_sample_loss at step 63800: 0.010472
+2025-12-13 19:11:49,072 INFO     Training average negative_sample_loss at step 63800: 0.024186
+2025-12-13 19:11:49,072 INFO     Training average loss at step 63800: 0.203812
+2025-12-13 19:12:02,184 INFO     Training average regularization at step 64000: 0.186390
+2025-12-13 19:12:02,184 INFO     Training average positive_sample_loss at step 64000: 0.010357
+2025-12-13 19:12:02,185 INFO     Training average negative_sample_loss at step 64000: 0.022426
+2025-12-13 19:12:02,185 INFO     Training average loss at step 64000: 0.202782
+2025-12-13 19:12:15,289 INFO     Training average regularization at step 64200: 0.186297
+2025-12-13 19:12:15,290 INFO     Training average positive_sample_loss at step 64200: 0.010158
+2025-12-13 19:12:15,290 INFO     Training average negative_sample_loss at step 64200: 0.022098
+2025-12-13 19:12:15,290 INFO     Training average loss at step 64200: 0.202425
+2025-12-13 19:12:28,416 INFO     Training average regularization at step 64400: 0.186204
+2025-12-13 19:12:28,417 INFO     Training average positive_sample_loss at step 64400: 0.010452
+2025-12-13 19:12:28,417 INFO     Training average negative_sample_loss at step 64400: 0.023148
+2025-12-13 19:12:28,417 INFO     Training average loss at step 64400: 0.203005
+2025-12-13 19:12:41,599 INFO     Training average regularization at step 64600: 0.186111
+2025-12-13 19:12:41,599 INFO     Training average positive_sample_loss at step 64600: 0.010326
+2025-12-13 19:12:41,599 INFO     Training average negative_sample_loss at step 64600: 0.022478
+2025-12-13 19:12:41,599 INFO     Training average loss at step 64600: 0.202514
+2025-12-13 19:12:54,750 INFO     Training average regularization at step 64800: 0.186020
+2025-12-13 19:12:54,750 INFO     Training average positive_sample_loss at step 64800: 0.010341
+2025-12-13 19:12:54,750 INFO     Training average negative_sample_loss at step 64800: 0.021415
+2025-12-13 19:12:54,750 INFO     Training average loss at step 64800: 0.201898
+2025-12-13 19:13:07,855 INFO     Training average regularization at step 65000: 0.185927
+2025-12-13 19:13:07,855 INFO     Training average positive_sample_loss at step 65000: 0.010263
+2025-12-13 19:13:07,855 INFO     Training average negative_sample_loss at step 65000: 0.019321
+2025-12-13 19:13:07,855 INFO     Training average loss at step 65000: 0.200719
+2025-12-13 19:13:20,973 INFO     Training average regularization at step 65200: 0.185833
+2025-12-13 19:13:20,974 INFO     Training average positive_sample_loss at step 65200: 0.010508
+2025-12-13 19:13:20,974 INFO     Training average negative_sample_loss at step 65200: 0.021808
+2025-12-13 19:13:20,974 INFO     Training average loss at step 65200: 0.201991
+2025-12-13 19:13:34,113 INFO     Training average regularization at step 65400: 0.185741
+2025-12-13 19:13:34,114 INFO     Training average positive_sample_loss at step 65400: 0.010491
+2025-12-13 19:13:34,114 INFO     Training average negative_sample_loss at step 65400: 0.023681
+2025-12-13 19:13:34,114 INFO     Training average loss at step 65400: 0.202826
+2025-12-13 19:13:47,475 INFO     Training average regularization at step 65600: 0.185651
+2025-12-13 19:13:47,476 INFO     Training average positive_sample_loss at step 65600: 0.010628
+2025-12-13 19:13:47,476 INFO     Training average negative_sample_loss at step 65600: 0.019275
+2025-12-13 19:13:47,476 INFO     Training average loss at step 65600: 0.200603
+2025-12-13 19:14:00,582 INFO     Training average regularization at step 65800: 0.185562
+2025-12-13 19:14:00,582 INFO     Training average positive_sample_loss at step 65800: 0.010824
+2025-12-13 19:14:00,582 INFO     Training average negative_sample_loss at step 65800: 0.022391
+2025-12-13 19:14:00,582 INFO     Training average loss at step 65800: 0.202169
+2025-12-13 19:14:13,691 INFO     Training average regularization at step 66000: 0.185472
+2025-12-13 19:14:13,691 INFO     Training average positive_sample_loss at step 66000: 0.010331
+2025-12-13 19:14:13,691 INFO     Training average negative_sample_loss at step 66000: 0.019067
+2025-12-13 19:14:13,691 INFO     Training average loss at step 66000: 0.200171
+2025-12-13 19:14:26,808 INFO     Training average regularization at step 66200: 0.185380
+2025-12-13 19:14:26,808 INFO     Training average positive_sample_loss at step 66200: 0.010913
+2025-12-13 19:14:26,808 INFO     Training average negative_sample_loss at step 66200: 0.023001
+2025-12-13 19:14:26,808 INFO     Training average loss at step 66200: 0.202337
+2025-12-13 19:14:40,049 INFO     Training average regularization at step 66400: 0.185289
+2025-12-13 19:14:40,049 INFO     Training average positive_sample_loss at step 66400: 0.010391
+2025-12-13 19:14:40,049 INFO     Training average negative_sample_loss at step 66400: 0.021265
+2025-12-13 19:14:40,049 INFO     Training average loss at step 66400: 0.201117
+2025-12-13 19:14:53,370 INFO     Training average regularization at step 66600: 0.185200
+2025-12-13 19:14:53,370 INFO     Training average positive_sample_loss at step 66600: 0.009887
+2025-12-13 19:14:53,370 INFO     Training average negative_sample_loss at step 66600: 0.023200
+2025-12-13 19:14:53,373 INFO     Training average loss at step 66600: 0.201744
+2025-12-13 19:15:06,518 INFO     Training average regularization at step 66800: 0.185110
+2025-12-13 19:15:06,519 INFO     Training average positive_sample_loss at step 66800: 0.010398
+2025-12-13 19:15:06,519 INFO     Training average negative_sample_loss at step 66800: 0.022592
+2025-12-13 19:15:06,519 INFO     Training average loss at step 66800: 0.201605
+2025-12-13 19:15:19,632 INFO     Training average regularization at step 67000: 0.185021
+2025-12-13 19:15:19,633 INFO     Training average positive_sample_loss at step 67000: 0.010851
+2025-12-13 19:15:19,633 INFO     Training average negative_sample_loss at step 67000: 0.021573
+2025-12-13 19:15:19,633 INFO     Training average loss at step 67000: 0.201232
+2025-12-13 19:15:32,756 INFO     Training average regularization at step 67200: 0.184931
+2025-12-13 19:15:32,757 INFO     Training average positive_sample_loss at step 67200: 0.009867
+2025-12-13 19:15:32,757 INFO     Training average negative_sample_loss at step 67200: 0.019706
+2025-12-13 19:15:32,757 INFO     Training average loss at step 67200: 0.199718
+2025-12-13 19:15:45,921 INFO     Training average regularization at step 67400: 0.184842
+2025-12-13 19:15:45,930 INFO     Training average positive_sample_loss at step 67400: 0.010206
+2025-12-13 19:15:45,930 INFO     Training average negative_sample_loss at step 67400: 0.021986
+2025-12-13 19:15:45,930 INFO     Training average loss at step 67400: 0.200939
+2025-12-13 19:15:59,125 INFO     Training average regularization at step 67600: 0.184754
+2025-12-13 19:15:59,126 INFO     Training average positive_sample_loss at step 67600: 0.010050
+2025-12-13 19:15:59,126 INFO     Training average negative_sample_loss at step 67600: 0.021869
+2025-12-13 19:15:59,126 INFO     Training average loss at step 67600: 0.200713
+2025-12-13 19:16:13,207 INFO     Training average regularization at step 67800: 0.184661
+2025-12-13 19:16:13,208 INFO     Training average positive_sample_loss at step 67800: 0.009639
+2025-12-13 19:16:13,208 INFO     Training average negative_sample_loss at step 67800: 0.022911
+2025-12-13 19:16:13,208 INFO     Training average loss at step 67800: 0.200936
+2025-12-13 19:16:26,321 INFO     Training average regularization at step 68000: 0.184564
+2025-12-13 19:16:26,321 INFO     Training average positive_sample_loss at step 68000: 0.009663
+2025-12-13 19:16:26,321 INFO     Training average negative_sample_loss at step 68000: 0.019904
+2025-12-13 19:16:26,321 INFO     Training average loss at step 68000: 0.199347
+2025-12-13 19:16:39,442 INFO     Training average regularization at step 68200: 0.184469
+2025-12-13 19:16:39,443 INFO     Training average positive_sample_loss at step 68200: 0.009934
+2025-12-13 19:16:39,443 INFO     Training average negative_sample_loss at step 68200: 0.019090
+2025-12-13 19:16:39,443 INFO     Training average loss at step 68200: 0.198981
+2025-12-13 19:16:52,575 INFO     Training average regularization at step 68400: 0.184375
+2025-12-13 19:16:52,575 INFO     Training average positive_sample_loss at step 68400: 0.009619
+2025-12-13 19:16:52,575 INFO     Training average negative_sample_loss at step 68400: 0.021553
+2025-12-13 19:16:52,575 INFO     Training average loss at step 68400: 0.199960
+2025-12-13 19:17:05,718 INFO     Training average regularization at step 68600: 0.184280
+2025-12-13 19:17:05,719 INFO     Training average positive_sample_loss at step 68600: 0.009461
+2025-12-13 19:17:05,719 INFO     Training average negative_sample_loss at step 68600: 0.021143
+2025-12-13 19:17:05,719 INFO     Training average loss at step 68600: 0.199582
+2025-12-13 19:17:18,859 INFO     Training average regularization at step 68800: 0.184185
+2025-12-13 19:17:18,859 INFO     Training average positive_sample_loss at step 68800: 0.009310
+2025-12-13 19:17:18,859 INFO     Training average negative_sample_loss at step 68800: 0.019358
+2025-12-13 19:17:18,859 INFO     Training average loss at step 68800: 0.198520
+2025-12-13 19:17:31,972 INFO     Training average regularization at step 69000: 0.184090
+2025-12-13 19:17:31,972 INFO     Training average positive_sample_loss at step 69000: 0.010076
+2025-12-13 19:17:31,972 INFO     Training average negative_sample_loss at step 69000: 0.020305
+2025-12-13 19:17:31,972 INFO     Training average loss at step 69000: 0.199280
+2025-12-13 19:17:45,356 INFO     Training average regularization at step 69200: 0.183995
+2025-12-13 19:17:45,357 INFO     Training average positive_sample_loss at step 69200: 0.009177
+2025-12-13 19:17:45,357 INFO     Training average negative_sample_loss at step 69200: 0.020935
+2025-12-13 19:17:45,357 INFO     Training average loss at step 69200: 0.199051
+2025-12-13 19:17:58,464 INFO     Training average regularization at step 69400: 0.183900
+2025-12-13 19:17:58,464 INFO     Training average positive_sample_loss at step 69400: 0.009853
+2025-12-13 19:17:58,464 INFO     Training average negative_sample_loss at step 69400: 0.021803
+2025-12-13 19:17:58,464 INFO     Training average loss at step 69400: 0.199729
+2025-12-13 19:18:11,578 INFO     Training average regularization at step 69600: 0.183808
+2025-12-13 19:18:11,578 INFO     Training average positive_sample_loss at step 69600: 0.009667
+2025-12-13 19:18:11,578 INFO     Training average negative_sample_loss at step 69600: 0.021284
+2025-12-13 19:18:11,578 INFO     Training average loss at step 69600: 0.199283
+2025-12-13 19:18:24,680 INFO     Training average regularization at step 69800: 0.183718
+2025-12-13 19:18:24,680 INFO     Training average positive_sample_loss at step 69800: 0.009669
+2025-12-13 19:18:24,680 INFO     Training average negative_sample_loss at step 69800: 0.017167
+2025-12-13 19:18:24,680 INFO     Training average loss at step 69800: 0.197136
+2025-12-13 19:18:37,754 INFO     Training average regularization at step 70000: 0.183625
+2025-12-13 19:18:37,755 INFO     Training average positive_sample_loss at step 70000: 0.009710
+2025-12-13 19:18:37,755 INFO     Training average negative_sample_loss at step 70000: 0.021200
+2025-12-13 19:18:37,755 INFO     Training average loss at step 70000: 0.199080
+2025-12-13 19:18:37,755 INFO     Evaluating on Valid Dataset...
+2025-12-13 19:18:38,322 INFO     Evaluating the model... (0/25000)
+2025-12-13 19:18:46,415 INFO     Evaluating the model... (500/25000)
+2025-12-13 19:18:54,203 INFO     Evaluating the model... (1000/25000)
+2025-12-13 19:19:02,618 INFO     Evaluating the model... (1500/25000)
+2025-12-13 19:19:10,393 INFO     Evaluating the model... (2000/25000)
+2025-12-13 19:19:18,228 INFO     Evaluating the model... (2500/25000)
+2025-12-13 19:19:26,069 INFO     Evaluating the model... (3000/25000)
+2025-12-13 19:19:34,467 INFO     Evaluating the model... (3500/25000)
+2025-12-13 19:19:42,429 INFO     Evaluating the model... (4000/25000)
+2025-12-13 19:19:50,322 INFO     Evaluating the model... (4500/25000)
+2025-12-13 19:19:58,618 INFO     Evaluating the model... (5000/25000)
+2025-12-13 19:20:06,444 INFO     Evaluating the model... (5500/25000)
+2025-12-13 19:20:14,253 INFO     Evaluating the model... (6000/25000)
+2025-12-13 19:20:22,081 INFO     Evaluating the model... (6500/25000)
+2025-12-13 19:20:30,547 INFO     Evaluating the model... (7000/25000)
+2025-12-13 19:20:38,497 INFO     Evaluating the model... (7500/25000)
+2025-12-13 19:20:46,595 INFO     Evaluating the model... (8000/25000)
+2025-12-13 19:20:55,026 INFO     Evaluating the model... (8500/25000)
+2025-12-13 19:21:02,872 INFO     Evaluating the model... (9000/25000)
+2025-12-13 19:21:10,706 INFO     Evaluating the model... (9500/25000)
+2025-12-13 19:21:18,544 INFO     Evaluating the model... (10000/25000)
+2025-12-13 19:21:27,082 INFO     Evaluating the model... (10500/25000)
+2025-12-13 19:21:34,908 INFO     Evaluating the model... (11000/25000)
+2025-12-13 19:21:42,838 INFO     Evaluating the model... (11500/25000)
+2025-12-13 19:21:51,489 INFO     Evaluating the model... (12000/25000)
+2025-12-13 19:21:59,706 INFO     Evaluating the model... (12500/25000)
+2025-12-13 19:22:07,665 INFO     Evaluating the model... (13000/25000)
+2025-12-13 19:22:15,518 INFO     Evaluating the model... (13500/25000)
+2025-12-13 19:22:23,935 INFO     Evaluating the model... (14000/25000)
+2025-12-13 19:22:31,801 INFO     Evaluating the model... (14500/25000)
+2025-12-13 19:22:39,859 INFO     Evaluating the model... (15000/25000)
+2025-12-13 19:22:48,544 INFO     Evaluating the model... (15500/25000)
+2025-12-13 19:22:56,448 INFO     Evaluating the model... (16000/25000)
+2025-12-13 19:23:04,352 INFO     Evaluating the model... (16500/25000)
+2025-12-13 19:23:12,267 INFO     Evaluating the model... (17000/25000)
+2025-12-13 19:23:20,663 INFO     Evaluating the model... (17500/25000)
+2025-12-13 19:23:28,572 INFO     Evaluating the model... (18000/25000)
+2025-12-13 19:23:36,574 INFO     Evaluating the model... (18500/25000)
+2025-12-13 19:23:45,344 INFO     Evaluating the model... (19000/25000)
+2025-12-13 19:23:53,323 INFO     Evaluating the model... (19500/25000)
+2025-12-13 19:24:01,250 INFO     Evaluating the model... (20000/25000)
+2025-12-13 19:24:09,185 INFO     Evaluating the model... (20500/25000)
+2025-12-13 19:24:17,934 INFO     Evaluating the model... (21000/25000)
+2025-12-13 19:24:25,846 INFO     Evaluating the model... (21500/25000)
+2025-12-13 19:24:33,731 INFO     Evaluating the model... (22000/25000)
+2025-12-13 19:24:42,522 INFO     Evaluating the model... (22500/25000)
+2025-12-13 19:24:50,555 INFO     Evaluating the model... (23000/25000)
+2025-12-13 19:24:58,460 INFO     Evaluating the model... (23500/25000)
+2025-12-13 19:25:06,392 INFO     Evaluating the model... (24000/25000)
+2025-12-13 19:25:15,052 INFO     Evaluating the model... (24500/25000)
+2025-12-13 19:25:23,206 INFO     Valid MRR at step 70000: 0.709844
+2025-12-13 19:25:23,207 INFO     Valid MR at step 70000: 254.417450
+2025-12-13 19:25:23,207 INFO     Valid HITS@1 at step 70000: 0.639490
+2025-12-13 19:25:23,207 INFO     Valid HITS@3 at step 70000: 0.757580
+2025-12-13 19:25:23,207 INFO     Valid HITS@10 at step 70000: 0.832660
+2025-12-13 19:25:23,207 INFO     Evaluating on Test Dataset...
+2025-12-13 19:25:23,822 INFO     Evaluating the model... (0/29536)
+2025-12-13 19:25:31,894 INFO     Evaluating the model... (500/29536)
+2025-12-13 19:25:40,536 INFO     Evaluating the model... (1000/29536)
+2025-12-13 19:25:48,509 INFO     Evaluating the model... (1500/29536)
+2025-12-13 19:25:56,387 INFO     Evaluating the model... (2000/29536)
+2025-12-13 19:26:04,224 INFO     Evaluating the model... (2500/29536)
+2025-12-13 19:26:12,550 INFO     Evaluating the model... (3000/29536)
+2025-12-13 19:26:20,433 INFO     Evaluating the model... (3500/29536)
+2025-12-13 19:26:28,270 INFO     Evaluating the model... (4000/29536)
+2025-12-13 19:26:36,646 INFO     Evaluating the model... (4500/29536)
+2025-12-13 19:26:44,618 INFO     Evaluating the model... (5000/29536)
+2025-12-13 19:26:52,503 INFO     Evaluating the model... (5500/29536)
+2025-12-13 19:27:00,349 INFO     Evaluating the model... (6000/29536)
+2025-12-13 19:27:08,736 INFO     Evaluating the model... (6500/29536)
+2025-12-13 19:27:16,610 INFO     Evaluating the model... (7000/29536)
+2025-12-13 19:27:24,468 INFO     Evaluating the model... (7500/29536)
+2025-12-13 19:27:32,894 INFO     Evaluating the model... (8000/29536)
+2025-12-13 19:27:40,840 INFO     Evaluating the model... (8500/29536)
+2025-12-13 19:27:48,784 INFO     Evaluating the model... (9000/29536)
+2025-12-13 19:27:56,579 INFO     Evaluating the model... (9500/29536)
+2025-12-13 19:28:05,304 INFO     Evaluating the model... (10000/29536)
+2025-12-13 19:28:13,127 INFO     Evaluating the model... (10500/29536)
+2025-12-13 19:28:20,997 INFO     Evaluating the model... (11000/29536)
+2025-12-13 19:28:29,751 INFO     Evaluating the model... (11500/29536)
+2025-12-13 19:28:37,685 INFO     Evaluating the model... (12000/29536)
+2025-12-13 19:28:45,753 INFO     Evaluating the model... (12500/29536)
+2025-12-13 19:28:53,620 INFO     Evaluating the model... (13000/29536)
+2025-12-13 19:29:02,263 INFO     Evaluating the model... (13500/29536)
+2025-12-13 19:29:10,151 INFO     Evaluating the model... (14000/29536)
+2025-12-13 19:29:17,996 INFO     Evaluating the model... (14500/29536)
+2025-12-13 19:29:26,235 INFO     Evaluating the model... (15000/29536)
+2025-12-13 19:29:34,143 INFO     Evaluating the model... (15500/29536)
+2025-12-13 19:29:42,846 INFO     Evaluating the model... (16000/29536)
+2025-12-13 19:29:50,821 INFO     Evaluating the model... (16500/29536)
+Traceback (most recent call last):
+  File "/home/25171213997/ITI/codes/run.py", line 469, in <module>
+    accuracy = objective()
+  File "/home/25171213997/ITI/codes/run.py", line 421, in objective
+    metrics = kge_model.test_step(kge_model, test_triples, all_true_triples, args)
+  File "/home/25171213997/ITI/codes/mult.py", line 1108, in test_step
+    ranking = (argsort[i, :] == positive_arg[i]).nonzero()
+KeyboardInterrupt
